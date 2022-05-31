@@ -1,0 +1,106 @@
+@font-face {
+	font-family: 'Aurebesh';
+	src: url('/fonts/aurebeshaf-canon-webfont.ttf') format('truetype'),
+		url('/fonts/aurebeshaf-canon-webfont.woff2') format('woff2'),
+		url('/fonts/aurebeshaf-canon-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 16px;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	background-color: black;
+	color: white;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+@media only screen and (min-width: 768px) and (min-height: 1024px) {
+	body {
+		margin: 128px;
+	}
+}
+
+.data_pad {
+	max-width: 444px;
+	margin: auto;
+}
+
+.data_pad p {
+	text-align: center;
+}
+
+.data_pad_logo img {
+	max-width: 75%;
+	margin: auto;
+	display: block;
+}
+
+.data_pad_links {
+	border: 2px solid white;
+	border-radius: 8px;
+	padding: 32px;
+}
+
+.data_pad_link {
+	display: block;
+	background-color: black;
+	margin-bottom: 24px;
+	position: relative;
+}
+.data_pad_link:last-child {
+	margin-bottom: 0;
+}
+
+.data_pad_link:focus-visible .icon,
+.data_pad_link:hover .icon {
+	background-color: white;
+	color: black;
+}
+
+.icon {
+	left: 0;
+	top: 0;
+	box-sizing: content-box;
+	width: 64px;
+	border: 2px solid white;
+	font-size: 48px;
+	text-align: center;
+	line-height: 64px;
+	background-color: black;
+}
+
+.labels {
+	position: absolute;
+	top: 0;
+	left: 68px;
+	right: 0;
+}
+
+.english {
+	background-color: white;
+	color: black;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 24px;
+	padding: 0 4px;
+}
+
+.aurebesh {
+	color: yellow;
+	font-size: 14px;
+	font-family: 'Aurebesh';
+	padding: 4px;
+}
