@@ -1,0 +1,23 @@
+<div id="body">
+
+    {{ partial "widgets/meta.html" . }}
+
+    <div class="content">
+        {{ .Content }}
+    </div>
+
+    {{ if eq .Kind "page" }}
+        {{ if ne .Params.monetize false }}
+            {{ partial "widgets/monetize.html" . }}
+        {{ end }}
+    {{ end }}
+
+    {{ with .Pages }}
+        <div class="children">
+            {{ range . }}
+                {{ partial "widgets/child.html" . }}
+            {{ end }}
+        </div>
+    {{ end }}
+
+</div>

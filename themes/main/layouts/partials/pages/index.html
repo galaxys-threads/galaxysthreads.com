@@ -1,0 +1,20 @@
+<div id="index">
+    {{ range where site.Sections "Title" "in" site.Params.homeSectionTitles }}
+        <div class="column">
+            <div class="title column-header">
+                <div class="aurebesh">
+                    {{ .Title }}
+                </div>
+                {{ .Title }}
+            </div>
+            <div class="children">
+                {{ range first 5 .Pages }}
+                    {{ partial "widgets/child.html" .}}
+                {{ end }}
+            </div>
+            <a class="view-all title" href="{{ .RelPermalink }}">
+                View All
+            </a>
+        </div>
+    {{ end }}
+</div>

@@ -1,0 +1,33 @@
+/* Layout */
+:root {
+    --spacing: 2rem;
+    --spacing-small: 1rem;
+    --spacing-large: 3rem;
+    --nav-height: 42px;
+    --border-radius: 1rem;
+}
+
+/* Colors */
+:root {
+    --background: #000000;
+    --background-accent: #323232;
+    --foreground: rgba(255, 255, 255, 0.5);
+    --foreground-accent: #fff;
+    --middle: #444444;
+    --primary: #00bfff;
+    --border: solid 1px var(--background-accent);
+}
+
+/* Fonts */
+:root {
+    --font-family-header: "Avenir Black", sans-serif;
+    --font-family-body: sans-serif;
+    --font-family-aurebesh: "Aurebesh";
+}
+
+/* Large Screens */
+@media (min-width: 820px) {
+    /* :root {
+        --spacing: 64px;
+    } */
+}

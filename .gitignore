@@ -1,3 +1,11 @@
+# npm
+/node_modules/
+
+# parcel
+/themes/main/assets/bundle/
+/.parcel-cache/
+
+# Hugo
 /public/
 /resources/
-/.hugo_build.lock
+.hugo_build.lock

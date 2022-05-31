@@ -1,0 +1,17 @@
+<div id="header">
+    <a href="/">
+        <img src="{{ (resources.Get "/assets/images/logo.svg" | resources.Fingerprint).RelPermalink }}" alt="Galaxy's Threads" width="254" height="128">
+    </a>
+    <div id="menu">
+        <div id="menu-wrapper">
+            {{ range .Site.Sections }}
+                <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+                    <div class="title">
+                        <div class="aurebesh">{{ .Title }}</div>
+                    {{ .Title }}
+                    </div>
+                </a>
+            {{ end }}
+        </div>
+    </div>
+</div>

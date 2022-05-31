@@ -1,0 +1,4 @@
+<figure>
+    <img src="{{ (resources.Get .Destination | resources.Fingerprint).RelPermalink }}" alt="{{ .Text }}">
+    <figcaption>Photo Credit: {{ .Title }}</figcaption>
+</figure>

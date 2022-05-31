@@ -1,0 +1,11 @@
+.monetize {
+    padding: var(--spacing-large) 0;
+    text-align: center;
+}
+
+.monetize img {
+    display: inline-block;
+    width: 256px;
+    max-width: 33%;
+    margin: 1rem;
+}

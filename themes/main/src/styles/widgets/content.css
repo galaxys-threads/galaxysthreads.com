@@ -1,0 +1,43 @@
+.content {
+    margin-bottom: var(--spacing);
+}
+
+.content>* {
+    margin-bottom: 1rem;
+}
+
+.content>*:last-child {
+    margin-bottom: 0;
+}
+
+.content p {
+    line-height: 1.5em;
+}
+
+.content img {
+    border-radius: 0.5rem;
+    border: var(--border);
+    display: block;
+    margin: auto;
+    max-height: 50vh;
+    max-width: 100%;
+}
+
+.content blockquote {
+    border-left: var(--border);
+    border-left-width: 2px;
+    padding: 0.5rem 1rem;
+}
+
+.content ul,
+.content ol {
+    margin-left: 1rem;
+}
+
+.content li {
+    margin-bottom: 1rem;
+}
+
+.content li:last-child {
+    margin-bottom: 0;
+}

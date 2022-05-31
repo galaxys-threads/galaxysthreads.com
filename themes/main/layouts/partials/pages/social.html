@@ -1,0 +1,44 @@
+{{ $cover := .Site.Params.default_cover}}
+{{ with .Params.cover }}
+    {{ $cover = . }}
+{{ end }}
+{{ $coverResource := (resources.Get $cover | resources.Fingerprint).RelPermalink }}
+
+<meta
+    property="og:title"
+    content="{{ .Title }}"
+/>
+
+<meta
+    property="og:description"
+    content="{{ .Description }}"
+/>
+
+<meta
+    property="og:url"
+    content="{{ .Permalink }}"
+/>
+
+<meta
+    property="og:image"
+    content="{{ $coverResource }}"
+/>
+
+<meta
+    name="twitter:card"
+    content="summary_large_image"
+/>
+<meta
+    name="twitter:image"
+    content="{{ $coverResource }}"
+/>
+
+<meta
+    name="twitter:title"
+    content="{{ .Title }}"
+/>
+
+<meta
+    name="twitter:description"
+    content="{{ .Description }}"
+/>

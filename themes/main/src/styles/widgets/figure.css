@@ -1,0 +1,23 @@
+figure {
+    overflow: hidden;
+    position: relative;
+}
+
+figure figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    text-align: center;
+    color: var(--foreground-accent);
+    opacity: .5;
+    font-size: .75rem;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+figure img {
+    display: block;
+    margin: auto;
+    min-width: 100%;
+}

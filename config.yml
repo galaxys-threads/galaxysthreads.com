@@ -1,3 +1,38 @@
 baseURL: '/'
 title: "Galaxy's Threads"
 theme: 'main'
+enableGitInfo: true
+
+params:
+  default_cover: /assets/images/cover-default.webp
+  homeSectionTitles:
+    - Guides
+    - News
+    - Reviews
+
+menu:
+  social:
+    - name: Etsy
+      title: Etsy
+      url: https://etsy.com/shop/GalaxysThreads
+      weight: 1
+      params:
+        class: fa-etsy
+    - name: Twitter
+      title: Twitter
+      url: https://twitter.com/GalaxysThreads
+      weight: 2
+      params:
+        class: fa-twitter
+    - name: TikTok
+      title: TikTok
+      url: https://www.tiktok.com/@GalaxysThreads
+      weight: 3
+      params:
+        class: fa-tiktok
+    - name: Discord
+      title: Discord
+      url: https://discord.gg/aEV6SQ33uy
+      weight: 4
+      params:
+        class: fa-discord

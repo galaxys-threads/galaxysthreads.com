@@ -1,0 +1,15 @@
+<div id="footer">
+    <p>
+        Galaxy's Threads 2022 ©
+    </p>
+    <p class="">
+        Please Note: Galaxy's Threads fan run organization and is NOT affiliated with Lucasfilm Ltd. or The Walt Disney Company.
+    </p>
+    <div>
+        {{ range .Site.Menus.social }}
+            <a href="{{ .URL }}" target="_blank" title="{{ .Title }}">
+                <i class="fa-brands {{ with .Params.class }}{{ . }}{{ end }}"></i>
+            </a>
+        {{ end }}
+    </div>
+</div>

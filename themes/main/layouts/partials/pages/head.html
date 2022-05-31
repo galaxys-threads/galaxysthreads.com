@@ -1,0 +1,52 @@
+<!-- HTML -->
+<meta charset="utf-8">
+<meta content="text/html; charset=UTF-8" name="Content-Type">
+<meta name="viewport" content="width=device-width">
+
+<!-- SEO -->
+<title>Galaxy‘s Threads</title>
+{{ if ne .Description "" }}
+    <meta name="description" content="{{ .Description }}">
+{{ end }}
+{{ partial "pages/social.html" . }}
+
+<!-- Icons -->
+<link rel="icon" href="{{ (resources.Get "/assets/images/favicon.ico" | resources.Fingerprint).RelPermalink }}" type="image/x-icon" />
+<link rel="apple-touch-icon" href="{{ (resources.Get "/assets/images/apple-touch-icon.png" | resources.Fingerprint).RelPermalink }}">
+
+<!-- Inline Styles -->
+<style>
+    body {
+        background-image: url("{{ (resources.Get "/assets/images/background.webp"|resources.Fingerprint).RelPermalink }} ");
+    }
+
+    @font-face {
+        font-family: 'Aurebesh';
+        src:
+            url('{{ (resources.Get "/assets/fonts/aurebeshaf-canon-webfont.ttf" | resources.Fingerprint).RelPermalink }}') format('truetype'),
+            url('{{ (resources.Get "/assets/fonts/aurebeshaf-canon-webfont.woff2" | resources.Fingerprint).RelPermalink }}') format('woff2'),
+            url('{{ (resources.Get "/assets/fonts/aurebeshaf-canon-webfont.woff" | resources.Fingerprint).RelPermalink }}') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Avenir Black';
+        src:
+            url('{{ (resources.Get "/assets/fonts/avenir-black.woff2"| resources.Fingerprint).RelPermalink }}') format('woff2'),
+            url('{{ (resources.Get "/assets/fonts/avenir-black.woff"| resources.Fingerprint).RelPermalink }}') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+</style>
+
+<!-- External CSS -->
+<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Parcel -->
+<link rel="stylesheet" href="{{ (resources.Get "/bundle/app.css" | resources.Fingerprint).RelPermalink }}" />
+<script src="{{ (resources.Get "/bundle/app.js" | resources.Fingerprint).RelPermalink }}"></script>

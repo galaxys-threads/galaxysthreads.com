@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "targets": {
+    "default": {
+      "source": "themes/main/src/app.ts",
+      "distDir": "themes/main/assets/bundle",
+      "sourceMap": {
+        "inline": true
+      }
+    }
+  },
+  "scripts": {
+    "build": "parcel build --no-cache",
+    "watch": "parcel watch --no-cache"
+  },
+  "devDependencies": {
+    "parcel": "^2.6.0"
+  }
+}
