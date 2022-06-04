@@ -1,12 +1,19 @@
+{{ $attribution := .Site.Params.default_attribution }}
 {{ $cover := .Site.Params.default_cover}}
 {{ with .Params.cover }}
     {{ $cover = . }}
+    {{ $attribution = "" }}
 {{ end }}
+
+{{ with .Params.attribution }}
+    {{ $attribution = . }}
+{{ end }}
+
 {{ $coverResource := (resources.Get $cover | resources.Fingerprint).RelPermalink }}
 
 <figure class="cover">
     <img src="{{ $coverResource }}" alt="{{ .Title }}">
-    {{ with .Params.attribution }}
-        <figcaption>Photo Credit: {{ . }}</figcaption>
+    {{ if ne $attribution "" }}
+        <figcaption>Photo Credit: {{ $attribution }}</figcaption>
     {{ end }}
 </figure>
