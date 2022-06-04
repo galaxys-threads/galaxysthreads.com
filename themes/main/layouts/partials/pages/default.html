@@ -6,10 +6,8 @@
         {{ .Content }}
     </div>
 
-    {{ if eq .Kind "page" }}
-        {{ if ne .Params.monetize false }}
-            {{ partial "widgets/monetize.html" . }}
-        {{ end }}
+    {{ if ne .Params.monetize false }}
+        {{ partial "widgets/monetize.html" . }}
     {{ end }}
 
     {{ with .Pages }}
