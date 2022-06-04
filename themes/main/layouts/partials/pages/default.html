@@ -6,16 +6,16 @@
         {{ .Content }}
     </div>
 
-    {{ if ne .Params.monetize false }}
-        {{ partial "widgets/monetize.html" . }}
-    {{ end }}
-
     {{ with .Pages }}
         <div class="children">
             {{ range . }}
                 {{ partial "widgets/child.html" . }}
             {{ end }}
         </div>
+    {{ end }}
+
+    {{ if ne .Params.monetize false }}
+        {{ partial "widgets/monetize.html" . }}
     {{ end }}
 
 </div>
