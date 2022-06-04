@@ -2,7 +2,7 @@
 {{ with .Params.cover }}
     {{ $cover = . }}
 {{ end }}
-{{ $coverResource := (resources.Get $cover | resources.Fingerprint).RelPermalink }}
+{{ $coverResource := (resources.Get $cover | resources.Fingerprint).RelPermalink | absURL }}
 
 <meta
     property="og:title"
