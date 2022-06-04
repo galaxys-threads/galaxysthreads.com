@@ -1,3 +1,8 @@
+#index {
+    max-width: 1500px;
+    margin: auto;
+}
+
 #index .column {
     margin-bottom: var(--spacing-large);
     text-align: center;
