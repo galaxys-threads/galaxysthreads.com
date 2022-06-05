@@ -14,6 +14,10 @@
     line-height: 1.5em;
 }
 
+.content strong {
+    color: var(--foreground-accent);
+}
+
 .content img {
     border-radius: 0.5rem;
     border: var(--border);
@@ -40,4 +44,19 @@
 
 .content li:last-child {
     margin-bottom: 0;
+}
+
+.content table {
+    border-collapse: collapse;
+}
+
+.content table th {
+    color: var(--foreground-accent);
+}
+
+.content table th,
+.content table td {
+    text-align: left;
+    border: var(--border);
+    padding: .5rem;
 }
