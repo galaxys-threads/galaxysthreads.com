@@ -6,4 +6,4 @@ cover: /assets/images/cover-guides.webp
 attribution: Lucasfilm Ltd.
 ---
 
-We will help you get started.
+Our goal is to provide sharable guides that can help you navigate the Star Wars universe.
