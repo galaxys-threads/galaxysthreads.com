@@ -6,12 +6,29 @@ cover: /assets/images/cover-kenobi-part1.webp
 attribution: Lucasfilm Ltd.
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu neque justo. Aenean hendrerit nibh quis condimentum fringilla. Ut dictum malesuada laoreet. Fusce dolor nunc, porttitor ut euismod ac, auctor sit amet augue. Cras sed felis nulla. Nam volutpat augue et nunc ultrices, luctus suscipit metus fringilla. Maecenas ac semper odio. Curabitur sodales est eu felis volutpat, eget elementum purus pulvinar. Sed porta velit vel erat sodales, sed consequat ante suscipit. Praesent volutpat elementum odio et varius.
+This first episode did exactly what we needed it to. It made us understand where Obi-Wan is in life right now. He has lost almost all of his hope and is hiding behind his responsibly to protect Luke. It showed us how dangerous the Inquisitors are and what the main conflict of the show is going to be. I'm 100% hooked and I'm so glad that I don't have to wait for part 2.
 
-Maecenas aliquam eros ligula, rutrum laoreet urna tincidunt sagittis. Curabitur in tempus justo. Nullam facilisis, neque in ullamcorper viverra, odio libero elementum enim, nec vehicula tellus neque in ipsum. Cras dapibus placerat ante, non scelerisque purus congue a. Quisque ac aliquet erat. Praesent vulputate tempor lectus, eu auctor est placerat et. Donec sed dolor nulla. Vestibulum id venenatis erat. Donec arcu quam, vulputate a orci sed, mollis auctor velit. Nunc tincidunt, elit ut elementum sagittis, erat urna malesuada quam, a dignissim enim nibh ut mi. Duis semper dictum urna ac tempus. Aenean sollicitudin ipsum convallis, commodo lectus ac, placerat arcu. Duis at tempor arcu. Maecenas est mauris, rhoncus non ligula sit amet, finibus malesuada odio.
+{{< spoiler-warning >}}
 
-Aliquam laoreet hendrerit metus, eget varius est pulvinar quis. Mauris tincidunt at ante et mattis. Vestibulum a dui quis velit porta lacinia quis sed est. Proin egestas ultrices orci eget mattis. Sed ut congue lectus. Nam iaculis venenatis erat at sodales. Fusce at tellus velit. Nam malesuada mi sed semper finibus. Integer quis accumsan mi. Fusce in eleifend sapien.
+## Recap
+I absolutely loved this recap, it was a great refreshed to those who have not seen the prequel moves recently. It set a really nice tone for the shows. Ending the recap with Yoda teasing an appearance from Qui-Gon Jinn seems significant.
 
-Sed semper arcu vitae turpis maximus laoreet. Suspendisse pretium, sapien a gravida consequat, urna lacus molestie risus, in dictum dui nisl a odio. Sed lacinia augue quam. Suspendisse rutrum lectus nisi, imperdiet tristique lorem efficitur id. Vestibulum lectus lorem, hendrerit nec nisi at, gravida porta odio. Nam sit amet congue ipsum. Aliquam non viverra justo, ut pretium sapien. Fusce efficitur ipsum justo, sit amet imperdiet mauris auctor et. Mauris viverra lectus lorem, ac rhoncus augue posuere nec. Curabitur porta in risus vitae aliquam. Ut facilisis dui vel nulla blandit lobortis. Donec euismod venenatis nisl sit amet scelerisque. Duis ac lacinia nulla, ac cursus libero. Nulla eu lacus neque. Nam in tellus erat. In viverra feugiat lorem, vitae interdum risus aliquet quis.
+## Order 66
+Yet another view of Order 66. I love it! Some of the imagery reminds my of Grogu's vision of the same event from the Mandalorian. I wonder what the significance of showing us this will be. Now that I've seen the whole episode I feel like they are just make sure we know that way more Jedi survived Order 66 than we original thought. Or maybe teasing the origin of some of the Inquisitors.
 
-Nunc tempor lacus id tortor egestas auctor. Vivamus euismod scelerisque diam non consequat. Ut at tellus ante. Pellentesque condimentum dolor eget erat placerat, sit amet auctor justo convallis. Duis ornare eu nibh nec rutrum. Donec aliquam, sem vel condimentum hendrerit, magna dui mattis elit, non pellentesque sem ipsum ut orci. Aenean vel placerat neque, non posuere massa. Praesent congue convallis enim, et blandit risus convallis vel. Integer dictum lectus est, et consectetur velit feugiat ac.
+## Sky Hopper and the Jawa
+I loved seeing how Luke got the Skyhopper toy we saw him with in A New Hope. Also that whole interaction with "Ben" and the Jawa was hilarious!
+
+## Qui-Gon Jinn
+They had 2 teasings of Qui-Gon Jinn this episode. I'll be super surprised if we don't see Qui-Gon Jinn sometime in this series
+## Leia
+First off, Vivien Lyra Blair is a fantastic Princess Leia! I have a feeling that she is going to be the star of this show!
+
+Is Leia reading minds a bit like Kylo Ren?
+
+The chase scene was a little ridiculous. I know it's just a show and Vivien (Leia) is just a kid, but it was a little absurd how bad those kidnappers were.
+
+Vivien Lyra Blair would be great in a Young Leia spinoff series.
+
+## Reva
+It's not star wars unless someone looses a hand!

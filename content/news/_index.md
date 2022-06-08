@@ -5,5 +5,3 @@ weight: 2
 cover: /assets/images/cover-news.webp
 attribution: Lucasfilm Ltd.
 ---
-
-Get some news

@@ -6,24 +6,31 @@ cover: /assets/images/cover-kenobi-part3.webp
 attribution: Lucasfilm Ltd.
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu neque justo. Aenean hendrerit nibh quis condimentum fringilla. Ut dictum malesuada laoreet. Fusce dolor nunc, porttitor ut euismod ac, auctor sit amet augue. [Cras](https://starwars.com) sed felis nulla. Nam volutpat augue et nunc ultrices, luctus suscipit metus fringilla. Maecenas ac semper odio. Curabitur sodales est eu felis volutpat, eget elementum purus pulvinar. Sed porta velit vel erat sodales, sed consequat ante suscipit. Praesent volutpat elementum odio et varius.
+This has been my favorite episode so far. It was also some of the most brutally violent Star Wars we have gotten since the fight on Mustafar in Revenge of the Sith.
 
+{{< spoiler-warning >}}
 
-![Alt text here](/assets/images/cover-default.webp "Lucasfilm Ltd.")
+## Vader
+Super cool throne in his castle! Also we just found out that Reva is going to die. We know she is not going to be able to permanently capture Obi-wan, so she is not going to live to regret failing Vader.
 
-Maecenas aliquam eros ligula, rutrum laoreet urna tincidunt sagittis. Curabitur in tempus justo. Nullam facilisis, neque in ullamcorper viverra, odio libero elementum enim, nec vehicula tellus neque in ipsum. Cras dapibus placerat ante, non scelerisque purus congue a. Quisque ac aliquet erat. Praesent vulputate tempor lectus, eu auctor est placerat et. Donec sed dolor nulla. Vestibulum id venenatis erat. Donec arcu quam, vulputate a orci sed, mollis auctor velit. Nunc tincidunt, elit ut elementum sagittis, erat urna malesuada quam, a dignissim enim nibh ut mi. Duis semper dictum urna ac tempus. Aenean sollicitudin ipsum convallis, commodo lectus ac, placerat arcu. Duis at tempor arcu. Maecenas est mauris, rhoncus non ligula sit amet, finibus malesuada odio.
+## Leia
+Some of the conversations Leia and Obi-Wan had this episode were heartbreaking. Especially when she asked if he was her father.
 
-## fds
-1. hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello
-1. hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello
-1. hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello
+It was also a little silly that Leia was better than Obi-Wan at not blowing their cover with the Stormtroopers.
 
-> Aliquam laoreet hendrerit metus, eget varius est pulvinar quis. Mauris tincidunt at ante et mattis. Vestibulum a dui quis velit porta lacinia quis sed est. Proin egestas ultrices orci eget mattis. Sed ut congue lectus. Nam iaculis venenatis erat at sodales. Fusce at tellus velit. Nam malesuada mi sed semper finibus. Integer quis accumsan mi. Fusce in eleifend sapien.
+We are also getting some confirmation that Leia is passively using the force to do some level of mind reading.
 
-- hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello
-- hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello
-- hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello
+## Quinlan Vos
+The mention of Quinlan Vos seems to reenforce the idea that many more Jedi survived order 66 than we previously thought.
 
-Sed semper arcu vitae turpis maximus laoreet. Suspendisse pretium, sapien a gravida consequat, urna lacus molestie risus, in dictum dui nisl a odio. Sed lacinia augue quam. Suspendisse rutrum lectus nisi, imperdiet tristique lorem efficitur id. Vestibulum lectus lorem, hendrerit nec nisi at, gravida porta odio. Nam sit amet congue ipsum. Aliquam non viverra justo, ut pretium sapien. Fusce efficitur ipsum justo, sit amet imperdiet mauris auctor et. Mauris viverra lectus lorem, ac rhoncus augue posuere nec. Curabitur porta in risus vitae aliquam. Ut facilisis dui vel nulla blandit lobortis. Donec euismod venenatis nisl sit amet scelerisque. Duis ac lacinia nulla, ac cursus libero. Nulla eu lacus neque. Nam in tellus erat. In viverra feugiat lorem, vitae interdum risus aliquet quis.
+## Force Sensitive Children
+We don't know what the Empire is doing with force sensitive children, but we do know what they are going to do with Grogu (a force sensitive "child"). Is this yet another hint of the Palpatine cloning project? We also got significant hints of this in the Mandalorian and in Bad Batch. This really seems like more of that.
 
-Nunc tempor lacus id tortor egestas auctor. Vivamus euismod scelerisque diam non consequat. Ut at tellus ante. Pellentesque condimentum dolor eget erat placerat, sit amet auctor justo convallis. Duis ornare eu nibh nec rutrum. Donec aliquam, sem vel condimentum hendrerit, magna dui mattis elit, non pellentesque sem ipsum ut orci. Aenean vel placerat neque, non posuere massa. Praesent congue convallis enim, et blandit risus convallis vel. Integer dictum lectus est, et consectetur velit feugiat ac.
+## Vader
+Brutal... snapping a kids neck, dragging a screaming person through the street?
+
+I did notice Reva's face during some of this, she didn't seems to care for it. Maybe she has a soft spot for children. We will have to see how she treats Leia.
+
+The ice cold rage of holding Kenobi over the flames just to make him suffer was insane! Vader's anger at Kenobi has been festering for 10 years, and it shows.
+
+The escape was a little silly. Vader couldn't jump over the flames? Or go around? Vader must have wanted Kenobi to get away. We will have to see if that is explained in the rest of the series.

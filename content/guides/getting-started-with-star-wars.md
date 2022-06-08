@@ -1,6 +1,7 @@
 ---
 title: "Getting Started With Star Wars"
 date: 2022-01-01T00:00:00Z
+description: Your guide to diving into the Star Wars universe!
 cover: /assets/images/cover-getting-started.webp
 attribution: Lucasfilm Ltd.
 ---
@@ -14,6 +15,7 @@ There are 9 main movies (episodes), The Skywalker Saga. The one odd thing is tha
 - The Original Trilogy - Episodes 4, 5, and 6 (1977-1893)
 - The Prequel Trilogy - Episode 1, 2, and 3 (1999-2005)
 - The Sequel Trilogy - Episode 7, 8, and 9 (2015-2019)
+
 ## Where to Start
 Normally we recommend starting by watching the Skywalker Saga in release order. But Episode 4 - A New Hope (1977), while a fantastic move that started the franchise, it can seem a bit dated for the fresh eyes of a modern audience. For that reason, we recommend starting with Rogue One (2016), an immediate prequel to Episode 4. It's a really good modern movie that does not require much prior knowledge to enjoy. From there, we recommend watching the Skywalker Saga movies in release order.
 
@@ -40,4 +42,4 @@ There are a couple other movies and TV show that you can watch from here. See ou
 
 But our recommendation is to watch two of the animated TV shows, The Clone Wars and then Rebels. Don't let the fact that they are animated dissuade you, both are fantastic and many of the characters from those shows are popping up in more recent live-action shows, like The Mandalorian (2019).
 
-There is way more to Star Wars than just movies and TV shows. There are also books and video games that tell fantastic stories within the Star Wars universe that you starting to invest yourself in. See our [Canon Guide](/guides/canon-guide/) to see a full list of canon stores and where they takeplace in the Star Wars timeline.
+<!-- There is way more to Star Wars than just movies and TV shows. There are also books and video games that tell fantastic stories within the Star Wars universe that you starting to invest yourself in. See our [Canon Guide](/guides/canon-guide/) to see a full list of canon stores and where they take place in the Star Wars timeline. -->

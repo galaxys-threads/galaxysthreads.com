@@ -45,10 +45,15 @@ a:hover .title {
     transform: scale(1.05);
 }
 
-
-
 #footer,
 #body {
     max-width: 768px;
     margin: auto;
+}
+
+.spoiler-warning {
+    background: red;
+    text-align: center;
+    padding: 1rem;
+    border: 4px solid white;
 }

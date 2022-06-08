@@ -11,7 +11,7 @@ build-npm:
 watch-hugo: clean build-npm
 	clear
 	@echo "Serving on http://0.0.0.0:2222/"
-	hugo serve -D --bind 0.0.0.0 --port 2222
+	hugo serve --bind 0.0.0.0 --port 2222
 
 watch-npm:
 	npm install
