@@ -31,7 +31,7 @@ export default class Archive {
             const content = contents[i];
             for (const archiveEntry of ArchiveDatabank) {
                 content.innerHTML = content.innerHTML.replaceAll(archiveEntry.matcher, function (foundText: string): string {
-                    return `<a href='${archiveEntry.wookieepedia}'>${foundText}</a>`;
+                    return `<a href='${archiveEntry.wookieepedia}' target="_blank">${foundText}</a>`;
                 });
             }
         }
