@@ -1,6 +1,6 @@
 ---
 title: "Obi-Wan Kenobi Part 3 Review"
-date: 2022-01-03T00:00:00Z
+date: 2022-06-01T00:00:00Z
 description: A review of Part 3 of the Obi-Wan Kenobi series on Disney+.
 cover: /assets/images/cover-kenobi-part3.webp
 attribution: Lucasfilm Ltd.
@@ -36,3 +36,5 @@ I did notice Reva's face during some of this, she didn't seems to care for it. M
 The ice cold rage of holding Kenobi over the flames just to make him suffer was insane! Vader's anger at Kenobi has been festering for 10 years, and it shows.
 
 The escape was a little silly. Vader couldn't jump over the flames? Or go around? Vader must have wanted Kenobi to get away. We will have to see if that is explained in the rest of the series.
+
+> Next Review: [Obi-Wan Kenobi Part 4 Review](/reviews/obi-wan-kenobi-part4/)

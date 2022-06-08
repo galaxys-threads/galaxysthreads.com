@@ -1,6 +1,6 @@
 ---
 title: "Obi-Wan Kenobi Part 1 Review"
-date: 2022-01-01T00:00:00Z
+date: 2022-05-27T00:00:00Z
 description: A review of Part 1 of the Obi-Wan Kenobi series on Disney+.
 cover: /assets/images/cover-kenobi-part1.webp
 attribution: Lucasfilm Ltd.
