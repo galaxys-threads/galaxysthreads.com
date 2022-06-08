@@ -6,6 +6,8 @@ cover: /assets/images/cover-kenobi-part2.webp
 attribution: Lucasfilm Ltd.
 ---
 
+> Previous Review: [Obi-Wan Kenobi Part 1 Review](/reviews/obi-wan-kenobi-part1/)
+
 Another really strong episode. I feel like the stage is set, and we are ready to get into the meat of this show starting with Part 3.
 
 {{< spoiler-warning >}}
@@ -29,3 +31,5 @@ I'm happy with the way Obi-Wan found out that Anakin is still alive. Reva "spill
 
 ## Grand Inquisitor
 I guess he can not be dead? I'm assuming that he is the same Grand Inquisitor we see in Rebels. Maybe not?
+
+> Next Review: [Obi-Wan Kenobi Part 3 Review](/reviews/obi-wan-kenobi-part3/)

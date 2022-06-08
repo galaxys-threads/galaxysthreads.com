@@ -4,7 +4,15 @@
 <meta name="viewport" content="width=device-width">
 
 <!-- SEO -->
-<title>Galaxy‘s Threads</title>
+
+<title>
+    {{ with .Title }}
+        {{ if ne . "Galaxy's Threads" }}
+            {{ . }} -
+        {{ end }}
+    {{ end }}
+    Galaxy‘s Threads
+</title>
 {{ if ne .Description "" }}
     <meta name="description" content="{{ .Description }}">
 {{ end }}

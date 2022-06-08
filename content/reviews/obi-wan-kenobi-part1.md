@@ -32,3 +32,5 @@ Vivien Lyra Blair would be great in a Young Leia spinoff series.
 
 ## Reva
 It's not star wars unless someone looses a hand!
+
+> Next Review: [Obi-Wan Kenobi Part 2 Review](/reviews/obi-wan-kenobi-part2/)

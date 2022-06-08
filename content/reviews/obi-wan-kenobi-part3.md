@@ -6,6 +6,8 @@ cover: /assets/images/cover-kenobi-part3.webp
 attribution: Lucasfilm Ltd.
 ---
 
+> Previous Review: [Obi-Wan Kenobi Part 2 Review](/reviews/obi-wan-kenobi-part2/)
+
 This has been my favorite episode so far. It was also some of the most brutally violent Star Wars we have gotten since the fight on Mustafar in Revenge of the Sith.
 
 {{< spoiler-warning >}}
