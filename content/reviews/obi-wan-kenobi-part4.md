@@ -14,7 +14,7 @@ attribution: Lucasfilm Ltd.
 I thought it was pretty cool to see the symbolism of Vader and Kenobi both needing Bacta tanks to treat their burns.
 
 ## Fortress Inquisitorius
-I love how much they pulled from Jedi: Fallen Order for this episode! I feel like I was rewarded for having played the game first. Purge troopers, swimming under the fortress, and the tunnel glass breaking were the main things that I noticed.
+I love how much they pulled from Jedi: Fallen Order for this episode! I feel like I was rewarded for having played the game first. Purge Troopers, swimming under the fortress, and the tunnel glass breaking were the main things that I noticed.
 
 ## Tera Sinube
 Seeing the tombs of captured Jedi was an unexpected addition to the story of the Inquisitors. I do wonder if they are actually all dead or something else. Maybe they are "frozen" for future genetic retrieval (cloning), or maybe they are being used as bait to lure other Jedi there, something like what they did with Luminara Unduli in Rebels, but this feels different. Seeing the youngling calls back to the Order 66 scene from Part 1 of this series, and  Tera Sinube was a nice reference to the Clone Wars episode where he helped Ahsoka retrieve her stolen lightsaber.
