@@ -39,3 +39,11 @@
 .content .rdt_Table .disneyPlusLink {
     margin-left: .5rem;
 }
+
+.content .rdt_TableCol_Sortable div:first-child,
+.content .rdt_TableCell div:first-child {
+    overflow: auto;
+    text-overflow: unset;
+    white-space: unset;
+
+}
