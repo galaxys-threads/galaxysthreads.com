@@ -5,5 +5,3 @@ cover: /assets/images/covers/cover-canon-guide.webp
 attribution: Lucasfilm Ltd.
 weight: -99
 ---
-
-{{< entry-point "canon-guide" >}}
