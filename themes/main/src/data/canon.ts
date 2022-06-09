@@ -32,7 +32,6 @@ export function formatTimeline(timeline: number): string {
         return `${timeline} ABY`
     }
 
-
     return "0 BBY / 0 ABY"
 }
 
