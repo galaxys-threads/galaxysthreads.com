@@ -25,12 +25,6 @@ menu:
       weight: 2
       params:
         class: fa-twitter
-    - name: TikTok
-      title: TikTok
-      url: https://www.tiktok.com/@GalaxysThreads
-      weight: 3
-      params:
-        class: fa-tiktok
     - name: Discord
       title: Discord
       url: https://discord.gg/aEV6SQ33uy
