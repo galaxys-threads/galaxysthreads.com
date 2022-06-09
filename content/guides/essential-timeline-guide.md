@@ -1,7 +1,7 @@
 ---
 title: "Essential Timeline Guide"
 date: 2022-06-07T00:00:00Z
-cover: /assets/images/cover-timeline-guide.webp
+cover: /assets/images/covers/cover-timeline-guide.webp
 description: The Essential Timeline Guide to help you keep track of all of the Canon Star Wars Movies and TV Shows
 attribution: Lucasfilm Ltd.
 weight: -100
@@ -9,8 +9,6 @@ weight: -100
 
 ## The Battle of Yavin
 All events in the Star Wars galaxy take place either "before the Battle of Yavin" (BBY) or "after the Battle of Yavin" (ABY). So what was the Battle of Yavin? It was when Luke Skywalker blew up the first Death Star in A New Hope (1977), the very first Star Wars movie. It's appropriate that we still use this event as a reference point for other Star Wars content because it's the movie that changed our world forever.
-
-<!-- {{< disney-plus "movies/star-wars-a-new-hope-episode-iv/12fVeZxD2fWJ" >}} {{< wookieepedia "Star_Wars:_Episode_IV_A_New_Hope" >}} -->
 
 | Era | Title | Year |
 | --- | ----- | ---- |

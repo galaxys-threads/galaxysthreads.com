@@ -2,7 +2,7 @@
 title: "Introducing younger Kids to Star Wars"
 date: 2022-01-01T00:00:00Z
 description: A guide on how to introduce younger kids to Star Wars.
-cover: /assets/images/cover-kids-intro.webp
+cover: /assets/images/covers/cover-kids-intro.webp
 attribution: Lucasfilm Ltd.
 ---
 

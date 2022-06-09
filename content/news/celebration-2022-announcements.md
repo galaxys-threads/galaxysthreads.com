@@ -2,7 +2,7 @@
 title: "Celebration 2022 Announcements"
 date: 2022-01-01T00:00:00Z
 description: Get a TLDR of all the major announcements that came from Celebration 2022.
-cover: /assets/images/cover-celebration-2022.webp
+cover: /assets/images/covers/cover-celebration-2022.webp
 attribution: Lucasfilm Ltd.
 ---
 

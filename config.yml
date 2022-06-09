@@ -4,7 +4,7 @@ theme: 'main'
 enableGitInfo: true
 
 params:
-  default_cover: /assets/images/cover-default.webp
+  default_cover: /assets/images/covers/cover-default.webp
   default_attribution: Lucasfilm Ltd.
   homeSectionTitles:
     - Guides

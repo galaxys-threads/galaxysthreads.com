@@ -2,7 +2,7 @@
 title: "Getting Started With Star Wars"
 date: 2022-01-01T00:00:00Z
 description: Your guide to diving into the Star Wars universe!
-cover: /assets/images/cover-getting-started.webp
+cover: /assets/images/covers/cover-getting-started.webp
 attribution: Lucasfilm Ltd.
 ---
 

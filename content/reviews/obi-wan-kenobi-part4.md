@@ -2,7 +2,7 @@
 title: "Obi-Wan Kenobi Part 4 Review"
 date: 2022-06-08T00:00:00Z
 description: A review of Part 4 of the Obi-Wan Kenobi series on Disney+.
-cover: /assets/images/cover-kenobi-part4.webp
+cover: /assets/images/covers/cover-kenobi-part4.webp
 attribution: Lucasfilm Ltd.
 ---
 
