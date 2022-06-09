@@ -8,6 +8,8 @@
 		{{ block "main" . }}{{ end }}
 		{{ partial "pages/footer.html" . }}
 
+		<script src="{{ (resources.Get "/bundle/app.js" | resources.Fingerprint).RelPermalink }}"></script>
+
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-PRM8157LTQ"></script>
 		<script>

@@ -1,0 +1,41 @@
+.content .rdt_Table,
+.content .rdt_TableRow,
+.content .rdt_TableCol,
+.content .rdt_TableCol_Sortable,
+.content .rdt_TableCell,
+.content .rdt_TableHeader,
+.content .rdt_TableFooter,
+.content .rdt_TableHead,
+.content .rdt_TableHeadRow,
+.content .rdt_TableBody,
+.content .rdt_ExpanderRow {
+    background: none;
+    color: var(--foreground);
+    font-family: var(--font-family-body);
+    font-size: 1rem;
+}
+
+
+.content .rdt_TableCol,
+.content .rdt_TableCol_Sortable {
+    color: var(--foreground-accent);
+    font-family: var(--font-family-header);
+    text-transform: uppercase;
+
+}
+
+.content .rdt_Table {
+    border-top: var(--border);
+    border-left: var(--border);
+
+}
+.content .rdt_TableCol,
+.content .rdt_TableCell {
+    border-bottom: var(--border);
+    padding: 0 .5rem;
+    border-right: var(--border);
+}
+
+.content .rdt_Table .disneyPlusLink {
+    margin-left: .5rem;
+}
