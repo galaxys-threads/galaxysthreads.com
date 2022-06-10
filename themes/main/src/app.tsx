@@ -2,6 +2,7 @@ import Archive from "./scripts/archive";
 import EasterEggs from "./scripts/easter-egg"
 import ReactDOM from "react-dom/client";
 import CanonGuide from "./pages/CanonGuide";
+import {disableMobile, isDesktop} from "./scripts/user-agent"
 
 import "./styles/app.css"
 
@@ -17,8 +18,12 @@ const apps: App[] = [
     },
 ];
 
+EasterEggs.print();
+if (isDesktop()) {
+    disableMobile()
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-    EasterEggs.print();
     Archive.replace();
 
     // Render the react apps
