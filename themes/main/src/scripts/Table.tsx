@@ -60,7 +60,7 @@ export function Table<T>(props: TableProps<T>) {
             <thead>
                 <tr>
                     {props.columns.map((column, columnIndex) => (
-                        <th onClick={() => handleSortingChange(columnIndex)}>
+                        <th key={columnIndex} onClick={() => handleSortingChange(columnIndex)}>
                             {column.name} {columnIndex === indexSorted &&
                                 (directionSorted === TableSortDirection.ASC ? "⭡" : "⭣")
                             }
@@ -69,10 +69,10 @@ export function Table<T>(props: TableProps<T>) {
                 </tr>
             </thead>
             <tbody>
-                {tableData.map(row => (
-                    <tr>
-                        {props.columns.map(column => (
-                            <td>{column.display(row)}</td>
+                {tableData.map((row, rowIndex) => (
+                    <tr key={rowIndex}>
+                        {props.columns.map((column, columnIndex) => (
+                            <td key={columnIndex}>{column.display(row)}</td>
                         ))}
                     </tr>
                 ))}
