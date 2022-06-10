@@ -1,0 +1,12 @@
+.react-table {
+    overflow-x: scroll;
+}
+
+.react-table table {
+    min-width: 100%;
+}
+
+.react-table th,
+.react-table td {
+    white-space: nowrap;
+}

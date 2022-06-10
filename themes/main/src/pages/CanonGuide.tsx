@@ -38,11 +38,14 @@ const columns: TableColumn<CanonEntry>[] = [
     {
         name: 'Released',
         display: row => row.released.getFullYear(),
+        sortFunction: (a, b) => {
+            return a.released > b.released ? 1 : -1
+        }
     },
 ];
 
 export default function CanonGuide() {
     return <div>
-        <Table data={Canon} columns={columns} />
+        <Table data={Canon} columns={columns} defaultSort={2} />
     </div>
 }

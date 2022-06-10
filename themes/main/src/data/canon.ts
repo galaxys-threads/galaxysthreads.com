@@ -103,7 +103,7 @@ const Canon: CanonEntry[] = [
     {
         name: "The Rise of Skywalker",
         type: CanonType.skywalkerSagaFilm,
-        timeline: 34,
+        timeline: 35,
         released: new Date("2019-12-20"),
         wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Episode_IX_The_Rise_of_Skywalker",
         disneyPlus: "https://www.disneyplus.com/movies/star-wars-the-rise-of-skywalker-episode-ix/5e8JThYwCYgw",
