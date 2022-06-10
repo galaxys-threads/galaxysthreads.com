@@ -1,10 +1,11 @@
-import DataTable, { TableColumn } from 'react-data-table-component';
 
 import Canon, {CanonEntry, formatTimeline} from "../data/canon"
+import { Table,TableColumn } from '../scripts/Table';
+
 const columns: TableColumn<CanonEntry>[] = [
     {
         name: 'Name',
-        cell: row => {
+        display: row => {
             let disneyPlus = <></>
             if (row.disneyPlus) {
                 disneyPlus = <a href={row.disneyPlus} target="_blank" title="Watch on Disney+" className='disneyPlusLink'>
@@ -12,43 +13,36 @@ const columns: TableColumn<CanonEntry>[] = [
                 </a>
             }
 
-            return <div>
+            return <div className="canon-title">
                 <a href={row.wookieepedia} target="_blank" title="View on Wookieepedia">
                     {row.name}
                 </a>
                 {disneyPlus}
             </div>
         },
-        sortable: true,
     },
     {
         name: 'Type',
-        selector: row => row.type,
-        sortable: true,
+        display: row => row.type,
     },
 
     {
         name: 'Timeline',
-        cell: (row) => {
+        display: (row) => {
             return formatTimeline(row.timeline)
         },
-        sortable: true,
         sortFunction: (rowA, rowB) => {
             return rowA.timeline > rowB.timeline ? 1 : -1
         },
     },
     {
         name: 'Released',
-        selector: row => row.released.getFullYear(),
-        sortable: true,
+        display: row => row.released.getFullYear(),
     },
 ];
 
 export default function CanonGuide() {
     return <div>
-        <DataTable
-            columns={columns}
-            data={Canon}
-        />
+        <Table data={Canon} columns={columns} />
     </div>
 }

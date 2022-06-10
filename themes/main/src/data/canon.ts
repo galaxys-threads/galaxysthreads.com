@@ -25,17 +25,41 @@ export interface CanonEntry {
 
 export function formatTimeline(timeline: number): string {
     if (timeline < 0) {
-        return `${timeline * -1} BBY`
+        return `${Math.ceil(timeline) * -1} BBY`
     }
 
     if (timeline > 0) {
-        return `${timeline} ABY`
+        return `${Math.floor(timeline)} ABY`
     }
 
     return "0 BBY / 0 ABY"
 }
 
 const Canon: CanonEntry[] = [
+    {
+        name: "The Phantom Menace",
+        type: CanonType.skywalkerSagaFilm,
+        timeline: -32,
+        released: new Date("1999-05-19"),
+        wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Episode_I_The_Phantom_Menace",
+        disneyPlus: "https://www.disneyplus.com/movies/star-wars-the-phantom-menace-episode-i/2ezYynkgW1AH",
+    },
+    {
+        name: "Attack of the Clones",
+        type: CanonType.skywalkerSagaFilm,
+        timeline: -22,
+        released: new Date("2002-05-16"),
+        wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Episode_II_Attack_of_the_Clones",
+        disneyPlus: "https://www.disneyplus.com/movies/star-wars-attack-of-the-clones-episode-ii/mgpYHGnzZW6N",
+    },
+    {
+        name: "Revenge of the Sith",
+        type: CanonType.skywalkerSagaFilm,
+        timeline: -19,
+        released: new Date("1999-05-19"),
+        wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Episode_III_Revenge_of_the_Sith",
+        disneyPlus: "https://www.disneyplus.com/movies/star-wars-revenge-of-the-sith-episode-iii/4WvbqLFumNvi",
+    },
     {
         name: "A New Hope",
         type: CanonType.skywalkerSagaFilm,
@@ -59,6 +83,30 @@ const Canon: CanonEntry[] = [
         released: new Date("1983-05-25"),
         wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Episode_VI_Return_of_the_Jedi",
         disneyPlus: "https://www.disneyplus.com/movies/star-wars-return-of-the-jedi-episode-vi/6QGKo5mjDBS8",
+    },
+    {
+        name: "The Force Awakens",
+        type: CanonType.skywalkerSagaFilm,
+        timeline: 34,
+        released: new Date("2015-12-18"),
+        wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Episode_VII_The_Force_Awakens",
+        disneyPlus: "https://www.disneyplus.com/movies/star-wars-the-force-awakens-episode-vii/1LEKJPDPeMr7",
+    },
+    {
+        name: "The Last Jedi",
+        type: CanonType.skywalkerSagaFilm,
+        timeline: 34.5,
+        released: new Date("2017-12-15"),
+        wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Episode_VIII_The_Last_Jedi",
+        disneyPlus: "https://www.disneyplus.com/movies/star-wars-the-last-jedi-episode-viii/1nCWFK1pmAI0",
+    },
+    {
+        name: "The Rise of Skywalker",
+        type: CanonType.skywalkerSagaFilm,
+        timeline: 34,
+        released: new Date("2019-12-20"),
+        wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Episode_IX_The_Rise_of_Skywalker",
+        disneyPlus: "https://www.disneyplus.com/movies/star-wars-the-rise-of-skywalker-episode-ix/5e8JThYwCYgw",
     },
 ];
 
