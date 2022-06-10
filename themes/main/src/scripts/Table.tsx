@@ -12,7 +12,7 @@ export interface TableColumn<T> {
     sortFunction?: ColumnSortFunction<T>;
 }
 
-enum TableSortDirection {
+export enum TableSortDirection {
     ASC = "asc",
     DESC = "desc",
 }
@@ -37,7 +37,10 @@ export function Table<T>(props: TableProps<T>) {
             newSortDirection = directionSorted === TableSortDirection.ASC ? TableSortDirection.DESC : TableSortDirection.ASC
         }
 
+        // Sort the results
         let sorted = [...tableData].sort(props.columns[columnIndex].sortFunction)
+
+        // Flip the sort if it's asc
         if (newSortDirection === TableSortDirection.ASC) {
             sorted = sorted.reverse()
         }
