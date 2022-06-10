@@ -63,10 +63,13 @@ export function Table<T>(props: TableProps<T>) {
             <thead>
                 <tr>
                     {props.columns.map((column, columnIndex) => (
-                        <th key={columnIndex} onClick={() => handleSortingChange(columnIndex)}>
-                            {column.name} {columnIndex === indexSorted &&
-                                (directionSorted === TableSortDirection.ASC ? "⭡" : "⭣")
+                        <th key={columnIndex} onClick={() => handleSortingChange(columnIndex)} className={column.sortFunction ?"sortable" : ""}>
+                            {columnIndex === indexSorted &&
+                                <span className="sort-indicator">
+                                    { directionSorted === TableSortDirection.ASC ? "⭡" : "⭣" }
+                                </span>
                             }
+                            {column.name}
                         </th>
                     ))}
                 </tr>

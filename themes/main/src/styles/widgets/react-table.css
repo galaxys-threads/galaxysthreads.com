@@ -10,3 +10,23 @@
 .react-table td {
     white-space: nowrap;
 }
+
+.react-table th.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.react-table .sortable {
+    padding-right: 1rem;
+    position: relative;
+}
+
+.react-table .sortable .sort-indicator {
+    position: absolute;
+    padding: 0 0.5rem;
+    right: 0;
+}
+
+.react-table .disney-plus-link {
+    padding-left: 0.25rem;
+}

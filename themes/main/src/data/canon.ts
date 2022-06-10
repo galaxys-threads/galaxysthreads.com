@@ -24,6 +24,10 @@ export interface CanonEntry {
 }
 
 export function formatTimeline(timeline: number): string {
+    if (timeline < 1 && timeline > -1) {
+        timeline = 0
+    }
+
     if (timeline < 0) {
         return `${Math.ceil(timeline) * -1} BBY`
     }
@@ -107,6 +111,14 @@ const Canon: CanonEntry[] = [
         released: new Date("2019-12-20"),
         wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Episode_IX_The_Rise_of_Skywalker",
         disneyPlus: "https://www.disneyplus.com/movies/star-wars-the-rise-of-skywalker-episode-ix/5e8JThYwCYgw",
+    },
+    {
+        name: "Rogue One",
+        type: CanonType.film,
+        timeline: -0.5,
+        released: new Date("2016-12-15"),
+        wookieepedia: "https://starwars.fandom.com/wiki/Rogue_One:_A_Star_Wars_Story",
+        disneyPlus: "https://www.disneyplus.com/movies/rogue-one-a-star-wars-story/14CV6eSbygOA",
     },
 ];
 

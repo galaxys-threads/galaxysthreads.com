@@ -8,7 +8,7 @@ const columns: TableColumn<CanonEntry>[] = [
         display: row => {
             let disneyPlus = <></>
             if (row.disneyPlus) {
-                disneyPlus = <a href={row.disneyPlus} target="_blank" title="Watch on Disney+" className='disneyPlusLink'>
+                disneyPlus = <a href={row.disneyPlus} target="_blank" title="Watch on Disney+" className='disney-plus-link'>
                     <i className="fa-solid fa-circle-play"></i>
                 </a>
             }
