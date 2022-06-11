@@ -63,6 +63,7 @@ const columns: TableColumn<CanonEntry>[] = [
 ];
 
 export default function CanonGuide() {
+    const [showBooks, setShowBooks] = useState(false);
     const [showGames, setShowGames] = useState(true);
     const [showShows, setShowShows] = useState(true);
     const [showFilms, setShowFilms] = useState(true);
@@ -108,6 +109,9 @@ export default function CanonGuide() {
                 if (item.type == CanonType.film && !showFilms) {
                     return false
                 }
+                if (item.type == CanonType.book && !showBooks) {
+                    return false
+                }
 
                 if (item.type == CanonType.skywalkerSagaFilm && !showSaga) {
                     return false
@@ -124,6 +128,7 @@ export default function CanonGuide() {
         applyFilters()
     }, [
         showGames,
+        showBooks,
         showShows,
         showFilms,
         showSaga,
@@ -135,58 +140,50 @@ export default function CanonGuide() {
     ])
 
     return <div>
-        <div>
-            <label>
-                <input type="checkbox" checked={showGames} onChange={() => setShowGames(!showGames)} />
-                Games
-            </label>
-        </div>
-        <div>
-            <label>
-                <input type="checkbox" checked={showShows} onChange={() => setShowShows(!showShows)} />
-                Shows
-            </label>
-        </div>
-        <div>
-            <label>
-                <input type="checkbox" checked={showFilms} onChange={() => setShowFilms(!showFilms)} />
-                Films
-            </label>
-        </div>
-        <div>
-            <label>
-                <input type="checkbox" checked={showSaga} onChange={() => setShowSaga(!showSaga)} />
-                Saga
-            </label>
-        </div>
-        <div>
-            <label>
-                <input type="checkbox" checked={showEmpire} onChange={() => setShowEmpire(!showEmpire)} />
-                Empire
-            </label>
-        </div>
-        <div>
-            <label>
-                <input type="checkbox" checked={showRepublic} onChange={() => setShowRepublic(!showRepublic)} />
-                Republic
-            </label>
-        </div>
-        <div>
-            <label>
-                <input type="checkbox" checked={showFirstOrder} onChange={() => setShowFirstOrder(!showFirstOrder)} />
-                First Order
-            </label>
-        </div>
-        <div>
-            <label>
-                <input type="checkbox" checked={showNewRepublic} onChange={() => setShowNewRepublic(!showNewRepublic)} />
-                New Republic
-            </label>
-        </div>
-        <div>
+        <div className="filters">
+            <h4>Eras</h4>
             <label>
                 <input type="checkbox" checked={showHighRepublic} onChange={() => setShowHighRepublic(!showHighRepublic)} />
-                High Republic
+                {CanonEra.highRepublic}
+            </label>
+            <label>
+                <input type="checkbox" checked={showRepublic} onChange={() => setShowRepublic(!showRepublic)} />
+                {CanonEra.republic}
+            </label>
+            <label>
+                <input type="checkbox" checked={showEmpire} onChange={() => setShowEmpire(!showEmpire)} />
+                {CanonEra.empire}
+            </label>
+            <label>
+                <input type="checkbox" checked={showNewRepublic} onChange={() => setShowNewRepublic(!showNewRepublic)} />
+                {CanonEra.newRepublic}
+            </label>
+            <label>
+                <input type="checkbox" checked={showFirstOrder} onChange={() => setShowFirstOrder(!showFirstOrder)} />
+                {CanonEra.firstOrder}
+            </label>
+        </div>
+        <div className="filters">
+            <h4>Types</h4>
+            <label>
+                <input type="checkbox" checked={showSaga} onChange={() => setShowSaga(!showSaga)} />
+                {CanonType.skywalkerSagaFilm}
+            </label>
+            <label>
+                <input type="checkbox" checked={showFilms} onChange={() => setShowFilms(!showFilms)} />
+                {CanonType.film}
+            </label>
+            <label>
+                <input type="checkbox" checked={showShows} onChange={() => setShowShows(!showShows)} />
+                {CanonType.show}
+            </label>
+            <label>
+                <input type="checkbox" checked={showGames} onChange={() => setShowGames(!showGames)} />
+                {CanonType.game}
+            </label>
+            <label>
+                <input type="checkbox" checked={showBooks} onChange={() => setShowBooks(!showBooks)} />
+                {CanonType.book}
             </label>
         </div>
         <Table data={tableData} columns={columns} defaultSort={1} />

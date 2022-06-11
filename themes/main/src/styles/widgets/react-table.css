@@ -40,3 +40,19 @@
 .react-table tbody tr:nth-child(even) {
     background-color: rgba(255,255,255,.075);
 }
+
+.filters {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.filters label {
+    padding: .5rem 0;
+    display: block;
+}
+
+.filters label input {
+    margin-right: .5rem;
+}

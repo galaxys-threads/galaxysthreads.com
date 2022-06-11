@@ -3,15 +3,15 @@ export enum CanonType {
     film = "Film",
     game = "Video Game",
     show = "TV Show",
-    book = "Novel",
+    book = "Book",
 }
 
 export enum CanonEra {
-    highRepublic = "The High Republic",
-    republic = "The Republic",
-    empire = "The Empire",
-    newRepublic = "The New Republic",
-    firstOrder = "The First Order",
+    highRepublic = "High Republic",
+    republic = "Republic",
+    empire = "Empire",
+    newRepublic = "New Republic",
+    firstOrder = "First Order",
 }
 
 export interface CanonEntry {
