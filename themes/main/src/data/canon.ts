@@ -343,7 +343,6 @@ const Canon: CanonEntry[] = [
         released: new Date('2020-11-19'),
         wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Tales_from_the_Galaxy%27s_Edge",
     },
-
 ];
 
 export default Canon
