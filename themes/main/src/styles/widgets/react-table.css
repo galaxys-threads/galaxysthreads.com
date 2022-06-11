@@ -17,7 +17,8 @@
 }
 
 .react-table .sortable {
-    padding-right: 1rem;
+    padding-right: 2rem;
+    text-decoration: underline;
     position: relative;
 }
 
@@ -29,4 +30,8 @@
 
 .react-table .disney-plus-link {
     padding-left: 0.25rem;
+}
+
+.react-table tbody tr:nth-child(even) {
+    background-color: rgba(255,255,255,.125);
 }
