@@ -17,6 +17,7 @@ export enum CanonEra {
 export interface CanonEntry {
     name: string,
     type: CanonType,
+    era: CanonEra,
     disneyPlus?: string,
     wookieepedia: string,
     released: Date|null,
@@ -42,6 +43,7 @@ export function formatTimeline(timeline: number): string {
 const Canon: CanonEntry[] = [
     {
         name: "The Phantom Menace",
+        era: CanonEra.republic,
         type: CanonType.skywalkerSagaFilm,
         timeline: -32,
         released: new Date("1999-05-19"),
@@ -50,6 +52,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "Attack of the Clones",
+        era: CanonEra.republic,
         type: CanonType.skywalkerSagaFilm,
         timeline: -22,
         released: new Date("2002-05-16"),
@@ -58,6 +61,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "Revenge of the Sith",
+        era: CanonEra.republic,
         type: CanonType.skywalkerSagaFilm,
         timeline: -19.9,
         released: new Date("1999-05-19"),
@@ -66,6 +70,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "A New Hope",
+        era: CanonEra.empire,
         type: CanonType.skywalkerSagaFilm,
         timeline: 0,
         released: new Date("1977-05-25"),
@@ -74,6 +79,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "The Empire Strikes Back",
+        era: CanonEra.empire,
         type: CanonType.skywalkerSagaFilm,
         timeline: 3,
         released: new Date("1980-05-12"),
@@ -82,6 +88,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "Return of the Jedi",
+        era: CanonEra.empire,
         type: CanonType.skywalkerSagaFilm,
         timeline: 4,
         released: new Date("1983-05-25"),
@@ -90,6 +97,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "The Force Awakens",
+        era: CanonEra.firstOrder,
         type: CanonType.skywalkerSagaFilm,
         timeline: 34.1,
         released: new Date("2015-12-18"),
@@ -98,6 +106,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "The Last Jedi",
+        era: CanonEra.firstOrder,
         type: CanonType.skywalkerSagaFilm,
         timeline: 34.5,
         released: new Date("2017-12-15"),
@@ -106,6 +115,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "The Rise of Skywalker",
+        era: CanonEra.firstOrder,
         type: CanonType.skywalkerSagaFilm,
         timeline: 35,
         released: new Date("2019-12-20"),
@@ -114,6 +124,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "Rogue One",
+        era: CanonEra.empire,
         type: CanonType.film,
         timeline: -0.5,
         released: new Date("2016-12-15"),
@@ -122,6 +133,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "Solo",
+        era: CanonEra.empire,
         type: CanonType.film,
         timeline: -10,
         released: new Date("2018-05-25"),
@@ -130,6 +142,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "The Clone Wars",
+        era: CanonEra.republic,
         type: CanonType.film,
         timeline: -22,
         released: new Date("2008-08-14"),
@@ -138,6 +151,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "The Mandalorian",
+        era: CanonEra.newRepublic,
         type: CanonType.show,
         timeline: 9,
         released: new Date("2019-11-12"),
@@ -146,6 +160,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "The Book of Boba Fett",
+        era: CanonEra.newRepublic,
         type: CanonType.show,
         timeline: 9.5,
         released: new Date("2021-12-29"),
@@ -154,6 +169,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "Obi-Wan Kenobi",
+        era: CanonEra.empire,
         type: CanonType.show,
         timeline: -9,
         released: new Date("2022-05-27"),
@@ -162,6 +178,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "Andor",
+        era: CanonEra.empire,
         type: CanonType.show,
         timeline: -5.1,
         released: new Date("2022-08-31"),
@@ -169,6 +186,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "Ahsoka",
+        era: CanonEra.newRepublic,
         type: CanonType.show,
         timeline: 9.7,
         released: null,
@@ -176,6 +194,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "The Acolyte",
+        era: CanonEra.highRepublic,
         type: CanonType.show,
         timeline: -132,
         released: null,
@@ -183,6 +202,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "Skeleton Crew",
+        era: CanonEra.newRepublic,
         type: CanonType.show,
         timeline: 9.8,
         released: null,
@@ -190,6 +210,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "The Clone Wars",
+        era: CanonEra.republic,
         type: CanonType.show,
         timeline: -22.1,
         released: new Date("2008-10-03"),
@@ -198,6 +219,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "Rebels",
+        era: CanonEra.empire,
         type: CanonType.show,
         timeline: -5,
         released: new Date("2014-10-13"),
@@ -206,6 +228,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "Resistance",
+        era: CanonEra.firstOrder,
         type: CanonType.show,
         timeline: 34,
         released: new Date("2018-10-07"),
@@ -214,6 +237,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "The Bad Batch",
+        era: CanonEra.empire,
         type: CanonType.show,
         timeline: -19.5,
         released: new Date("2021-05-04"),

@@ -25,7 +25,10 @@ const columns: TableColumn<CanonEntry>[] = [
         name: 'Type',
         display: row => row.type,
     },
-
+    {
+        name: 'Era',
+        display: row => row.era,
+    },
     {
         name: 'Timeline',
         display: (row) => {
