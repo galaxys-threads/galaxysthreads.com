@@ -244,6 +244,55 @@ const Canon: CanonEntry[] = [
         wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_The_Bad_Batch",
         disneyPlus: "https://www.disneyplus.com/series/star-wars-the-bad-batch/4gMliqFxxqXC",
     },
+    {
+        name: "Jedi: Fallen Order",
+        era: CanonEra.empire,
+        type: CanonType.game,
+        timeline: -14,
+        released: new Date("2019-11-15"),
+        wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars_Jedi:_Fallen_Order",
+    },
+    {
+        name: "Jedi: Survivor",
+        era: CanonEra.empire,
+        type: CanonType.game,
+        timeline: -9,
+        released: null,
+        wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars_Jedi:_Survivor",
+    },
+    {
+        name: "Squadrons",
+        era: CanonEra.newRepublic,
+        type: CanonType.game,
+        timeline: 4.9,
+        released: new Date('2020-10-02'),
+        wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Squadrons",
+    },
+    {
+        name: "Battlefront II",
+        era: CanonEra.empire,
+        type: CanonType.game,
+        timeline: 4.5,
+        released: new Date('2017-11-09'),
+        wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars_Battlefront_II",
+    },
+    {
+        name: "Vader Immortal",
+        era: CanonEra.empire,
+        type: CanonType.game,
+        timeline: 2,
+        released: new Date('2019-05-21'),
+        wookieepedia: "https://starwars.fandom.com/wiki/Vader_Immortal:_A_Star_Wars_VR_Series_%E2%80%93_Episode_I",
+    },
+    {
+        name: "Tales from the Galaxy's Edge",
+        era: CanonEra.firstOrder,
+        type: CanonType.game,
+        timeline: 34.6,
+        released: new Date('2020-11-19'),
+        wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Tales_from_the_Galaxy%27s_Edge",
+    },
+
 ];
 
 export default Canon
