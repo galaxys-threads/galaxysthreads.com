@@ -42,15 +42,17 @@
 }
 
 .filters {
-    display: inline-block;
+    /* display: inline-block; */
     vertical-align: top;
     padding-right: 1rem;
     padding-bottom: 1rem;
 }
 
 .filters label {
-    padding: .5rem 0;
-    display: block;
+    white-space: nowrap;
+    padding-bottom: .5rem;
+    padding-right: .5rem;
+    display: inline-block;
 }
 
 .filters label input {
