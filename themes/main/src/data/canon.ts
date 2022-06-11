@@ -40,6 +40,57 @@ export function formatTimeline(timeline: number): string {
     return "0 BBY / 0 ABY"
 }
 
+// Light of the Jedi
+// Into the Dark
+// The Rising Storm
+// Out Of The Shadows
+// Tempest Runner
+// The Fallen Star
+// Midnight Horizon
+// Master & Apprentice
+// Queen's Peril
+// Queen's Shadow
+// Dooku: Jedi Lost
+// Dark Disciple
+// Thrawn: Ascendancy: Chaos Rising
+// Thrawn Ascendancy: Greater Good
+// Thrawn Ascendancy: Lesser Evil
+// Ahsoka
+// Catalyst
+// Lords of the Sith
+// Tarkin
+// Most Wanted
+// A New Dawn
+// Leia: Princess of Alderaan
+// Thrawn
+// Thrawn: Alliances
+// Thrawn: Treason
+// Guardians of the Whills
+// Rebel Rising
+// Smuggler's Run
+// Heir to the Jedi
+// The Weapon of a Jedi
+// Moving Target
+// Alphabet Squadron
+// Aftermath
+// Alphabet Squadron: Shadow Fall
+// Aftermath: Life Debt
+// Aftermath: Empire's End
+// Alphabet Squadron: Victory's Price
+// Lost Stars
+// Last Shot
+// Poe Dameron: Free Fall
+// Bloodline
+// Force Collector
+// Phasma
+// Tales from a Galaxy Far, Far Away: Aliens
+// Cobalt Squadron
+// Resistance Reborn
+// Spark of the Resistance
+// Galaxy’s Edge: Black Spire
+// Galaxy’s Edge: A Crash of Fate
+
+
 const Canon: CanonEntry[] = [
     {
         name: "The Phantom Menace",
@@ -280,7 +331,7 @@ const Canon: CanonEntry[] = [
         name: "Vader Immortal",
         era: CanonEra.empire,
         type: CanonType.game,
-        timeline: 2,
+        timeline: -2,
         released: new Date('2019-05-21'),
         wookieepedia: "https://starwars.fandom.com/wiki/Vader_Immortal:_A_Star_Wars_VR_Series_%E2%80%93_Episode_I",
     },

@@ -11,6 +11,11 @@
     white-space: nowrap;
 }
 
+.react-table th {
+    text-transform: uppercase;
+    font-family: var(--font-family-header);
+}
+
 .react-table th.sortable {
     cursor: pointer;
     user-select: none;

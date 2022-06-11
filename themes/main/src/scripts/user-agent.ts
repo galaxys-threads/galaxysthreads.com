@@ -17,5 +17,5 @@ export function isDesktop(): boolean {
 }
 
 export function disableMobile(): void {
-    document.getElementsByTagName('meta')['viewport'].content = 'min-width: 980px;';
+    document.getElementsByTagName('meta')['viewport'].content = '';
 }
