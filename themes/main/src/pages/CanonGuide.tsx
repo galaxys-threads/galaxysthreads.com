@@ -37,9 +37,22 @@ const columns: TableColumn<CanonEntry>[] = [
     },
     {
         name: 'Released',
-        display: row => row.released.getFullYear(),
+        display: row => {
+            if (!row.released) {
+                return "TDB"
+            }
+
+            if (row.released >= new Date()) {
+                return row.released.toLocaleDateString()
+            }
+
+            return row.released.getFullYear()
+        },
         sortFunction: (a, b) => {
-            return a.released > b.released ? 1 : -1
+            let valueA = a.released || new Date("4000-01-01")
+            let valueB = b.released || new Date("4000-01-01")
+
+            return valueA > valueB ? 1 : -1
         }
     },
 ];
