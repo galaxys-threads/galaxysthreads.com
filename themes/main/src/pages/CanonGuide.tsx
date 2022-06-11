@@ -22,14 +22,6 @@ const columns: TableColumn<CanonEntry>[] = [
         },
     },
     {
-        name: 'Type',
-        display: row => row.type,
-    },
-    {
-        name: 'Era',
-        display: row => row.era,
-    },
-    {
         name: 'Timeline',
         display: (row) => {
             return formatTimeline(row.timeline)
@@ -58,10 +50,19 @@ const columns: TableColumn<CanonEntry>[] = [
             return valueA > valueB ? 1 : -1
         }
     },
+    {
+        name: 'Type',
+        display: row => row.type,
+    },
+    {
+        name: 'Era',
+        display: row => row.era,
+    },
+
 ];
 
 export default function CanonGuide() {
     return <div>
-        <Table data={Canon} columns={columns} defaultSort={2} />
+        <Table data={Canon} columns={columns} defaultSort={1} />
     </div>
 }

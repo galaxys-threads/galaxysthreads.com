@@ -1,5 +1,5 @@
 export enum CanonType {
-    skywalkerSagaFilm = "Skywalker Saga Film",
+    skywalkerSagaFilm = "Skywalker Saga",
     film = "Film",
     game = "Video Game",
     show = "TV Show",
