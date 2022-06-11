@@ -321,7 +321,7 @@ const Canon: CanonEntry[] = [
     },
     {
         name: "Battlefront II",
-        era: CanonEra.empire,
+        era: CanonEra.newRepublic,
         type: CanonType.game,
         timeline: 4.5,
         released: new Date('2017-11-09'),
