@@ -1,25 +1,25 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /* For Firefox */
 html {
-    scrollbar-color: var(--middle) var(--background);
+	scrollbar-color: var(--middle) var(--background);
 }
 
 /* For Chrome */
 html::-webkit-scrollbar {
-    width: 8px;
+	width: 8px;
 }
 
 /* For Chrome */
 html::-webkit-scrollbar-thumb {
-    background-color: var(--middle);
+	background-color: var(--middle);
 }
 
 body {
-    /* Always show scrollbar so the page does not jump in size based on the height */
-    overflow-y: scroll;
+	/* Always show scrollbar so the page does not jump in size based on the height */
+	overflow-y: scroll;
 }

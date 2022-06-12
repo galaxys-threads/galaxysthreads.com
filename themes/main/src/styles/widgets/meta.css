@@ -1,10 +1,10 @@
 .meta {
-    text-align: center;
-    margin-bottom: var(--spacing-small);
+	text-align: center;
+	margin-bottom: var(--spacing-small);
 }
 
 .meta .cover {
-    margin-bottom: var(--spacing-small);
-    border-radius: var(--border-radius);
-    overflow: hidden;
+	margin-bottom: var(--spacing-small);
+	border-radius: var(--border-radius);
+	overflow: hidden;
 }

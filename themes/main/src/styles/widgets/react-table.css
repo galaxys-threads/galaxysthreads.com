@@ -1,60 +1,60 @@
 .react-table {
-    overflow-x: scroll;
+	overflow-x: scroll;
 }
 
 .react-table table {
-    min-width: 100%;
+	min-width: 100%;
 }
 
 .react-table th,
 .react-table td {
-    white-space: nowrap;
+	white-space: nowrap;
 }
 
 .react-table th {
-    text-transform: uppercase;
-    font-family: var(--font-family-header);
+	text-transform: uppercase;
+	font-family: var(--font-family-header);
 }
 
 .react-table th.sortable {
-    cursor: pointer;
-    user-select: none;
+	cursor: pointer;
+	user-select: none;
 }
 
 .react-table .sortable {
-    padding-right: 2rem;
-    text-decoration: underline;
-    position: relative;
+	padding-right: 2rem;
+	text-decoration: underline;
+	position: relative;
 }
 
 .react-table .sortable .sort-indicator {
-    position: absolute;
-    padding: 0 0.5rem;
-    right: 0;
+	position: absolute;
+	padding: 0 0.5rem;
+	right: 0;
 }
 
 .react-table .disney-plus-link {
-    padding-left: 0.25rem;
+	padding-left: 0.25rem;
 }
 
 .react-table tbody tr:nth-child(even) {
-    background-color: rgba(255,255,255,.075);
+	background-color: rgba(255, 255, 255, 0.075);
 }
 
 .filters {
-    /* display: inline-block; */
-    vertical-align: top;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
+	/* display: inline-block; */
+	vertical-align: top;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
 }
 
 .filters label {
-    white-space: nowrap;
-    padding-bottom: .5rem;
-    padding-right: .5rem;
-    display: inline-block;
+	white-space: nowrap;
+	padding-bottom: 0.5rem;
+	padding-right: 0.5rem;
+	display: inline-block;
 }
 
 .filters label input {
-    margin-right: .5rem;
+	margin-right: 0.5rem;
 }

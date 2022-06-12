@@ -1,0 +1,3 @@
+*.html
+*.md
+/node_modules/

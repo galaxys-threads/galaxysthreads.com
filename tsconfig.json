@@ -1,21 +1,15 @@
 {
-    "compilerOptions": {
-        "moduleResolution": "node",
-        "lib": [
-            "DOM",
-            "webworker",
-            "es2022"
-        ],
-        "esModuleInterop": true,
-        "strict": true,
-        "jsx": "react-jsx",
-        "target": "ESNext",
-        "module": "ESNext",
-        "baseUrl": ".",
-        "paths": {
-            "~*": [
-                "./*"
-            ]
-        }
-    }
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"lib": ["DOM", "webworker", "es2022"],
+		"esModuleInterop": true,
+		"strict": true,
+		"jsx": "react-jsx",
+		"target": "ESNext",
+		"module": "ESNext",
+		"baseUrl": ".",
+		"paths": {
+			"~*": ["./*"]
+		}
+	}
 }

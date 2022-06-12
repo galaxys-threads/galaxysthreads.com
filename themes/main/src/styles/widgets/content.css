@@ -1,62 +1,62 @@
 .content {
-    margin-bottom: var(--spacing);
+	margin-bottom: var(--spacing);
 }
 
-.content>* {
-    margin-bottom: 1rem;
+.content > * {
+	margin-bottom: 1rem;
 }
 
-.content>*:last-child {
-    margin-bottom: 0;
+.content > *:last-child {
+	margin-bottom: 0;
 }
 
 .content p {
-    line-height: 1.5em;
+	line-height: 1.5em;
 }
 
 .content strong {
-    color: var(--foreground-accent);
+	color: var(--foreground-accent);
 }
 
 .content img {
-    border-radius: 0.5rem;
-    border: var(--border);
-    display: block;
-    margin: auto;
-    max-height: 50vh;
-    max-width: 100%;
+	border-radius: 0.5rem;
+	border: var(--border);
+	display: block;
+	margin: auto;
+	max-height: 50vh;
+	max-width: 100%;
 }
 
 .content blockquote {
-    border-left: var(--border);
-    border-left-width: 2px;
-    padding: 0.5rem 1rem;
+	border-left: var(--border);
+	border-left-width: 2px;
+	padding: 0.5rem 1rem;
 }
 
 .content ul,
 .content ol {
-    margin-left: 1rem;
+	margin-left: 1rem;
 }
 
 .content li {
-    margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .content li:last-child {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .content table {
-    border-collapse: collapse;
+	border-collapse: collapse;
 }
 
 .content table th {
-    color: var(--foreground-accent);
+	color: var(--foreground-accent);
 }
 
 .content table th,
 .content table td {
-    text-align: left;
-    border: var(--border);
-    padding: .5rem;
+	text-align: left;
+	border: var(--border);
+	padding: 0.5rem;
 }
