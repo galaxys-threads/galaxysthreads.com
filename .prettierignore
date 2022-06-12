@@ -1,3 +1,4 @@
 *.html
 *.md
 /node_modules/
+/themes/main/assets/bundle/

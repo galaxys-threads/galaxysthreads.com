@@ -11,6 +11,9 @@
 	},
 	"scripts": {
 		"build": "parcel build --no-cache",
+		"test": "jest",
+		"fix": "prettier --write .",
+		"lint": "prettier --check .",
 		"watch": "parcel watch --no-cache"
 	},
 	"devDependencies": {
