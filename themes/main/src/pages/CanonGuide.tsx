@@ -40,12 +40,14 @@ const columns: TableColumn<CanonEntry>[] = [
 			if (!row.released) {
 				return 'TDB';
 			}
-
+			let label = row.released.getFullYear().toString()
 			if (row.released >= new Date()) {
-				return row.released.toLocaleDateString();
+				label = row.released.toLocaleDateString();
 			}
 
-			return row.released.getFullYear();
+			return <span title={row.released.toLocaleDateString()}>
+				{label}
+			</span>;
 		},
 		sortFunction: (a, b) => {
 			let valueA = a.released || new Date('4000-01-01');

@@ -171,7 +171,7 @@ const Canon: CanonEntry[] = [
 		name: 'Obi-Wan Kenobi',
 		era: CanonEra.empire,
 		type: CanonType.show,
-		timeline: -9,
+		timeline: -9.5,
 		released: new Date('2022-05-27'),
 		wookieepedia: 'https://starwars.fandom.com/wiki/Obi-Wan_Kenobi_(television_series)',
 		disneyPlus: 'https://www.disneyplus.com/series/obi-wan-kenobi/2JYKcHv9fRJb',
@@ -297,7 +297,7 @@ const Canon: CanonEntry[] = [
 		era: CanonEra.highRepublic,
 		type: CanonType.book,
 		wookieepedia: 'https://starwars.fandom.com/wiki/The_High_Republic:_Into_the_Dark',
-		timeline: -232,
+		timeline: -232.5,
 		released: new Date('2021-02-02'),
 	},
 	{
@@ -313,7 +313,7 @@ const Canon: CanonEntry[] = [
 		era: CanonEra.highRepublic,
 		type: CanonType.book,
 		wookieepedia: 'https://starwars.fandom.com/wiki/The_High_Republic:_The_Rising_Storm',
-		timeline: -231,
+		timeline: -231.7,
 		released: new Date('2021-06-29'),
 	},
 	{
@@ -321,7 +321,7 @@ const Canon: CanonEntry[] = [
 		era: CanonEra.highRepublic,
 		type: CanonType.book,
 		wookieepedia: 'https://starwars.fandom.com/wiki/The_High_Republic:_Out_of_the_Shadows',
-		timeline: -231,
+		timeline: -231.5,
 		released: new Date('2021-07-27'),
 	},
 	{
@@ -345,7 +345,7 @@ const Canon: CanonEntry[] = [
 		era: CanonEra.highRepublic,
 		type: CanonType.book,
 		wookieepedia: 'https://starwars.fandom.com/wiki/The_High_Republic:_The_Fallen_Star',
-		timeline: -230,
+		timeline: -230.5,
 		released: new Date('2022-01-04'),
 	},
 ];
