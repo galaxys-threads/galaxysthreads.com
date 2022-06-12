@@ -47,8 +47,10 @@ const Canon: CanonEntry[] = [
 		type: CanonType.skywalkerSagaFilm,
 		timeline: -32,
 		released: new Date('1999-05-19'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_Episode_I_The_Phantom_Menace',
-		disneyPlus: 'https://www.disneyplus.com/movies/star-wars-the-phantom-menace-episode-i/2ezYynkgW1AH',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Star_Wars:_Episode_I_The_Phantom_Menace',
+		disneyPlus:
+			'https://www.disneyplus.com/movies/star-wars-the-phantom-menace-episode-i/2ezYynkgW1AH',
 	},
 	{
 		name: 'Attack of the Clones',
@@ -56,8 +58,10 @@ const Canon: CanonEntry[] = [
 		type: CanonType.skywalkerSagaFilm,
 		timeline: -22.8,
 		released: new Date('2002-05-16'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_Episode_II_Attack_of_the_Clones',
-		disneyPlus: 'https://www.disneyplus.com/movies/star-wars-attack-of-the-clones-episode-ii/mgpYHGnzZW6N',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Star_Wars:_Episode_II_Attack_of_the_Clones',
+		disneyPlus:
+			'https://www.disneyplus.com/movies/star-wars-attack-of-the-clones-episode-ii/mgpYHGnzZW6N',
 	},
 	{
 		name: 'Revenge of the Sith',
@@ -65,8 +69,10 @@ const Canon: CanonEntry[] = [
 		type: CanonType.skywalkerSagaFilm,
 		timeline: -19.9,
 		released: new Date('2005-05-19'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_Episode_III_Revenge_of_the_Sith',
-		disneyPlus: 'https://www.disneyplus.com/movies/star-wars-revenge-of-the-sith-episode-iii/4WvbqLFumNvi',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Star_Wars:_Episode_III_Revenge_of_the_Sith',
+		disneyPlus:
+			'https://www.disneyplus.com/movies/star-wars-revenge-of-the-sith-episode-iii/4WvbqLFumNvi',
 	},
 	{
 		name: 'A New Hope',
@@ -74,8 +80,10 @@ const Canon: CanonEntry[] = [
 		type: CanonType.skywalkerSagaFilm,
 		timeline: 0,
 		released: new Date('1977-05-25'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_Episode_IV_A_New_Hope',
-		disneyPlus: 'https://www.disneyplus.com/movies/star-wars-a-new-hope-episode-iv/12fVeZxD2fWJ',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Star_Wars:_Episode_IV_A_New_Hope',
+		disneyPlus:
+			'https://www.disneyplus.com/movies/star-wars-a-new-hope-episode-iv/12fVeZxD2fWJ',
 	},
 	{
 		name: 'The Empire Strikes Back',
@@ -83,8 +91,10 @@ const Canon: CanonEntry[] = [
 		type: CanonType.skywalkerSagaFilm,
 		timeline: 3,
 		released: new Date('1980-05-12'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_Episode_V_The_Empire_Strikes_Back',
-		disneyPlus: 'https://www.disneyplus.com/movies/star-wars-the-empire-strikes-back-episode-v/iqtDTZAewwYl',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Star_Wars:_Episode_V_The_Empire_Strikes_Back',
+		disneyPlus:
+			'https://www.disneyplus.com/movies/star-wars-the-empire-strikes-back-episode-v/iqtDTZAewwYl',
 	},
 	{
 		name: 'Return of the Jedi',
@@ -92,8 +102,10 @@ const Canon: CanonEntry[] = [
 		type: CanonType.skywalkerSagaFilm,
 		timeline: 4,
 		released: new Date('1983-05-25'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_Episode_VI_Return_of_the_Jedi',
-		disneyPlus: 'https://www.disneyplus.com/movies/star-wars-return-of-the-jedi-episode-vi/6QGKo5mjDBS8',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Star_Wars:_Episode_VI_Return_of_the_Jedi',
+		disneyPlus:
+			'https://www.disneyplus.com/movies/star-wars-return-of-the-jedi-episode-vi/6QGKo5mjDBS8',
 	},
 	{
 		name: 'The Force Awakens',
@@ -101,8 +113,10 @@ const Canon: CanonEntry[] = [
 		type: CanonType.skywalkerSagaFilm,
 		timeline: 34.1,
 		released: new Date('2015-12-18'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_Episode_VII_The_Force_Awakens',
-		disneyPlus: 'https://www.disneyplus.com/movies/star-wars-the-force-awakens-episode-vii/1LEKJPDPeMr7',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Star_Wars:_Episode_VII_The_Force_Awakens',
+		disneyPlus:
+			'https://www.disneyplus.com/movies/star-wars-the-force-awakens-episode-vii/1LEKJPDPeMr7',
 	},
 	{
 		name: 'The Last Jedi',
@@ -110,8 +124,10 @@ const Canon: CanonEntry[] = [
 		type: CanonType.skywalkerSagaFilm,
 		timeline: 34.5,
 		released: new Date('2017-12-15'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_Episode_VIII_The_Last_Jedi',
-		disneyPlus: 'https://www.disneyplus.com/movies/star-wars-the-last-jedi-episode-viii/1nCWFK1pmAI0',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Star_Wars:_Episode_VIII_The_Last_Jedi',
+		disneyPlus:
+			'https://www.disneyplus.com/movies/star-wars-the-last-jedi-episode-viii/1nCWFK1pmAI0',
 	},
 	{
 		name: 'The Rise of Skywalker',
@@ -119,8 +135,10 @@ const Canon: CanonEntry[] = [
 		type: CanonType.skywalkerSagaFilm,
 		timeline: 35,
 		released: new Date('2019-12-20'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_Episode_IX_The_Rise_of_Skywalker',
-		disneyPlus: 'https://www.disneyplus.com/movies/star-wars-the-rise-of-skywalker-episode-ix/5e8JThYwCYgw',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Star_Wars:_Episode_IX_The_Rise_of_Skywalker',
+		disneyPlus:
+			'https://www.disneyplus.com/movies/star-wars-the-rise-of-skywalker-episode-ix/5e8JThYwCYgw',
 	},
 	{
 		name: 'Rogue One',
@@ -128,8 +146,10 @@ const Canon: CanonEntry[] = [
 		type: CanonType.film,
 		timeline: -0.5,
 		released: new Date('2016-12-15'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Rogue_One:_A_Star_Wars_Story',
-		disneyPlus: 'https://www.disneyplus.com/movies/rogue-one-a-star-wars-story/14CV6eSbygOA',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Rogue_One:_A_Star_Wars_Story',
+		disneyPlus:
+			'https://www.disneyplus.com/movies/rogue-one-a-star-wars-story/14CV6eSbygOA',
 	},
 	{
 		name: 'Solo',
@@ -138,7 +158,8 @@ const Canon: CanonEntry[] = [
 		timeline: -10,
 		released: new Date('2018-05-25'),
 		wookieepedia: 'https://starwars.fandom.com/wiki/Solo:_A_Star_Wars_Story',
-		disneyPlus: 'https://www.disneyplus.com/movies/solo-a-star-wars-story/7ks3IYr1eU2P',
+		disneyPlus:
+			'https://www.disneyplus.com/movies/solo-a-star-wars-story/7ks3IYr1eU2P',
 	},
 	{
 		name: 'The Clone Wars',
@@ -146,8 +167,10 @@ const Canon: CanonEntry[] = [
 		type: CanonType.film,
 		timeline: -22.7,
 		released: new Date('2008-08-14'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_The_Clone_Wars_(film)',
-		disneyPlus: 'https://www.disneyplus.com/movies/star-wars-the-clone-wars/AVmv1ulT1nQW',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Star_Wars:_The_Clone_Wars_(film)',
+		disneyPlus:
+			'https://www.disneyplus.com/movies/star-wars-the-clone-wars/AVmv1ulT1nQW',
 	},
 	{
 		name: 'The Mandalorian',
@@ -156,7 +179,8 @@ const Canon: CanonEntry[] = [
 		timeline: 9,
 		released: new Date('2019-11-12'),
 		wookieepedia: 'https://starwars.fandom.com/wiki/The_Mandalorian',
-		disneyPlus: 'https://www.disneyplus.com/series/the-mandalorian/3jLIGMDYINqD',
+		disneyPlus:
+			'https://www.disneyplus.com/series/the-mandalorian/3jLIGMDYINqD',
 	},
 	{
 		name: 'The Book of Boba Fett',
@@ -165,7 +189,8 @@ const Canon: CanonEntry[] = [
 		timeline: 9.5,
 		released: new Date('2021-12-29'),
 		wookieepedia: 'https://starwars.fandom.com/wiki/The_Book_of_Boba_Fett',
-		disneyPlus: 'https://www.disneyplus.com/series/the-book-of-boba-fett/57TL7zLNu2wf',
+		disneyPlus:
+			'https://www.disneyplus.com/series/the-book-of-boba-fett/57TL7zLNu2wf',
 	},
 	{
 		name: 'Obi-Wan Kenobi',
@@ -173,7 +198,8 @@ const Canon: CanonEntry[] = [
 		type: CanonType.show,
 		timeline: -9.5,
 		released: new Date('2022-05-27'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Obi-Wan_Kenobi_(television_series)',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Obi-Wan_Kenobi_(television_series)',
 		disneyPlus: 'https://www.disneyplus.com/series/obi-wan-kenobi/2JYKcHv9fRJb',
 	},
 	{
@@ -215,7 +241,8 @@ const Canon: CanonEntry[] = [
 		timeline: -22.6,
 		released: new Date('2008-10-03'),
 		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_The_Clone_Wars',
-		disneyPlus: 'https://www.disneyplus.com/series/star-wars-the-clone-wars/1wYXzjabXGVZ',
+		disneyPlus:
+			'https://www.disneyplus.com/series/star-wars-the-clone-wars/1wYXzjabXGVZ',
 	},
 	{
 		name: 'Rebels',
@@ -224,7 +251,8 @@ const Canon: CanonEntry[] = [
 		timeline: -5,
 		released: new Date('2014-10-13'),
 		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars_Rebels',
-		disneyPlus: 'https://www.disneyplus.com/series/star-wars-rebels/64MCZgAzY0Zw',
+		disneyPlus:
+			'https://www.disneyplus.com/series/star-wars-rebels/64MCZgAzY0Zw',
 	},
 	{
 		name: 'Resistance',
@@ -233,7 +261,8 @@ const Canon: CanonEntry[] = [
 		timeline: 34,
 		released: new Date('2018-10-07'),
 		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars_Resistance',
-		disneyPlus: 'https://www.disneyplus.com/series/star-wars-resistance/FQwsUthRSbnp',
+		disneyPlus:
+			'https://www.disneyplus.com/series/star-wars-resistance/FQwsUthRSbnp',
 	},
 	{
 		name: 'The Bad Batch',
@@ -242,7 +271,8 @@ const Canon: CanonEntry[] = [
 		timeline: -19.5,
 		released: new Date('2021-05-04'),
 		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_The_Bad_Batch',
-		disneyPlus: 'https://www.disneyplus.com/series/star-wars-the-bad-batch/4gMliqFxxqXC',
+		disneyPlus:
+			'https://www.disneyplus.com/series/star-wars-the-bad-batch/4gMliqFxxqXC',
 	},
 	{
 		name: 'Jedi: Fallen Order',
@@ -250,7 +280,8 @@ const Canon: CanonEntry[] = [
 		type: CanonType.game,
 		timeline: -14,
 		released: new Date('2019-11-15'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars_Jedi:_Fallen_Order',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Star_Wars_Jedi:_Fallen_Order',
 	},
 	{
 		name: 'Jedi: Survivor',
@@ -282,7 +313,8 @@ const Canon: CanonEntry[] = [
 		type: CanonType.game,
 		timeline: -2,
 		released: new Date('2019-05-21'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Vader_Immortal:_A_Star_Wars_VR_Series_%E2%80%93_Episode_I',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Vader_Immortal:_A_Star_Wars_VR_Series_%E2%80%93_Episode_I',
 	},
 	{
 		name: "Tales from the Galaxy's Edge",
@@ -290,13 +322,15 @@ const Canon: CanonEntry[] = [
 		type: CanonType.game,
 		timeline: 34.6,
 		released: new Date('2020-11-19'),
-		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_Tales_from_the_Galaxy%27s_Edge',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Star_Wars:_Tales_from_the_Galaxy%27s_Edge',
 	},
 	{
 		name: 'Into the Dark',
 		era: CanonEra.highRepublic,
 		type: CanonType.book,
-		wookieepedia: 'https://starwars.fandom.com/wiki/The_High_Republic:_Into_the_Dark',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Into_the_Dark',
 		timeline: -232.5,
 		released: new Date('2021-02-02'),
 	},
@@ -304,7 +338,8 @@ const Canon: CanonEntry[] = [
 		name: 'Light of the Jedi',
 		era: CanonEra.highRepublic,
 		type: CanonType.book,
-		wookieepedia: 'https://starwars.fandom.com/wiki/The_High_Republic:_Light_of_the_Jedi',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Light_of_the_Jedi',
 		timeline: -232,
 		released: new Date('2021-01-05'),
 	},
@@ -312,7 +347,8 @@ const Canon: CanonEntry[] = [
 		name: 'The Rising Storm',
 		era: CanonEra.highRepublic,
 		type: CanonType.book,
-		wookieepedia: 'https://starwars.fandom.com/wiki/The_High_Republic:_The_Rising_Storm',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_The_Rising_Storm',
 		timeline: -231.7,
 		released: new Date('2021-06-29'),
 	},
@@ -320,7 +356,8 @@ const Canon: CanonEntry[] = [
 		name: 'Out of the Shadows',
 		era: CanonEra.highRepublic,
 		type: CanonType.book,
-		wookieepedia: 'https://starwars.fandom.com/wiki/The_High_Republic:_Out_of_the_Shadows',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Out_of_the_Shadows',
 		timeline: -231.5,
 		released: new Date('2021-07-27'),
 	},
@@ -328,7 +365,8 @@ const Canon: CanonEntry[] = [
 		name: 'Tempest Runner',
 		era: CanonEra.highRepublic,
 		type: CanonType.book,
-		wookieepedia: 'https://starwars.fandom.com/wiki/The_High_Republic:_Tempest_Runner_(script)',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Tempest_Runner_(script)',
 		timeline: -231,
 		released: new Date('2022-03-15'),
 	},
@@ -336,7 +374,8 @@ const Canon: CanonEntry[] = [
 		name: 'Midnight Horizon',
 		era: CanonEra.highRepublic,
 		type: CanonType.book,
-		wookieepedia: 'https://starwars.fandom.com/wiki/The_High_Republic:_Midnight_Horizon',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Midnight_Horizon',
 		timeline: -230,
 		released: new Date('2022-02-01'),
 	},
@@ -344,7 +383,8 @@ const Canon: CanonEntry[] = [
 		name: 'The Fallen Star',
 		era: CanonEra.highRepublic,
 		type: CanonType.book,
-		wookieepedia: 'https://starwars.fandom.com/wiki/The_High_Republic:_The_Fallen_Star',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_The_Fallen_Star',
 		timeline: -230.5,
 		released: new Date('2022-01-04'),
 	},

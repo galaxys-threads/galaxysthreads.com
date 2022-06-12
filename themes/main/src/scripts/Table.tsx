@@ -22,7 +22,9 @@ export declare type ColumnSortFunction<T> = (a: T, b: T) => number;
 export function Table<T>(props: TableProps<T>) {
 	const [tableData, setTableData] = useState(props.data);
 	const [indexSorted, setIndexSorted] = useState(-1);
-	const [directionSorted, setDirectionSorted] = useState(TableSortDirection.DESC);
+	const [directionSorted, setDirectionSorted] = useState(
+		TableSortDirection.DESC
+	);
 
 	const handleSortingChange = (columnIndex: number) => {
 		// Do nothing if column is not sortable
@@ -36,14 +38,21 @@ export function Table<T>(props: TableProps<T>) {
 		let newSortDirection = TableSortDirection.DESC;
 		if (indexSorted === columnIndex) {
 			// Flip the sort direction if it's not the first time we are clicking this column
-			newSortDirection = directionSorted === TableSortDirection.ASC ? TableSortDirection.DESC : TableSortDirection.ASC;
+			newSortDirection =
+				directionSorted === TableSortDirection.ASC
+					? TableSortDirection.DESC
+					: TableSortDirection.ASC;
 		}
 		setDirectionSorted(newSortDirection);
 
 		sortData(tableData, columnIndex, newSortDirection);
 	};
 
-	const sortData = (data: T[], columnIndex: number, newSortDirection: TableSortDirection) => {
+	const sortData = (
+		data: T[],
+		columnIndex: number,
+		newSortDirection: TableSortDirection
+	) => {
 		// Skip if no column is selected
 		if (columnIndex < 0) {
 			return;
@@ -80,8 +89,16 @@ export function Table<T>(props: TableProps<T>) {
 				<thead>
 					<tr>
 						{props.columns.map((column, columnIndex) => (
-							<th key={columnIndex} onClick={() => handleSortingChange(columnIndex)} className={column.sortFunction ? 'sortable' : ''}>
-								{columnIndex === indexSorted && <span className="sort-indicator">{directionSorted === TableSortDirection.ASC ? '⭡' : '⭣'}</span>}
+							<th
+								key={columnIndex}
+								onClick={() => handleSortingChange(columnIndex)}
+								className={column.sortFunction ? 'sortable' : ''}
+							>
+								{columnIndex === indexSorted && (
+									<span className="sort-indicator">
+										{directionSorted === TableSortDirection.ASC ? '⭡' : '⭣'}
+									</span>
+								)}
 								{column.name}
 							</th>
 						))}
