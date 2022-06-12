@@ -40,57 +40,6 @@ export function formatTimeline(timeline: number): string {
     return "0 BBY / 0 ABY"
 }
 
-// Light of the Jedi
-// Into the Dark
-// The Rising Storm
-// Out Of The Shadows
-// Tempest Runner
-// The Fallen Star
-// Midnight Horizon
-// Master & Apprentice
-// Queen's Peril
-// Queen's Shadow
-// Dooku: Jedi Lost
-// Dark Disciple
-// Thrawn: Ascendancy: Chaos Rising
-// Thrawn Ascendancy: Greater Good
-// Thrawn Ascendancy: Lesser Evil
-// Ahsoka
-// Catalyst
-// Lords of the Sith
-// Tarkin
-// Most Wanted
-// A New Dawn
-// Leia: Princess of Alderaan
-// Thrawn
-// Thrawn: Alliances
-// Thrawn: Treason
-// Guardians of the Whills
-// Rebel Rising
-// Smuggler's Run
-// Heir to the Jedi
-// The Weapon of a Jedi
-// Moving Target
-// Alphabet Squadron
-// Aftermath
-// Alphabet Squadron: Shadow Fall
-// Aftermath: Life Debt
-// Aftermath: Empire's End
-// Alphabet Squadron: Victory's Price
-// Lost Stars
-// Last Shot
-// Poe Dameron: Free Fall
-// Bloodline
-// Force Collector
-// Phasma
-// Tales from a Galaxy Far, Far Away: Aliens
-// Cobalt Squadron
-// Resistance Reborn
-// Spark of the Resistance
-// Galaxy’s Edge: Black Spire
-// Galaxy’s Edge: A Crash of Fate
-
-
 const Canon: CanonEntry[] = [
     {
         name: "The Phantom Menace",
@@ -343,6 +292,64 @@ const Canon: CanonEntry[] = [
         released: new Date('2020-11-19'),
         wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Tales_from_the_Galaxy%27s_Edge",
     },
+    {
+        name: "Into the Dark",
+        era: CanonEra.highRepublic,
+        type: CanonType.book,
+        wookieepedia: "https://starwars.fandom.com/wiki/The_High_Republic:_Into_the_Dark",
+        timeline: -232,
+        released: new Date("2021-02-02"),
+    },
+    {
+        name: "Light of the Jedi",
+        era: CanonEra.highRepublic,
+        type: CanonType.book,
+        wookieepedia: "https://starwars.fandom.com/wiki/The_High_Republic:_Light_of_the_Jedi",
+        timeline: -232,
+        released: new Date("2021-01-05"),
+    },
+    {
+        name: "The Rising Storm",
+        era: CanonEra.highRepublic,
+        type: CanonType.book,
+        wookieepedia: "https://starwars.fandom.com/wiki/The_High_Republic:_The_Rising_Storm",
+        timeline: -231,
+        released: new Date("2021-06-29"),
+    },
+    {
+        name: "Out of the Shadows",
+        era: CanonEra.highRepublic,
+        type: CanonType.book,
+        wookieepedia: "https://starwars.fandom.com/wiki/The_High_Republic:_Out_of_the_Shadows",
+        timeline: -231,
+        released: new Date("2021-07-27"),
+    },
+    {
+        name: "Tempest Runner",
+        era: CanonEra.highRepublic,
+        type: CanonType.book,
+        wookieepedia: "https://starwars.fandom.com/wiki/The_High_Republic:_Tempest_Runner_(script)",
+        timeline: -231,
+        released: new Date("2022-03-15"),
+    },
+    {
+        name: "Midnight Horizon",
+        era: CanonEra.highRepublic,
+        type: CanonType.book,
+        wookieepedia: "https://starwars.fandom.com/wiki/The_High_Republic:_Midnight_Horizon",
+        timeline: -230,
+        released: new Date("2022-02-01"),
+    },
+    {
+        name: "The Fallen Star",
+        era: CanonEra.highRepublic,
+        type: CanonType.book,
+        wookieepedia: "https://starwars.fandom.com/wiki/The_High_Republic:_The_Fallen_Star",
+        timeline: -230,
+        released: new Date("2022-01-04"),
+    },
 ];
+
+// https://starwars.fandom.com/wiki/List_of_books#Canon
 
 export default Canon
