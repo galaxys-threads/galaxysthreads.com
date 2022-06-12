@@ -64,7 +64,7 @@ const Canon: CanonEntry[] = [
         era: CanonEra.republic,
         type: CanonType.skywalkerSagaFilm,
         timeline: -19.9,
-        released: new Date("1999-05-19"),
+        released: new Date("2005-05-19"),
         wookieepedia: "https://starwars.fandom.com/wiki/Star_Wars:_Episode_III_Revenge_of_the_Sith",
         disneyPlus: "https://www.disneyplus.com/movies/star-wars-revenge-of-the-sith-episode-iii/4WvbqLFumNvi",
     },
