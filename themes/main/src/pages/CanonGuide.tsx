@@ -97,45 +97,46 @@ export default function CanonGuide() {
 	const [tableData, setTableData] = useState([...Canon]);
 
 	const toggleCanonEra = (era: string) => {
-		let previouslyAllowedEras = [...allowedEras];
-		if (previouslyAllowedEras.includes(era)) {
-			previouslyAllowedEras = previouslyAllowedEras.filter((e) => e !== era);
-		} else {
-			previouslyAllowedEras.push(era);
-		}
-		setAllowedEras(previouslyAllowedEras);
-		applyFilters();
+		setAllowedEras((previousValue) => {
+			let newValue = [...previousValue];
+
+			if (previousValue.includes(era)) {
+				newValue = previousValue.filter((e) => e !== era);
+			} else {
+				newValue.push(era);
+			}
+
+			return newValue;
+		});
 	};
 
 	const toggleCanonType = (type: string) => {
-		let previouslyAllowedTypes = [...allowedTypes];
-		if (previouslyAllowedTypes.includes(type)) {
-			previouslyAllowedTypes = previouslyAllowedTypes.filter((e) => e !== type);
-		} else {
-			previouslyAllowedTypes.push(type);
-		}
-		setAllowedTypes(previouslyAllowedTypes);
-		applyFilters();
-	};
-
-	const applyFilters = () => {
-		const newItems = [...Canon].filter((item) => {
-			if (!allowedTypes.includes(item.type)) {
-				return false;
+		setAllowedTypes((previousValue) => {
+			let newValue = [...previousValue];
+			if (previousValue.includes(type)) {
+				newValue = previousValue.filter((e) => e !== type);
+			} else {
+				newValue.push(type);
 			}
 
-			if (!allowedEras.includes(item.era)) {
-				return false;
-			}
-
-			return true;
+			return newValue;
 		});
-
-		setTableData([...newItems]);
 	};
 
 	useEffect(() => {
-		applyFilters();
+		setTableData(
+			[...Canon].filter((item) => {
+				if (!allowedTypes.includes(item.type)) {
+					return false;
+				}
+
+				if (!allowedEras.includes(item.era)) {
+					return false;
+				}
+
+				return true;
+			})
+		);
 	}, [allowedEras, allowedTypes]);
 
 	return (
@@ -148,7 +149,7 @@ export default function CanonGuide() {
 							<input
 								type="checkbox"
 								checked={allowedEras.includes(era)}
-								onChange={(event) => toggleCanonEra(era)}
+								onChange={() => toggleCanonEra(era)}
 							/>
 							{era}
 						</label>

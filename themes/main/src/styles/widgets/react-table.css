@@ -42,6 +42,7 @@
 }
 
 .filters {
+	user-select: none;
 	/* display: inline-block; */
 	vertical-align: top;
 	padding-right: 1rem;
@@ -50,6 +51,7 @@
 
 .filters label {
 	white-space: nowrap;
+	cursor: pointer;
 	padding-bottom: 0.5rem;
 	padding-right: 0.5rem;
 	display: inline-block;

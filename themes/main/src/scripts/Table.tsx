@@ -21,7 +21,7 @@ export declare type ColumnSortFunction<T> = (a: T, b: T) => number;
 
 export function Table<T>(props: TableProps<T>) {
 	const [tableData, setTableData] = useState(props.data);
-	const [indexSorted, setIndexSorted] = useState(-1);
+	const [indexSorted, setIndexSorted] = useState(props.defaultSort);
 	const [directionSorted, setDirectionSorted] = useState(
 		TableSortDirection.DESC
 	);
@@ -32,56 +32,37 @@ export function Table<T>(props: TableProps<T>) {
 			return;
 		}
 
-		setIndexSorted(columnIndex);
-
-		// Default first sort of column
-		let newSortDirection = TableSortDirection.DESC;
-		if (indexSorted === columnIndex) {
-			// Flip the sort direction if it's not the first time we are clicking this column
-			newSortDirection =
-				directionSorted === TableSortDirection.ASC
+		setDirectionSorted((previousValue) => {
+			let newValue = TableSortDirection.DESC;
+			if (indexSorted === columnIndex) {
+				// Flip the sort direction if it's not the first time we are clicking this column
+				return previousValue === TableSortDirection.ASC
 					? TableSortDirection.DESC
 					: TableSortDirection.ASC;
-		}
-		setDirectionSorted(newSortDirection);
+			}
+			return newValue;
+		});
 
-		sortData(tableData, columnIndex, newSortDirection);
+		setIndexSorted(columnIndex);
 	};
 
-	const sortData = (
-		data: T[],
-		columnIndex: number,
-		newSortDirection: TableSortDirection
-	) => {
+	useEffect(() => {
 		// Skip if no column is selected
-		if (columnIndex < 0) {
+		if (indexSorted === undefined || indexSorted < 0) {
 			return;
 		}
 
 		// Sort using the sort function
-		let sorted = [...data].sort(props.columns[columnIndex].sortFunction);
+		let sorted = [...props.data].sort(props.columns[indexSorted].sortFunction);
 
 		// Flip the sort if it's asc
-		if (newSortDirection === TableSortDirection.ASC) {
+		if (directionSorted === TableSortDirection.ASC) {
 			sorted = sorted.reverse();
 		}
 
 		// Update the state
 		setTableData(sorted);
-	};
-
-	// Initial Load
-	useEffect(() => {
-		if (props.defaultSort) {
-			setIndexSorted(props.defaultSort);
-		}
-	}, []);
-
-	// When it gets new data
-	useEffect(() => {
-		setTableData(props.data);
-		sortData(props.data, indexSorted, directionSorted);
-	}, [props.data, indexSorted]);
+	}, [props.data, indexSorted, directionSorted]);
 
 	return (
 		<div className="react-table">
