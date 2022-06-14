@@ -551,7 +551,7 @@ const Canon: CanonEntry[] = [
 	{
 		era: CanonEra.empire,
 		name: 'Shadow Fall',
-		released: new Date('202-06-23'),
+		released: new Date('2020-06-23'),
 		timeline: 5,
 		type: CanonType.book,
 		wookieepedia: 'https://starwars.fandom.com/wiki/Shadow_Fall',
