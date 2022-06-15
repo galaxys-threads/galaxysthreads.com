@@ -24,3 +24,5 @@ I loved how when Kenobi first started fighting, his aim while reflecting blaster
 
 ## Snowspeeders
 I didn't remember what T-47 were until I saw them show up later in the episode, but it was another nice reference to overlap between "The Path" and the "Rebel Alliance".
+
+> Next Review: [Obi-Wan Kenobi Part 5 Review](/reviews/obi-wan-kenobi-part5/)
