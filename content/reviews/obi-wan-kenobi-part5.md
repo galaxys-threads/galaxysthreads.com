@@ -30,3 +30,5 @@ I think we were all expecting it but I'm glad he is not dead. I like knowing tha
 
 ## Luke
 With one episode left I'm curious how this is going to go. It seems like Reva is going to Tatooine but I am still expecting a final battle between Vader and Kenobi. I also don't think Vader is going to Tatooine. So I guess we will see next week!
+
+> Next Review: [Obi-Wan Kenobi Part 6 Review](/reviews/obi-wan-kenobi-part6/)
