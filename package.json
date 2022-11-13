@@ -1,0 +1,33 @@
+{
+	"scripts": {
+		"build": "parcel build",
+		"watch": "parcel serve --dist-dir var/dist",
+		"lint": "prettier -w .",
+		"test": "jest"
+	},
+	"targets": {
+		"entrypoint": {
+			"source": [
+				"src/index.html"
+			],
+			"distDir": "var/dist"
+		}
+	},
+	"devDependencies": {
+		"@parcel/transformer-inline-string": "^2.8.0",
+		"@types/jest": "^29.2.2",
+		"jest": "^29.3.1",
+		"parcel": "^2.8.0",
+		"parcel-reporter-static-files-copy": "^1.4.0",
+		"prettier": "^2.7.1",
+		"process": "^0.11.10",
+		"ts-jest": "^29.0.3"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^6.2.0",
+		"@kyberbits/prism": "^1.0.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.4.3"
+	}
+}

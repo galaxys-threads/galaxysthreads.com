@@ -1,0 +1,10 @@
+@import url('./Styles/fonts.css');
+@import url('./Styles/spacing.css');
+@import url('./Styles/layout.css');
+
+@import url('./Styles/header.css');
+@import url('./Styles/navigation.css');
+@import url('./Styles/body.css');
+@import url('./Styles/footer.css');
+
+@import url('./Styles/widgets/react-table.css');

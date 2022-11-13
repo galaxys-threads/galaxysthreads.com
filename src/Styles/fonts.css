@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'GE Aurebesh';
+	src: url('../Fonts/aurebeshaf-canon-webfont.ttf') format('truetype'),
+		url('../Fonts/aurebeshaf-canon-webfont.woff2') format('woff2'),
+		url('../Fonts/aurebeshaf-canon-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'GE Title';
+	src: url('../Fonts/avenir-black.woff2') format('woff2'),
+		url('../Fonts/avenir-black.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

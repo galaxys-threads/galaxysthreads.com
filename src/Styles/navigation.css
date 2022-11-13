@@ -1,0 +1,52 @@
+#navigation {
+	background-color: var(--color-background-highlight);
+	border-bottom: var(--border);
+	border-top: var(--border);
+	text-align: center;
+}
+
+#navigation .nav-link {
+	display: inline-block;
+}
+
+#navigation .nav-link a {
+	padding: 1rem 2rem;
+	color: var(--color-text);
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	transition: transform 0.125s ease-in-out;
+}
+
+/* Hover Effect */
+#navigation a:focus > div,
+#navigation a:hover > div {
+	transform: scale(1.05);
+}
+
+/* English/Aurebesh Styling */
+#navigation a .english {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: 'GE Title';
+	font-size: 1.5rem;
+}
+
+#navigation a .aurebesh {
+	opacity: 0.45;
+	font-size: 0.75rem;
+}
+
+@media screen and (max-width: 55em) {
+	#navigation .nav-link a {
+		padding: 0.5rem 0.5rem;
+	}
+
+	#navigation a .english {
+		font-size: 1.25rem;
+	}
+
+	#navigation a .aurebesh {
+		font-size: 0.66rem;
+	}
+}
