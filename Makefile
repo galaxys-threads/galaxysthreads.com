@@ -1,4 +1,4 @@
-.PHONY: full build build-npm test test-npm lint lint-npm fix fix-npm watch watch-npm clean docker
+.PHONY: full build build-npm test test-npm lint lint-npm fix fix-npm watch watch-npm clean docker docker-publish
 
 SHELL=/bin/bash -o pipefail
 $(shell git config core.hooksPath ops/git-hooks)
@@ -47,4 +47,8 @@ clean:
 
 ## Build the docker image
 docker: clean
-	docker build -t galaxys-threads/galaxystreads.com:latest .
+	docker build -t galaxys-threads/galaxysthreads.com:latest .
+
+## Publish the docker image
+docker-publish: clean docker
+	docker push galaxys-threads/galaxysthreads.com:latest

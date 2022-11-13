@@ -3,7 +3,7 @@ WORKDIR /staging
 COPY . .
 RUN make build-npm
 
-FROM aaronellington/static-file-server:latest
+FROM aaronellington/valet:latest
 ENV NOT_FOUND_CODE=200
 ENV NOT_FOUND_FILE="index.html"
 COPY --from=parcelBuilder /staging/var/dist .
