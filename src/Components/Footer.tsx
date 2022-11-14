@@ -21,11 +21,14 @@ export default function Footer() {
 					</a>
 				</div>
 				<div>
-					<a href="https://www.buymeacoffee.com/GalaxysThreads" target="_blank">
+					<a
+						href="https://www.buymeacoffee.com/GalaxysThreads"
+						target="_blank"
+						className="bmac"
+					>
 						<img
 							src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
 							alt="Buy Me A Coffee"
-							className="bmac"
 						/>
 					</a>
 				</div>

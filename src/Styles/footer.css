@@ -19,7 +19,8 @@
 	display: inline-block;
 }
 
-.bmac {
+.bmac img {
 	height: 60px !important;
 	width: 217px !important;
+	vertical-align: middle;
 }
