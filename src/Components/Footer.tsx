@@ -30,7 +30,7 @@ export default function Footer() {
 					</a>
 				</div>
 				<p>
-					Please Note: Galaxy's Threads fan run organization and is NOT
+					Please Note: Galaxy's Threads fan-run organization and is NOT
 					affiliated with Lucasfilm Ltd. or The Walt Disney Company.
 				</p>
 				<p>Galaxy's Threads {new Date().getFullYear()} ©</p>
