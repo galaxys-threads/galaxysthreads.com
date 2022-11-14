@@ -5,6 +5,7 @@ export default function Footer() {
 	return (
 		<div id="footer">
 			<div className="container">
+				<hr />
 				<div className="social-menu">
 					<a href={Links.Etsy} target="_blank">
 						<i className="fa-brands fa-etsy"></i>
@@ -19,11 +20,20 @@ export default function Footer() {
 						<i className="fa-brands fa-github"></i>
 					</a>
 				</div>
-				<p>Galaxy's Threads {new Date().getFullYear()} ©</p>
+				<div>
+					<a href="https://www.buymeacoffee.com/GalaxysThreads" target="_blank">
+						<img
+							src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+							alt="Buy Me A Coffee"
+							className="bmac"
+						/>
+					</a>
+				</div>
 				<p>
 					Please Note: Galaxy's Threads fan run organization and is NOT
 					affiliated with Lucasfilm Ltd. or The Walt Disney Company.
 				</p>
+				<p>Galaxy's Threads {new Date().getFullYear()} ©</p>
 			</div>
 		</div>
 	)
