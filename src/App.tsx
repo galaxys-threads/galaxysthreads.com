@@ -7,7 +7,6 @@ import CanonGuide from './Pages/CanonGuide'
 import Header from './Components/Header'
 import Navigation from './Components/Navigation'
 import Footer from './Components/Footer'
-import Landing from './Pages/Landing'
 import Links from './Data/links'
 
 export function App() {
