@@ -65,7 +65,7 @@ export function Table<T>(props: TableProps<T>) {
 		setTableData(sorted)
 	}, [props.data, indexSorted, directionSorted])
 
-	let message = <div></div>
+	let message = <></>
 	if (tableData.length <= 0) {
 		message = (
 			<tr>
