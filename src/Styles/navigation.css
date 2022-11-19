@@ -28,7 +28,7 @@
 #navigation a .english {
 	font-weight: bold;
 	text-transform: uppercase;
-	font-family: 'GE Title';
+	font-family: var(--font-title);
 	font-size: 1.5rem;
 }
 

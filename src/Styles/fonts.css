@@ -1,3 +1,8 @@
+:root {
+	--font-aurebesh: 'GE Aurebesh', webdings, sans-serif;
+	--font-title: 'GE Title', sans-serif;
+}
+
 @font-face {
 	font-family: 'GE Aurebesh';
 	src: url('../Fonts/aurebeshaf-canon-webfont.ttf') format('truetype'),

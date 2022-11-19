@@ -10,6 +10,6 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: 'GE Title';
+	font-family: var(--font-title);
 	text-transform: uppercase;
 }
