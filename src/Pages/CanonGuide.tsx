@@ -8,7 +8,12 @@ import Canon, {
 	formatTimeline,
 	getMediaLinkResult,
 } from '../Data/canon'
-import { Table, TableColumn } from '../Components/Table'
+import {
+	Table,
+	TableColumn,
+	TableSort,
+	TableSortDirection,
+} from '../Components/Table'
 
 const columns: TableColumn<CanonEntry>[] = [
 	{
@@ -90,6 +95,11 @@ export default function CanonGuide() {
 		CanonType.game as string,
 	])
 
+	const [sort, setSort] = useState({
+		columnIndex: 1,
+		direction: TableSortDirection.DESC,
+	} as TableSort)
+
 	const [allowedEras, setAllowedEras] = useState([
 		CanonEra.highRepublic as string,
 		CanonEra.republic as string,
@@ -146,6 +156,36 @@ export default function CanonGuide() {
 	return (
 		<div className="container">
 			<div className="filters">
+				<h4>Sorting</h4>
+
+				<label>
+					<input
+						checked={sort.columnIndex === 1}
+						onClick={() => {
+							setSort({
+								columnIndex: 1,
+								direction: TableSortDirection.DESC,
+							} as TableSort)
+						}}
+						type="radio"
+					/>
+					Timeline
+				</label>
+				<label>
+					<input
+						checked={sort.columnIndex === 2}
+						onClick={() => {
+							setSort({
+								columnIndex: 2,
+								direction: TableSortDirection.DESC,
+							} as TableSort)
+						}}
+						type="radio"
+					/>
+					Released
+				</label>
+			</div>
+			<div className="filters">
 				<h4>Eras</h4>
 				{Object.values(CanonEra).map((era: string, eraIndex: Number) => {
 					return (
@@ -178,7 +218,14 @@ export default function CanonGuide() {
 				)}
 			</div>
 			<div className="table-caption">{tableData.length} Items</div>
-			<Table data={tableData} columns={columns} defaultSort={1} />
+			<Table
+				data={tableData}
+				columns={columns}
+				sort={sort}
+				onSort={(newSort: TableSort) => {
+					setSort(newSort)
+				}}
+			/>
 		</div>
 	)
 }

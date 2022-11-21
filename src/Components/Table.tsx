@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react'
 
 export declare type TableProps<T> = {
 	data: T[]
-	defaultSort?: number
+	sort: TableSort
+	onSort?: OnSort
 	columns: TableColumn<T>[]
 }
 
@@ -13,57 +14,71 @@ export interface TableColumn<T> {
 	sortFunction?: ColumnSortFunction<T>
 }
 
+export interface TableSort {
+	columnIndex: number
+	direction: TableSortDirection
+}
+
 export enum TableSortDirection {
 	ASC = 'asc',
 	DESC = 'desc',
 }
 
+export declare type OnSort = (newSort: TableSort) => void
 export declare type ColumnSortFunction<T> = (a: T, b: T) => number
 
 export function Table<T>(props: TableProps<T>) {
 	const [tableData, setTableData] = useState(props.data)
-	const [indexSorted, setIndexSorted] = useState(props.defaultSort)
-	const [directionSorted, setDirectionSorted] = useState(
-		TableSortDirection.DESC,
-	)
+	const [sort, setSort] = useState(props.sort)
 
 	const handleSortingChange = (columnIndex: number) => {
 		// Do nothing if column is not sortable
 		if (!props.columns[columnIndex].sortFunction) {
 			return
 		}
-
-		setDirectionSorted((previousValue) => {
-			let newValue = TableSortDirection.DESC
-			if (indexSorted === columnIndex) {
+		setSort((previousValue: TableSort) => {
+			let newValue = {
+				columnIndex: columnIndex,
+				direction: TableSortDirection.DESC,
+			} as TableSort
+			if (previousValue.columnIndex === columnIndex) {
 				// Flip the sort direction if it's not the first time we are clicking this column
-				return previousValue === TableSortDirection.ASC
-					? TableSortDirection.DESC
-					: TableSortDirection.ASC
+				newValue.direction =
+					previousValue.direction === TableSortDirection.ASC
+						? TableSortDirection.DESC
+						: TableSortDirection.ASC
 			}
 			return newValue
 		})
-
-		setIndexSorted(columnIndex)
 	}
 
 	useEffect(() => {
 		// Skip if no column is selected
-		if (indexSorted === undefined || indexSorted < 0) {
+		if (sort.columnIndex === undefined || sort.columnIndex < 0) {
 			return
 		}
 
 		// Sort using the sort function
-		let sorted = [...props.data].sort(props.columns[indexSorted].sortFunction)
+		let sorted = [...props.data].sort(
+			props.columns[sort.columnIndex].sortFunction,
+		)
 
 		// Flip the sort if it's asc
-		if (directionSorted === TableSortDirection.ASC) {
+		if (sort.direction === TableSortDirection.ASC) {
 			sorted = sorted.reverse()
 		}
 
 		// Update the state
 		setTableData(sorted)
-	}, [props.data, indexSorted, directionSorted])
+	}, [props.data, sort])
+
+	useEffect(() => {
+		props.onSort(sort)
+	}, [sort])
+
+	useEffect(() => {
+		setSort(props.sort)
+	}, [props.sort])
 
 	let message = <></>
 	if (tableData.length <= 0) {
@@ -87,9 +102,9 @@ export function Table<T>(props: TableProps<T>) {
 								onClick={() => handleSortingChange(columnIndex)}
 								className={column.sortFunction ? 'sortable' : ''}
 							>
-								{columnIndex === indexSorted && (
+								{columnIndex === sort.columnIndex && (
 									<span className="sort-indicator">
-										{directionSorted === TableSortDirection.ASC ? '⭡' : '⭣'}
+										{sort.direction === TableSortDirection.ASC ? '⭡' : '⭣'}
 									</span>
 								)}
 								{column.name}
