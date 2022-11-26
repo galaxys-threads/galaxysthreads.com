@@ -226,6 +226,19 @@ export default function CanonGuide() {
 					setSort(newSort)
 				}}
 			/>
+			<p>
+				Source:{' '}
+				<a
+					href="https://starwars.fandom.com/wiki/Timeline_of_canon_media"
+					target="_blank"
+				>
+					Wookieepedia Timeline of canon media
+				</a>
+			</p>
+			<p>
+				This is more extensive list of Star Wars Canon media, but is a bit more
+				overwhelming.
+			</p>
 		</div>
 	)
 }

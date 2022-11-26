@@ -3,8 +3,8 @@ export enum CanonType {
 	film = 'Film',
 	game = 'Video Game',
 	show = 'TV Show',
-	book = 'Book',
-	bookYoungReader = 'Young Reader Book',
+	book = 'Novel',
+	bookYoungReader = 'Junior Novel',
 }
 
 export enum CanonEra {
@@ -84,7 +84,7 @@ export function getMediaLinkResult(mediaLink: string): MediaLinkResult {
 	throw 'Unmapped Media Link: ' + mediaLink
 }
 
-const Canon: CanonEntry[] = [
+const canonSkywalkerSaga: CanonEntry[] = [
 	{
 		mediaLink:
 			'https://www.disneyplus.com/movies/star-wars-the-phantom-menace-episode-i/2ezYynkgW1AH',
@@ -184,6 +184,9 @@ const Canon: CanonEntry[] = [
 		wookieepedia:
 			'https://starwars.fandom.com/wiki/Star_Wars:_Episode_IX_The_Rise_of_Skywalker',
 	},
+]
+
+const otherFilms: CanonEntry[] = [
 	{
 		mediaLink:
 			'https://www.disneyplus.com/movies/rogue-one-a-star-wars-story/14CV6eSbygOA',
@@ -216,6 +219,9 @@ const Canon: CanonEntry[] = [
 		wookieepedia:
 			'https://starwars.fandom.com/wiki/Star_Wars:_The_Clone_Wars_(film)',
 	},
+]
+
+const shows: CanonEntry[] = [
 	{
 		mediaLink: 'https://www.disneyplus.com/series/the-mandalorian/3jLIGMDYINqD',
 		era: CanonEra.newRepublic,
@@ -321,6 +327,9 @@ const Canon: CanonEntry[] = [
 		type: CanonType.show,
 		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_The_Bad_Batch',
 	},
+]
+
+const games: CanonEntry[] = [
 	{
 		era: CanonEra.empire,
 		mediaLink: 'https://www.xbox.com/en-US/games/star-wars-jedi-fallen-order',
@@ -378,82 +387,249 @@ const Canon: CanonEntry[] = [
 		wookieepedia:
 			'https://starwars.fandom.com/wiki/Star_Wars:_Tales_from_the_Galaxy%27s_Edge',
 	},
+]
+
+const highRepublic: CanonEntry[] = [
 	{
+		timeline: -382.9,
 		era: CanonEra.highRepublic,
-		name: 'Into the Dark',
-		mediaLink:
-			'https://www.audible.com/pd/Star-Wars-The-High-Republic-Into-the-Dark-Audiobook/0593291018',
-		released: new Date('2021-02-02 10:00:00Z'),
-		timeline: -232.5,
+		type: CanonType.book,
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Convergence',
+		mediaLink: '',
+		name: 'Convergence',
+		released: new Date('2022-11-22 10:00:00Z'),
+	},
+	{
+		timeline: -382.8,
+		era: CanonEra.highRepublic,
+		type: CanonType.bookYoungReader,
+		mediaLink: '',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Quest_for_the_Hidden_City',
+		name: 'Quest for the Hidden City',
+		released: new Date('2022-11-01 10:00:00Z'),
+	},
+	{
+		timeline: -382.7,
+		era: CanonEra.highRepublic,
+		type: CanonType.book,
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Path_of_Deceit',
+		mediaLink: '',
+		name: 'Path of Deceit',
+		released: new Date('2022-10-04 10:00:00Z'),
+	},
+	{
+		timeline: -382.6,
+		era: CanonEra.highRepublic,
+		type: CanonType.book,
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_The_Battle_of_Jedha',
+		mediaLink: '',
+		name: 'The Battle of Jedha',
+		released: new Date('2023-01-04 10:00:00Z'),
+	},
+	{
+		timeline: -382.5,
+		era: CanonEra.highRepublic,
+		type: CanonType.book,
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Cataclysm',
+		mediaLink: '',
+		name: 'Cataclysm',
+		released: new Date('2023-04-04 10:00:00Z'),
+	},
+	{
+		timeline: -382.4,
+		era: CanonEra.highRepublic,
+		type: CanonType.bookYoungReader,
+		mediaLink: '',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Quest_for_Planet_X',
+		name: 'Quest for Planet X',
+		released: new Date('2023-04-04 10:00:00Z'),
+	},
+	{
+		timeline: -382.3,
+		era: CanonEra.highRepublic,
+		type: CanonType.book,
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Path_of_Vengeance',
+		mediaLink: '',
+		name: 'Path of Vengeance',
+		released: new Date('2023-05-02 10:00:00Z'),
+	},
+	{
+		timeline: -232.9,
+		era: CanonEra.highRepublic,
 		type: CanonType.book,
 		wookieepedia:
 			'https://starwars.fandom.com/wiki/The_High_Republic:_Into_the_Dark',
+		mediaLink: '',
+		name: 'Into the Dark',
+		released: new Date('2021-02-02 10:00:00Z'),
 	},
 	{
+		timeline: -232.8,
 		era: CanonEra.highRepublic,
-		name: 'Light of the Jedi',
-		mediaLink:
-			'https://www.audible.com/pd/Star-Wars-Light-of-the-Jedi-Audiobook/0593215508',
-		released: new Date('2021-01-05 10:00:00Z'),
-		timeline: -232,
 		type: CanonType.book,
 		wookieepedia:
 			'https://starwars.fandom.com/wiki/The_High_Republic:_Light_of_the_Jedi',
+		mediaLink: '',
+		name: 'Light of the Jedi',
+		released: new Date('2021-01-05 10:00:00Z'),
 	},
 	{
+		timeline: -232.7,
 		era: CanonEra.highRepublic,
+		type: CanonType.bookYoungReader,
 		mediaLink:
-			'https://www.audible.com/pd/Star-Wars-The-Rising-Storm-The-High-Republic-Audiobook/0593396820',
-		name: 'The Rising Storm',
-		released: new Date('2021-06-29 10:00:00Z'),
-		timeline: -231.7,
+			'https://www.audible.com/pd/Star-Wars-The-High-Republic-A-Test-of-Courage-Audiobook/0593291034',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_A_Test_of_Courage',
+		name: 'A Test of Courage',
+		released: new Date('2021-01-05 10:00:00Z'),
+	},
+	{
+		timeline: -231.9,
+		era: CanonEra.highRepublic,
 		type: CanonType.book,
 		wookieepedia:
 			'https://starwars.fandom.com/wiki/The_High_Republic:_The_Rising_Storm',
+		mediaLink: '',
+		name: 'The Rising Storm',
+		released: new Date('2021-06-29 10:00:00Z'),
 	},
 	{
+		timeline: -231.8,
 		era: CanonEra.highRepublic,
+		type: CanonType.bookYoungReader,
 		mediaLink:
-			'https://www.audible.com/pd/Out-of-the-Shadows-Audiobook/1368075347',
-		name: 'Out of the Shadows',
-		released: new Date('2021-07-27 10:00:00Z'),
-		timeline: -231.5,
+			'https://www.audible.com/pd/Race-to-Crashpoint-Tower-Audiobook/1368075339',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Race_to_Crashpoint_Tower',
+		name: 'Race to Crashpoint Tower',
+		released: new Date('2021-06-29 10:00:00Z'),
+	},
+	{
+		timeline: -231.7,
+		era: CanonEra.highRepublic,
 		type: CanonType.book,
 		wookieepedia:
 			'https://starwars.fandom.com/wiki/The_High_Republic:_Out_of_the_Shadows',
+		mediaLink: '',
+		name: 'Out of the Shadows',
+		released: new Date('2021-07-27 10:00:00Z'),
 	},
 	{
+		timeline: -231.6,
 		era: CanonEra.highRepublic,
-		name: 'Tempest Runner',
-		mediaLink:
-			'https://www.audible.com/pd/Star-Wars-Tempest-Runner-Audiobook/059345586X',
-		released: new Date('2022-03-15 10:00:00Z'),
-		timeline: -231,
 		type: CanonType.book,
 		wookieepedia:
-			'https://starwars.fandom.com/wiki/The_High_Republic:_Tempest_Runner_(script)',
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Tempest_Runner',
+		mediaLink: '',
+		name: 'Tempest Runner',
+		released: new Date('2021-08-31 10:00:00Z'),
 	},
 	{
+		timeline: -230.9,
 		era: CanonEra.highRepublic,
-		name: 'Midnight Horizon',
+		type: CanonType.bookYoungReader,
 		mediaLink:
-			'https://www.audible.com/pd/Midnight-Horizon-Audiobook/B09RKV4WP9',
-		released: new Date('2022-02-01 10:00:00Z'),
-		timeline: -230,
+			'https://www.audible.com/pd/Star-Wars-The-High-Republic-Mission-to-Disaster-Audiobook/B09NXFZBRJ',
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Mission_to_Disaster',
+		name: 'Mission to Disaster',
+		released: new Date('2022-01-03 10:00:00Z'),
+	},
+	{
+		timeline: -230.8,
+		era: CanonEra.highRepublic,
 		type: CanonType.book,
 		wookieepedia:
 			'https://starwars.fandom.com/wiki/The_High_Republic:_Midnight_Horizon',
+		mediaLink: '',
+		name: 'Midnight Horizon',
+		released: new Date('2022-02-01 10:00:00Z'),
 	},
 	{
+		timeline: -230.7,
 		era: CanonEra.highRepublic,
-		name: 'The Fallen Star',
-		mediaLink:
-			'https://www.audible.com/pd/Star-Wars-The-Fallen-Star-The-High-Republic-Audiobook/0593558170',
-		released: new Date('2022-01-04 10:00:00Z'),
-		timeline: -230.5,
 		type: CanonType.book,
 		wookieepedia:
 			'https://starwars.fandom.com/wiki/The_High_Republic:_The_Fallen_Star',
+		mediaLink: '',
+		name: 'The Fallen Star',
+		released: new Date('2022-01-04 10:00:00Z'),
+	},
+]
+
+const novels: CanonEntry[] = [
+	{
+		era: CanonEra.republic,
+		type: CanonType.book,
+		name: 'Padawan',
+		released: new Date('2022-07-26 10:00:00Z'),
+		mediaLink: '',
+		timeline: -41,
+		wookieepedia: 'https://starwars.fandom.com/wiki/Padawan_(novel)',
+	},
+	{
+		era: CanonEra.empire,
+		type: CanonType.book,
+		name: 'Inquisitor: Rise of the Red Blade',
+		released: new Date('2023-07-18 10:00:00Z'),
+		mediaLink: '',
+		timeline: -17, // TODO: confirm
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Inquisitor:_Rise_of_the_Red_Blade',
+	},
+	{
+		era: CanonEra.empire,
+		type: CanonType.book,
+		name: 'Jedi: Battle Scars',
+		released: new Date('2023-03-07 10:00:00Z'),
+		mediaLink: '',
+		timeline: -9.4, // TODO: confirm
+		wookieepedia: 'https://starwars.fandom.com/wiki/Jedi:_Battle_Scars',
+	},
+	{
+		era: CanonEra.newRepublic,
+		type: CanonType.book,
+		name: 'The Princess and the Scoundrel',
+		released: new Date('2022-08-16 10:00:00Z'),
+		mediaLink: '',
+		timeline: 4.1,
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_Princess_and_the_Scoundrel',
+	},
+	{
+		era: CanonEra.newRepublic,
+		type: CanonType.book,
+		name: 'Last Shot',
+		released: new Date('2018-04-17 10:00:00Z'),
+		mediaLink: '',
+		timeline: 7,
+		wookieepedia: 'https://starwars.fandom.com/wiki/Last_Shot',
+	},
+	{
+		era: CanonEra.newRepublic,
+		type: CanonType.book,
+		name: 'Poe Dameron: Free Fall',
+		released: new Date('2020-08-04 10:00:00Z'),
+		mediaLink: '',
+		timeline: 18,
+		wookieepedia: 'https://starwars.fandom.com/wiki/Poe_Dameron:_Free_Fall',
+	},
+	{
+		era: CanonEra.newRepublic,
+		type: CanonType.book,
+		name: 'Force Collector',
+		released: new Date('2019-10-04 10:00:00Z'),
+		mediaLink: '',
+		timeline: 31,
+		wookieepedia: 'https://starwars.fandom.com/wiki/Force_Collector',
 	},
 	{
 		era: CanonEra.republic,
@@ -515,12 +691,12 @@ const Canon: CanonEntry[] = [
 		wookieepedia: 'https://starwars.fandom.com/wiki/Brotherhood',
 	},
 	{
-		era: CanonEra.republic,
+		era: CanonEra.empire,
 		name: 'Catalyst',
 		mediaLink:
 			'https://www.audible.com/pd/Catalyst-Star-Wars-Audiobook/B01J6GNS9I',
 		released: new Date('2016-11-15 10:00:00Z'),
-		timeline: -21,
+		timeline: -16.5,
 		type: CanonType.book,
 		wookieepedia:
 			'https://starwars.fandom.com/wiki/Catalyst:_A_Rogue_One_Novel',
@@ -708,7 +884,7 @@ const Canon: CanonEntry[] = [
 		wookieepedia: 'https://starwars.fandom.com/wiki/Aftermath_(novel)',
 	},
 	{
-		era: CanonEra.empire,
+		era: CanonEra.newRepublic,
 		name: 'Shadow Fall',
 		mediaLink:
 			'https://www.audible.com/pd/Shadow-Fall-Star-Wars-Audiobook/0593215354',
@@ -717,8 +893,98 @@ const Canon: CanonEntry[] = [
 		type: CanonType.book,
 		wookieepedia: 'https://starwars.fandom.com/wiki/Shadow_Fall',
 	},
+	{
+		era: CanonEra.newRepublic,
+		name: 'Life Debt',
+		mediaLink:
+			'https://www.audible.com/pd/Star-Wars-Life-Debt-Aftermath-Book-2-Audiobook/B01CRN2KBY',
+		released: new Date('2016-07-12 10:00:00Z'),
+		timeline: 5.1,
+		type: CanonType.book,
+		wookieepedia: 'https://starwars.fandom.com/wiki/Aftermath:_Life_Debt',
+	},
+	{
+		era: CanonEra.newRepublic,
+		name: 'Empires End',
+		mediaLink:
+			'https://www.audible.com/pd/Empires-End-Aftermath-Audiobook/B01MRSYSI4',
+		released: new Date('2017-02-21 10:00:00Z'),
+		timeline: 5.2,
+		type: CanonType.book,
+		wookieepedia: 'https://starwars.fandom.com/wiki/Aftermath:_Empire%27s_End',
+	},
+	{
+		era: CanonEra.newRepublic,
+		name: "Victory's Price",
+		mediaLink:
+			'https://www.audible.com/pd/Victorys-Price-Star-Wars-Audiobook/0593396855',
+		released: new Date('2021-03-02 10:00:00Z'),
+		timeline: 5.3,
+		type: CanonType.book,
+		wookieepedia: 'https://starwars.fandom.com/wiki/Victory%27s_Price',
+	},
+	{
+		era: CanonEra.newRepublic,
+		name: 'Shadow of the Sith',
+		timeline: 21,
+		type: CanonType.book,
+		mediaLink:
+			'https://www.audible.com/pd/Star-Wars-Shadow-of-the-Sith-Audiobook/B09HR24RRV',
+		released: new Date('2022-06-28 10:00:00Z'),
+		wookieepedia: 'https://starwars.fandom.com/wiki/Shadow_of_the_Sith',
+	},
+	{
+		era: CanonEra.newRepublic,
+		name: 'Bloodline',
+		timeline: 28,
+		type: CanonType.book,
+		mediaLink:
+			'https://www.audible.com/pd/Star-Wars-Bloodline-New-Republic-Audiobook/B01CRMO9BE',
+		released: new Date('2016-05-03 10:00:00Z'),
+		wookieepedia: 'https://starwars.fandom.com/wiki/Bloodline_(novel)',
+	},
+	{
+		era: CanonEra.firstOrder,
+		name: 'Phasma',
+		timeline: 34.05,
+		type: CanonType.book,
+		mediaLink:
+			'https://www.audible.com/pd/Phasma-Star-Wars-Audiobook/B074CMPKG3',
+		released: new Date('2017-09-01 10:00:00Z'),
+		wookieepedia: 'https://starwars.fandom.com/wiki/Phasma_(novel)',
+	},
+	{
+		era: CanonEra.firstOrder,
+		name: 'Black Spire',
+		timeline: 34.4,
+		type: CanonType.book,
+		mediaLink:
+			'https://www.audible.com/pd/Galaxys-Edge-Black-Spire-Star-Wars-Audiobook/0593150511',
+		released: new Date('2019-08-27 10:00:00Z'),
+		wookieepedia:
+			'https://starwars.fandom.com/wiki/Galaxy%27s_Edge:_Black_Spire',
+	},
+	{
+		era: CanonEra.firstOrder,
+		name: 'A Crash of Fate',
+		timeline: 34.45,
+		type: CanonType.book,
+		mediaLink:
+			'https://www.audible.com/pd/Star-Wars-Galaxys-Edge-A-Crash-of-Fate-Audiobook/0593152603',
+		released: new Date('2019-08-06 10:00:00Z'),
+		wookieepedia: 'https://starwars.fandom.com/wiki/A_Crash_of_Fate',
+	},
 ]
 
-// https://starwars.fandom.com/wiki/List_of_books#Canon
+const Canon: CanonEntry[] = [
+	...canonSkywalkerSaga,
+	...otherFilms,
+	...shows,
+	...games,
+	...highRepublic,
+	...novels,
+]
+
+// https://starwars.fandom.com/wiki/Timeline_of_canon_media#js
 
 export default Canon
