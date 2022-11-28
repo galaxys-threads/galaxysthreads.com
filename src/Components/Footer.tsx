@@ -16,6 +16,9 @@ export default function Footer() {
 					<a href={Links.Reddit} target="_blank">
 						<i className="fa-brands fa-reddit"></i>
 					</a>
+					<a href={Links.Instagram} target="_blank">
+						<i className="fa-brands fa-instagram"></i>
+					</a>
 					<a href={Links.Github} target="_blank">
 						<i className="fa-brands fa-github"></i>
 					</a>
