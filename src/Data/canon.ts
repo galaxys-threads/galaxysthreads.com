@@ -323,7 +323,7 @@ const shows: CanonEntry[] = [
 		era: CanonEra.empire,
 		name: 'The Bad Batch',
 		released: new Date('2021-05-04 10:00:00Z'),
-		timeline: -19.55,
+		timeline: -19.45,
 		type: CanonType.show,
 		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_The_Bad_Batch',
 	},
