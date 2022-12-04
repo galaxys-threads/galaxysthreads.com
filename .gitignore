@@ -4,9 +4,6 @@
 # Project Config and Secrets
 /.env*local
 
-# Go Temporary Files
-__debug_bin
-
 # NPM Temporary Files
 /node_modules/
 /.parcel-cache/
