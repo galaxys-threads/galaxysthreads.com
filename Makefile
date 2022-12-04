@@ -1,4 +1,4 @@
-.PHONY: full build build-npm test test-npm lint lint-npm fix fix-npm watch watch-npm clean docker docker-publish
+.PHONY: full build build-npm test test-npm lint lint-npm fix fix-npm watch watch-npm docs-go clean docker docker-publish
 
 SHELL=/bin/bash -o pipefail
 $(shell git config core.hooksPath ops/git-hooks)
@@ -40,6 +40,12 @@ watch:
 watch-npm:
 	[ -d node_modules ] || npm install
 	npm run watch
+
+## Run the godoc server
+docs-go:
+	go install golang.org/x/tools/cmd/godoc@latest
+	@echo "listening on http://127.0.0.1:6060/pkg/"
+	godoc -http=127.0.0.1:6060
 
 ## Clean the project
 clean:
