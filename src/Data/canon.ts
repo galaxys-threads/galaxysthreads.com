@@ -343,9 +343,10 @@ const games: CanonEntry[] = [
 	{
 		era: CanonEra.empire,
 		name: 'Jedi: Survivor',
-		released: null,
+		released: new Date('2023-03-17 10:00:00Z'),
 		timeline: -9,
-		mediaLink: null,
+		mediaLink:
+			'https://www.xbox.com/en-US/games/store/star-wars-jedi-survivor-standard-edition/9NJXPV1WX44X/0017',
 		type: CanonType.game,
 		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars_Jedi:_Survivor',
 	},
