@@ -12,17 +12,17 @@ test('Confirm no duplicate timelines', () => {
 })
 
 test('Confirm no duplicate release dates', () => {
-	let foundThings = [] as Date[]
+	let foundThings = [] as number[]
 	for (const entry of Canon) {
 		if (!entry.released) {
 			continue
 		}
-
-		if (foundThings.includes(entry.released)) {
+		const released = entry.released.getTime()
+		if (foundThings.includes(released)) {
 			throw `Duplicate released on: ${entry.name}`
 		}
 
-		foundThings.push(entry.released)
+		foundThings.push(released)
 	}
 })
 

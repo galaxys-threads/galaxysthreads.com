@@ -449,7 +449,7 @@ const highRepublic: CanonEntry[] = [
 		wookieepedia:
 			'https://starwars.fandom.com/wiki/The_High_Republic:_Quest_for_Planet_X',
 		name: 'Quest for Planet X',
-		released: new Date('2023-04-04 10:00:00Z'),
+		released: new Date('2023-04-04 10:01:00Z'),
 	},
 	{
 		timeline: -382.3,
@@ -490,7 +490,7 @@ const highRepublic: CanonEntry[] = [
 		wookieepedia:
 			'https://starwars.fandom.com/wiki/The_High_Republic:_A_Test_of_Courage',
 		name: 'A Test of Courage',
-		released: new Date('2021-01-05 10:00:00Z'),
+		released: new Date('2021-01-05 10:01:00Z'), // here
 	},
 	{
 		timeline: -231.9,
@@ -511,7 +511,7 @@ const highRepublic: CanonEntry[] = [
 		wookieepedia:
 			'https://starwars.fandom.com/wiki/The_High_Republic:_Race_to_Crashpoint_Tower',
 		name: 'Race to Crashpoint Tower',
-		released: new Date('2021-06-29 10:00:00Z'),
+		released: new Date('2021-06-29 10:01:00Z'),
 	},
 	{
 		timeline: -231.7,
@@ -744,7 +744,7 @@ const novels: CanonEntry[] = [
 		name: 'Most Wanted',
 		mediaLink:
 			'https://www.audible.com/pd/Star-Wars-Most-Wanted-Audiobook/B07BL4DSD6',
-		released: new Date('2018-05-25 10:00:00Z'),
+		released: new Date('2018-05-25 10:01:00Z'),
 		timeline: -13.9,
 		type: CanonType.book,
 		wookieepedia: 'https://starwars.fandom.com/wiki/Most_Wanted',
@@ -781,7 +781,7 @@ const novels: CanonEntry[] = [
 	{
 		era: CanonEra.empire,
 		name: 'Lost Stars',
-		released: new Date('2015-09-04 10:00:00Z'),
+		released: new Date('2015-09-04 10:01:00Z'),
 		timeline: -6,
 		mediaLink:
 			'https://www.amazon.com/Journey-Star-Wars-Force-Awakens-ebook/dp/B00YB2HK42/ref=tmm_kin_swatch_0',
@@ -793,7 +793,7 @@ const novels: CanonEntry[] = [
 		name: 'Leia, Princess of Alderaan',
 		mediaLink:
 			'https://www.audible.com/pd/Journey-to-Star-Wars-The-Last-Jedi-Leia-Princess-of-Alderaan-Audiobook/B074CMXKJ4',
-		released: new Date('2017-09-01 10:00:00Z'),
+		released: new Date('2017-09-01 10:01:00Z'),
 		timeline: -3,
 		type: CanonType.book,
 		wookieepedia: 'https://starwars.fandom.com/wiki/Leia,_Princess_of_Alderaan',
