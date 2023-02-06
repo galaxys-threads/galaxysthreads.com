@@ -343,7 +343,7 @@ const games: CanonEntry[] = [
 	{
 		era: CanonEra.empire,
 		name: 'Jedi: Survivor',
-		released: new Date('2023-03-17 10:00:00Z'),
+		released: new Date('2023-04-28 10:00:00Z'),
 		timeline: -9,
 		mediaLink:
 			'https://www.xbox.com/en-US/games/store/star-wars-jedi-survivor-standard-edition/9NJXPV1WX44X/0017',
