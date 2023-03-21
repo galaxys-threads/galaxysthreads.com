@@ -18,10 +18,13 @@
 	transition: transform 0.125s ease-in-out;
 }
 
-/* Hover Effect */
-#navigation a:focus > div,
-#navigation a:hover > div {
-	transform: scale(1.05);
+/* mouse, touch pad */
+@media (any-pointer: fine) {
+	/* Hover Effect */
+	#navigation a:focus > div,
+	#navigation a:hover > div {
+		transform: scale(1.05);
+	}
 }
 
 /* English/Aurebesh Styling */
