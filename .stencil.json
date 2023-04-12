@@ -1,5 +1,0 @@
-{
-	"port": 1234,
-	"spa": true,
-	"docker_tag": "galaxys-threads/galaxysthreads.com:latest"
-}

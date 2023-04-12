@@ -1,0 +1,27 @@
+@import './Components/Table.scss';
+
+:root {
+	--kpds-src-color-dark-accent-primary: #00bfff;
+	--kpds-src-color-dark-foreground-accent: black;
+	--kpds-src-color-light-accent-primary: #ae0000;
+	--kpds-src-color-light-foreground-accent: white;
+}
+
+.filters {
+	user-select: none;
+	vertical-align: top;
+	padding-right: 1rem;
+	padding-bottom: 1rem;
+
+	label {
+		cursor: pointer;
+		display: inline-block;
+		padding-bottom: 0.5rem;
+		padding-right: 0.5rem;
+		white-space: nowrap;
+
+		input {
+			margin-right: 0.5rem;
+		}
+	}
+}

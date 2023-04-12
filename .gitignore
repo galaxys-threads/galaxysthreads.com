@@ -1,9 +1,8 @@
-# Temporary Files
-/var/
-
-# Project Config and Secrets
-/.env*local
-
 # NPM Temporary Files
 /node_modules/
 /.parcel-cache/
+
+# Hugo
+/public/
+/.hugo_build.lock
+/resources/

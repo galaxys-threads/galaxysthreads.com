@@ -1,10 +1,18 @@
-FROM node:18-buster as parcelBuilder
-WORKDIR /staging
-COPY . .
-RUN make build-npm
+FROM alpine AS build
+
+ARG VERSION=0.111.3
+
+ADD https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz /hugo.tar.gz
+RUN tar -zxvf hugo.tar.gz
+RUN apk add --no-cache git
+COPY . /site
+WORKDIR /site
+
+# And then we just run Hugo
+RUN git submodule sync --recursive
+RUN git submodule update --init --recursive
+RUN /hugo --minify --enableGitInfo
 
 FROM aaronellington/valet:latest
-ENV NOT_FOUND_CODE=200
-ENV NOT_FOUND_FILE="index.html"
-COPY --from=parcelBuilder /staging/var/dist .
+COPY --from=build /site/public .
 EXPOSE 1234

@@ -1,0 +1,42 @@
+.react-table {
+	overflow-x: scroll;
+
+	.table-caption {
+		text-align: center;
+		padding-bottom: 0.5rem;
+	}
+
+	table {
+		.table-message {
+			text-align: center;
+		}
+
+		th,
+		td {
+			white-space: nowrap;
+			text-align: left;
+		}
+
+		th {
+			&.sortable {
+				cursor: pointer;
+				user-select: none;
+				padding-right: 2rem;
+				text-decoration: underline;
+				position: relative;
+
+				.sort-indicator {
+					position: absolute;
+					padding: 0 0.5rem;
+					right: 0;
+				}
+			}
+		}
+
+		td {
+			.media-link-icon {
+				padding-left: 0.25rem;
+			}
+		}
+	}
+}

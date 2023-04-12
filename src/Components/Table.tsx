@@ -93,6 +93,7 @@ export function Table<T>(props: TableProps<T>) {
 
 	return (
 		<div className="react-table">
+			<div className="table-caption">{tableData.length} Items</div>
 			<table>
 				<thead>
 					<tr>

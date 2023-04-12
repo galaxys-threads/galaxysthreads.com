@@ -8,12 +8,7 @@ import Canon, {
 	formatTimeline,
 	getMediaLinkResult,
 } from '../Data/canon'
-import {
-	Table,
-	TableColumn,
-	TableSort,
-	TableSortDirection,
-} from '../Components/Table'
+import { Table, TableColumn, TableSort, TableSortDirection } from './Table'
 
 const columns: TableColumn<CanonEntry>[] = [
 	{
@@ -217,7 +212,6 @@ export default function CanonGuide() {
 					},
 				)}
 			</div>
-			<div className="table-caption">{tableData.length} Items</div>
 			<Table
 				data={tableData}
 				columns={columns}
@@ -236,8 +230,8 @@ export default function CanonGuide() {
 				</a>
 			</p>
 			<p>
-				This is more extensive list of Star Wars Canon media, but is a bit more
-				overwhelming.
+				Wookieepedia is a more extensive list of Star Wars Canon media, but is a
+				bit more overwhelming.
 			</p>
 		</div>
 	)

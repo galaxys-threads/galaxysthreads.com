@@ -1,54 +1,34 @@
-.PHONY: full build build-npm test test-npm lint lint-npm fix fix-npm watch watch-npm clean docker docker-publish
+.PHONY: full build build-npm build-hugo watch watch-npm watch-hugo update-submodules clean
 
 SHELL=/bin/bash -o pipefail
 $(shell git config core.hooksPath ops/git-hooks)
 
-full: clean lint test build
+full: clean build
 
 ## Build the project
-build: build-npm
+build: build-npm build-hugo
 
 build-npm:
 	[ -d node_modules ] || npm install
 	npm run build
 
-## Test the project
-test: test-npm
-
-test-npm:
-	[ -d node_modules ] || npm install
-	npm run test
-
-## Lint the project
-lint: lint-npm
-
-lint-npm:
-	[ -d node_modules ] || npm install
-	npm run lint
-
-## Fix the project
-fix: fix-npm
-
-fix-npm:
-	[ -d node_modules ] || npm install
-	npm run fix
+build-hugo:
+	hugo
 
 ## Watch the project
-watch:
-	make -j1 watch-npm
+watch: build-npm
+	make -j2 watch-npm watch-hugo
 
 watch-npm:
 	[ -d node_modules ] || npm install
 	npm run watch
 
+watch-hugo:
+	hugo serve
+
+update-submodules:
+	git submodule update --remote
+
 ## Clean the project
 clean:
-	git clean -Xdff --exclude="!.env*local"
-
-## Build the docker image
-docker: clean
-	docker build -t galaxys-threads/galaxysthreads.com:latest .
-
-## Publish the docker image
-docker-publish: clean docker
-	docker push galaxys-threads/galaxysthreads.com:latest
+	git clean -Xdff
