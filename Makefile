@@ -27,6 +27,8 @@ watch-hugo:
 	hugo serve
 
 update-submodules:
+	git submodule sync --recursive
+	git submodule update --init --recursive
 	git submodule update --remote
 
 ## Clean the project
