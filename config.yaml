@@ -12,4 +12,4 @@ menus:
       weight: 99
 params:
   disclaimer: "Please Note: Galaxy's Threads fan-run organization and is NOT affiliated with Lucasfilm Ltd. or The Walt Disney Company."
-  disableDarkMode: true
+  disableLightMode: true
