@@ -151,7 +151,7 @@ export default function CanonGuide() {
 	return (
 		<div className="container">
 			<div className="filters">
-				<h4>Sorting</h4>
+				<h2>Sorting</h2>
 
 				<label>
 					<input
@@ -181,7 +181,7 @@ export default function CanonGuide() {
 				</label>
 			</div>
 			<div className="filters">
-				<h4>Eras</h4>
+				<h2>Eras</h2>
 				{Object.values(CanonEra).map((era: string, eraIndex: Number) => {
 					return (
 						<label key={`${eraIndex}`}>
@@ -196,7 +196,7 @@ export default function CanonGuide() {
 				})}
 			</div>
 			<div className="filters">
-				<h4>Types</h4>
+				<h2>Types</h2>
 				{Object.values(CanonType).map(
 					(canonType: string, canonTypeIndex: Number) => {
 						return (
