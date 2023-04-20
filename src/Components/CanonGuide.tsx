@@ -9,6 +9,27 @@ import Canon, {
 	getMediaLinkResult,
 } from '../Data/canon'
 import { Table, TableColumn, TableSort, TableSortDirection } from './Table'
+import { useSearchParams } from 'react-router-dom'
+
+const defaultEras = [
+	CanonEra.highRepublic as string,
+	CanonEra.republic as string,
+	CanonEra.empire as string,
+	CanonEra.newRepublic as string,
+	CanonEra.firstOrder as string,
+]
+
+const defaultTypes = [
+	CanonType.skywalkerSagaFilm as string,
+	CanonType.film as string,
+	CanonType.show as string,
+	CanonType.game as string,
+]
+
+const defaultSort = {
+	columnIndex: 1,
+	direction: TableSortDirection.DESC,
+} as TableSort
 
 const columns: TableColumn<CanonEntry>[] = [
 	{
@@ -83,27 +104,18 @@ const columns: TableColumn<CanonEntry>[] = [
 ]
 
 export default function CanonGuide() {
-	const [allowedTypes, setAllowedTypes] = useState([
-		CanonType.skywalkerSagaFilm as string,
-		CanonType.film as string,
-		CanonType.show as string,
-		CanonType.game as string,
-	])
+	const [searchParams, setSearchParams] = useSearchParams()
+	const config = JSON.parse(searchParams.get('config')) || {}
 
-	const [sort, setSort] = useState({
-		columnIndex: 1,
-		direction: TableSortDirection.DESC,
-	} as TableSort)
+	const [allowedTypes, setAllowedTypes] = useState(
+		config.allowedTypes || defaultTypes,
+	)
 
-	const [allowedEras, setAllowedEras] = useState([
-		CanonEra.highRepublic as string,
-		CanonEra.republic as string,
-		CanonEra.empire as string,
-		CanonEra.newRepublic as string,
-		CanonEra.firstOrder as string,
-	])
+	const [sort, setSort] = useState(config.sort || defaultSort)
 
-	const [tableData, setTableData] = useState([...Canon])
+	const [allowedEras, setAllowedEras] = useState(
+		config.allowedEras || defaultEras,
+	)
 
 	const toggleCanonEra = (era: string) => {
 		setAllowedEras((previousValue) => {
@@ -131,20 +143,26 @@ export default function CanonGuide() {
 	}
 
 	useEffect(() => {
-		setTableData(
-			[...Canon].filter((item) => {
-				if (!allowedTypes.includes(item.type)) {
-					return false
-				}
-
-				if (!allowedEras.includes(item.era)) {
-					return false
-				}
-
-				return true
+		setSearchParams({
+			config: JSON.stringify({
+				allowedEras,
+				allowedTypes,
+				sort,
 			}),
-		)
-	}, [allowedEras, allowedTypes])
+		})
+	}, [allowedEras, allowedTypes, sort])
+
+	const tableData = [...Canon].filter((item) => {
+		if (!allowedTypes.includes(item.type)) {
+			return false
+		}
+
+		if (!allowedEras.includes(item.era)) {
+			return false
+		}
+
+		return true
+	})
 
 	return (
 		<div className="container">
