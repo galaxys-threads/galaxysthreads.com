@@ -2,13 +2,25 @@ import CanonGuide from './Components/CanonGuide'
 import { createRoot } from 'react-dom/client'
 
 import './styles.scss'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 const actions = [
 	{
 		selector: '#canon-guide',
 		func: (target) => {
+			const router = createBrowserRouter([
+				{
+					path: '*',
+					element: <CanonGuide />,
+				},
+			])
+
 			const root = createRoot(target)
-			root.render(<CanonGuide />)
+			root.render(
+				<div>
+					<RouterProvider router={router} />
+				</div>,
+			)
 		},
 	},
 ]

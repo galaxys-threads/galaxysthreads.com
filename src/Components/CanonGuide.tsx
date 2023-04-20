@@ -120,16 +120,14 @@ export default function CanonGuide() {
 	}
 
 	const toggleCanonType = (type: string) => {
-		setAllowedTypes((previousValue) => {
-			let newValue = [...previousValue]
-			if (previousValue.includes(type)) {
-				newValue = previousValue.filter((e) => e !== type)
-			} else {
-				newValue.push(type)
-			}
+		let newValue = [...allowedTypes]
+		if (allowedTypes.includes(type)) {
+			newValue = allowedTypes.filter((e) => e !== type)
+		} else {
+			newValue.push(type)
+		}
 
-			return newValue
-		})
+		setAllowedTypes(newValue)
 	}
 
 	useEffect(() => {
@@ -156,6 +154,7 @@ export default function CanonGuide() {
 				<label>
 					<input
 						checked={sort.columnIndex === 1}
+						readOnly
 						onClick={() => {
 							setSort({
 								columnIndex: 1,
@@ -169,6 +168,7 @@ export default function CanonGuide() {
 				<label>
 					<input
 						checked={sort.columnIndex === 2}
+						readOnly
 						onClick={() => {
 							setSort({
 								columnIndex: 2,

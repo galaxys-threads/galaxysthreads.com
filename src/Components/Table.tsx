@@ -84,7 +84,7 @@ export function Table<T>(props: TableProps<T>) {
 	if (tableData.length <= 0) {
 		message = (
 			<tr>
-				<td className="table-message" colspan={props.columns.length}>
+				<td className="table-message" colSpan={props.columns.length}>
 					No Results Selected
 				</td>
 			</tr>
