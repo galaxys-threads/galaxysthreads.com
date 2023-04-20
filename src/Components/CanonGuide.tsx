@@ -230,6 +230,17 @@ export default function CanonGuide() {
 					},
 				)}
 			</div>
+			<div className="filters">
+				<input
+					type="button"
+					value="Reset Filters"
+					onClick={() => {
+						setAllowedEras(defaultEras)
+						setAllowedTypes(defaultTypes)
+						setSort(defaultSort)
+					}}
+				/>
+			</div>
 			<Table
 				data={tableData}
 				columns={columns}
