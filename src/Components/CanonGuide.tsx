@@ -250,17 +250,14 @@ export default function CanonGuide() {
 				}}
 			/>
 			<p>
-				Source:{' '}
 				<a
 					href="https://starwars.fandom.com/wiki/Timeline_of_canon_media"
 					target="_blank"
 				>
-					Wookieepedia Timeline of canon media
-				</a>
-			</p>
-			<p>
-				Wookieepedia is a more extensive list of Star Wars Canon media, but is a
-				bit more overwhelming.
+					Wookieepedia
+				</a>{' '}
+				has a more extensive list of Star Wars Canon media, but can be a bit
+				overwhelming.
 			</p>
 		</div>
 	)

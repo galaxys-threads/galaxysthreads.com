@@ -7,18 +7,6 @@
 }
 
 .filters {
-	input[type='button'] {
-		padding: 0.5rem 1rem;
-		border: none;
-		background-color: var(--k-prism-color-accent);
-		color: black;
-		cursor: pointer;
-	}
-
-	input[type='button']:hover {
-		text-decoration: underline;
-	}
-
 	user-select: none;
 	vertical-align: top;
 	padding-right: 1rem;
