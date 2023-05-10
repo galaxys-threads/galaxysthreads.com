@@ -1,5 +1,6 @@
 ---
 title: Hello there!
+linktitle: Home
 menu: main
 weight: 1
 disableList: true
