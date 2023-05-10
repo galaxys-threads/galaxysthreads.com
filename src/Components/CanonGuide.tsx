@@ -77,7 +77,7 @@ const columns: TableColumn<CanonEntry>[] = [
 		name: 'Released',
 		display: (row) => {
 			if (!row.released) {
-				return 'TDB'
+				return 'TBD'
 			}
 			let label = row.released.getFullYear().toString()
 			if (row.released >= new Date()) {
