@@ -436,13 +436,23 @@ const highRepublic: CanonEntry[] = [
 		era: CanonEra.highRepublic,
 		type: CanonType.book,
 		wookieepedia:
+			'https://starwars.fandom.com/wiki/The_High_Republic:_Path_of_Vengeance',
+		mediaLink: '',
+		name: 'Path of Vengeance',
+		released: new Date('2023-05-02 10:00:00Z'),
+	},
+	{
+		timeline: -382.4,
+		era: CanonEra.highRepublic,
+		type: CanonType.book,
+		wookieepedia:
 			'https://starwars.fandom.com/wiki/The_High_Republic:_Cataclysm',
 		mediaLink: '',
 		name: 'Cataclysm',
 		released: new Date('2023-04-04 10:00:00Z'),
 	},
 	{
-		timeline: -382.4,
+		timeline: -382.3,
 		era: CanonEra.highRepublic,
 		type: CanonType.bookYoungReader,
 		mediaLink: '',
@@ -451,16 +461,7 @@ const highRepublic: CanonEntry[] = [
 		name: 'Quest for Planet X',
 		released: new Date('2023-04-04 10:01:00Z'),
 	},
-	{
-		timeline: -382.3,
-		era: CanonEra.highRepublic,
-		type: CanonType.book,
-		wookieepedia:
-			'https://starwars.fandom.com/wiki/The_High_Republic:_Path_of_Vengeance',
-		mediaLink: '',
-		name: 'Path of Vengeance',
-		released: new Date('2023-05-02 10:00:00Z'),
-	},
+
 	{
 		timeline: -232.9,
 		era: CanonEra.highRepublic,

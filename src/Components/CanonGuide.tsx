@@ -249,7 +249,7 @@ export default function CanonGuide() {
 					setSort(newSort)
 				}}
 			/>
-			<p>
+			<p className="table-disclaimer">
 				<a
 					href="https://starwars.fandom.com/wiki/Timeline_of_canon_media"
 					target="_blank"
