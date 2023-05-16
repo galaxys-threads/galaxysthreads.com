@@ -8,11 +8,12 @@ export enum CanonType {
 }
 
 export enum CanonEra {
-	highRepublic = 'High Republic',
-	republic = 'Republic',
-	empire = 'Empire',
-	newRepublic = 'New Republic',
-	firstOrder = 'First Order',
+	highRepublic = 'The High Republic',
+	republic = 'Fall of the Jedi',
+	empire = 'The Reign of the Empire',
+	rebellion = 'The Age of Rebellion',
+	newRepublic = 'The New Republic',
+	firstOrder = 'The Rise of the First Order',
 }
 export interface MediaLinkResult {
 	iconClass: string
@@ -121,7 +122,7 @@ const skywalkerSaga: CanonEntry[] = [
 	{
 		mediaLink:
 			'https://www.disneyplus.com/movies/star-wars-a-new-hope-episode-iv/12fVeZxD2fWJ',
-		era: CanonEra.empire,
+		era: CanonEra.rebellion,
 		name: 'A New Hope',
 		released: new Date('1977-05-25 10:00:00Z'),
 		timeline: 0,
@@ -132,7 +133,7 @@ const skywalkerSaga: CanonEntry[] = [
 	{
 		mediaLink:
 			'https://www.disneyplus.com/movies/star-wars-the-empire-strikes-back-episode-v/iqtDTZAewwYl',
-		era: CanonEra.empire,
+		era: CanonEra.rebellion,
 		name: 'The Empire Strikes Back',
 		released: new Date('1980-05-12 10:00:00Z'),
 		timeline: 3,
@@ -143,7 +144,7 @@ const skywalkerSaga: CanonEntry[] = [
 	{
 		mediaLink:
 			'https://www.disneyplus.com/movies/star-wars-return-of-the-jedi-episode-vi/6QGKo5mjDBS8',
-		era: CanonEra.empire,
+		era: CanonEra.rebellion,
 		name: 'Return of the Jedi',
 		released: new Date('1983-05-25 10:00:00Z'),
 		timeline: 4,
@@ -351,7 +352,7 @@ const games: CanonEntry[] = [
 		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars_Jedi:_Survivor',
 	},
 	{
-		era: CanonEra.newRepublic,
+		era: CanonEra.rebellion,
 		mediaLink: 'https://www.xbox.com/en-US/games/star-wars-squadrons',
 		name: 'Squadrons',
 		released: new Date('2020-10-02 10:00:00Z'),
@@ -360,7 +361,7 @@ const games: CanonEntry[] = [
 		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars:_Squadrons',
 	},
 	{
-		era: CanonEra.newRepublic,
+		era: CanonEra.rebellion,
 		mediaLink: 'https://www.xbox.com/en-US/games/star-wars-battlefront-ii',
 		name: 'Battlefront II',
 		released: new Date('2017-11-09 10:00:00Z'),
@@ -819,7 +820,7 @@ const novels: CanonEntry[] = [
 		wookieepedia: 'https://starwars.fandom.com/wiki/Thrawn:_Treason',
 	},
 	{
-		era: CanonEra.empire,
+		era: CanonEra.rebellion,
 		name: 'Heir to the Jedi',
 		mediaLink:
 			'https://www.audible.com/pd/Heir-to-the-Jedi-Star-Wars-Audiobook/B00RDN6628',
@@ -829,7 +830,7 @@ const novels: CanonEntry[] = [
 		wookieepedia: 'https://starwars.fandom.com/wiki/Heir_to_the_Jedi',
 	},
 	{
-		era: CanonEra.newRepublic,
+		era: CanonEra.rebellion,
 		type: CanonType.book,
 		name: 'The Princess and the Scoundrel',
 		released: new Date('2022-08-16 10:00:00Z'),
@@ -839,7 +840,7 @@ const novels: CanonEntry[] = [
 			'https://starwars.fandom.com/wiki/The_Princess_and_the_Scoundrel',
 	},
 	{
-		era: CanonEra.newRepublic,
+		era: CanonEra.rebellion,
 		name: 'Alphabet Squadron',
 		mediaLink:
 			'https://www.audible.com/pd/Alphabet-Squadron-Star-Wars-Audiobook/1984889931',
@@ -849,7 +850,7 @@ const novels: CanonEntry[] = [
 		wookieepedia: 'https://starwars.fandom.com/wiki/Alphabet_Squadron_(novel)',
 	},
 	{
-		era: CanonEra.newRepublic,
+		era: CanonEra.rebellion,
 		name: 'Aftermath',
 		mediaLink:
 			'https://www.audible.com/pd/Aftermath-Star-Wars-Audiobook/B011PVXPO0',
@@ -859,7 +860,7 @@ const novels: CanonEntry[] = [
 		wookieepedia: 'https://starwars.fandom.com/wiki/Aftermath_(novel)',
 	},
 	{
-		era: CanonEra.newRepublic,
+		era: CanonEra.rebellion,
 		name: 'Shadow Fall',
 		mediaLink:
 			'https://www.audible.com/pd/Shadow-Fall-Star-Wars-Audiobook/0593215354',
@@ -869,7 +870,7 @@ const novels: CanonEntry[] = [
 		wookieepedia: 'https://starwars.fandom.com/wiki/Shadow_Fall',
 	},
 	{
-		era: CanonEra.newRepublic,
+		era: CanonEra.rebellion,
 		name: 'Life Debt',
 		mediaLink:
 			'https://www.audible.com/pd/Star-Wars-Life-Debt-Aftermath-Book-2-Audiobook/B01CRN2KBY',
@@ -879,7 +880,7 @@ const novels: CanonEntry[] = [
 		wookieepedia: 'https://starwars.fandom.com/wiki/Aftermath:_Life_Debt',
 	},
 	{
-		era: CanonEra.newRepublic,
+		era: CanonEra.rebellion,
 		name: "Victory's Price",
 		mediaLink:
 			'https://www.audible.com/pd/Victorys-Price-Star-Wars-Audiobook/0593396855',
@@ -889,7 +890,7 @@ const novels: CanonEntry[] = [
 		wookieepedia: 'https://starwars.fandom.com/wiki/Victory%27s_Price',
 	},
 	{
-		era: CanonEra.newRepublic,
+		era: CanonEra.rebellion,
 		name: 'Empires End',
 		mediaLink:
 			'https://www.audible.com/pd/Empires-End-Aftermath-Audiobook/B01MRSYSI4',

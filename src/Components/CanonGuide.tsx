@@ -15,6 +15,7 @@ const defaultEras = [
 	CanonEra.highRepublic as string,
 	CanonEra.republic as string,
 	CanonEra.empire as string,
+	CanonEra.rebellion as string,
 	CanonEra.newRepublic as string,
 	CanonEra.firstOrder as string,
 ]
@@ -165,72 +166,74 @@ export default function CanonGuide() {
 	})
 
 	return (
-		<div className="container">
+		<div>
 			<div className="filters">
-				<h2>Sorting</h2>
+				<div className="filter">
+					<h2>Sorting</h2>
 
-				<label>
-					<input
-						checked={sort.columnIndex === 1}
-						readOnly
-						onClick={() => {
-							setSort({
-								columnIndex: 1,
-								direction: TableSortDirection.DESC,
-							} as TableSort)
-						}}
-						type="radio"
-					/>
-					Timeline
-				</label>
-				<label>
-					<input
-						checked={sort.columnIndex === 2}
-						readOnly
-						onClick={() => {
-							setSort({
-								columnIndex: 2,
-								direction: TableSortDirection.DESC,
-							} as TableSort)
-						}}
-						type="radio"
-					/>
-					Released
-				</label>
-			</div>
-			<div className="filters">
-				<h2>Eras</h2>
-				{Object.values(CanonEra).map((era: string, eraIndex: Number) => {
-					return (
-						<label key={`${eraIndex}`}>
-							<input
-								type="checkbox"
-								checked={allowedEras.includes(era)}
-								onChange={() => toggleCanonEra(era)}
-							/>
-							{era}
-						</label>
-					)
-				})}
-			</div>
-			<div className="filters">
-				<h2>Types</h2>
-				{Object.values(CanonType).map(
-					(canonType: string, canonTypeIndex: Number) => {
+					<label>
+						<input
+							checked={sort.columnIndex === 1}
+							readOnly
+							onClick={() => {
+								setSort({
+									columnIndex: 1,
+									direction: TableSortDirection.DESC,
+								} as TableSort)
+							}}
+							type="radio"
+						/>
+						Timeline
+					</label>
+					<label>
+						<input
+							checked={sort.columnIndex === 2}
+							readOnly
+							onClick={() => {
+								setSort({
+									columnIndex: 2,
+									direction: TableSortDirection.DESC,
+								} as TableSort)
+							}}
+							type="radio"
+						/>
+						Released
+					</label>
+				</div>
+				<div className="filter">
+					<h2>Eras</h2>
+					{Object.values(CanonEra).map((era: string, eraIndex: Number) => {
 						return (
-							<label key={`${canonTypeIndex}`}>
+							<label key={`${eraIndex}`}>
 								<input
 									type="checkbox"
-									checked={allowedTypes.includes(canonType)}
-									onChange={() => toggleCanonType(canonType)}
+									checked={allowedEras.includes(era)}
+									onChange={() => toggleCanonEra(era)}
 								/>
-								{canonType}
+								{era}
 							</label>
 						)
-					},
-				)}
+					})}
+				</div>
+				<div className="filter">
+					<h2>Types</h2>
+					{Object.values(CanonType).map(
+						(canonType: string, canonTypeIndex: Number) => {
+							return (
+								<label key={`${canonTypeIndex}`}>
+									<input
+										type="checkbox"
+										checked={allowedTypes.includes(canonType)}
+										onChange={() => toggleCanonType(canonType)}
+									/>
+									{canonType}
+								</label>
+							)
+						},
+					)}
+				</div>
 			</div>
-			<div className="filters">
+			<div className="filter">
 				<input
 					type="button"
 					value="Reset Filters"

@@ -8,19 +8,26 @@
 
 .filters {
 	user-select: none;
-	vertical-align: top;
 	padding-right: 1rem;
 	padding-bottom: 1rem;
+	display: flex;
+	gap: 4rem;
+	flex-wrap: wrap;
 
-	label {
-		cursor: pointer;
-		display: inline-block;
-		padding-bottom: 0.5rem;
-		padding-right: 0.5rem;
-		white-space: nowrap;
+	.filter {
+		h2 {
+			margin-bottom: 0.5rem;
+		}
+		label {
+			cursor: pointer;
+			display: block;
+			padding-bottom: 0.5rem;
+			padding-right: 0.5rem;
+			white-space: nowrap;
 
-		input {
-			margin-right: 0.5rem;
+			input {
+				margin-right: 0.25rem;
+			}
 		}
 	}
 }
