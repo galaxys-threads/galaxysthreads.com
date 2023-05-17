@@ -252,16 +252,6 @@ export default function CanonGuide() {
 					setSort(newSort)
 				}}
 			/>
-			<p className="table-disclaimer">
-				<a
-					href="https://starwars.fandom.com/wiki/Timeline_of_canon_media"
-					target="_blank"
-				>
-					Wookieepedia
-				</a>{' '}
-				has a more extensive list of Star Wars Canon media, but can be a bit
-				overwhelming.
-			</p>
 		</div>
 	)
 }
