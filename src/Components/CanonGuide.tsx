@@ -24,7 +24,6 @@ const defaultTypes = [
 	CanonType.skywalkerSagaFilm as string,
 	CanonType.film as string,
 	CanonType.show as string,
-	CanonType.game as string,
 ]
 
 const defaultSort = {
