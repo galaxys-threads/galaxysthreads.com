@@ -294,7 +294,7 @@ const shows: CanonEntry[] = [
 		era: CanonEra.newRepublic,
 		mediaLink: null,
 		name: 'Ahsoka',
-		released: new Date('2023-08-31 10:00:00Z'),
+		released: new Date('2023-08-23 10:00:00Z'),
 		timeline: 12.1,
 		type: CanonType.show,
 		wookieepedia: 'https://starwars.fandom.com/wiki/Ahsoka_(television_series)',
