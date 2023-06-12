@@ -422,6 +422,15 @@ const games: CanonEntry[] = [
 	},
 	{
 		era: CanonEra.rebellion,
+		name: 'Outlaws',
+		released: null,
+		timeline: 3.5,
+		type: CanonType.game,
+		wookieepedia: 'https://starwars.fandom.com/wiki/Star_Wars_Outlaws',
+		mediaLink: null,
+	},
+	{
+		era: CanonEra.rebellion,
 		mediaLink: 'https://www.xbox.com/en-US/games/star-wars-squadrons',
 		name: 'Squadrons',
 		released: new Date('2020-10-02 10:00:00Z'),
