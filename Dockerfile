@@ -13,4 +13,4 @@ RUN /hugo --minify --enableGitInfo
 ## Setup the static file server
 FROM aaronellington/static-web-server:latest
 COPY --from=build /workspace/public ./public
-EXPOSE 1234
+EXPOSE 2828
