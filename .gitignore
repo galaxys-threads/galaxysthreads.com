@@ -1,8 +1,17 @@
-# NPM Temporary Files
-/node_modules/
-/.parcel-cache/
+# System
+.DS_Store
+
+# Temp
+/var/
+
+# Secrets
+/.env*local
 
 # Hugo
-/public/
-/.hugo_build.lock
+.hugo_build.lock
 /resources/
+/public/
+
+# Node
+/node_modules/
+/.parcel-cache/
