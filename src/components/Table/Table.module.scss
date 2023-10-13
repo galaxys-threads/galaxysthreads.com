@@ -1,21 +1,18 @@
-.react-table {
-	overflow-x: scroll;
-	max-width: 100%;
-
-	.table-caption {
+.main {
+	.caption {
 		text-align: center;
-		padding-bottom: 0.5rem;
+		border-top: var(--reset-css-border-primary);
+		padding: 0.5rem 0;
 	}
 
 	table {
-		.table-message {
+		.message {
 			text-align: center;
 		}
 
 		th,
 		td {
 			white-space: nowrap;
-			text-align: left;
 		}
 
 		th {
@@ -26,7 +23,7 @@
 				text-decoration: underline;
 				position: relative;
 
-				.sort-indicator {
+				.sortIndicator {
 					position: absolute;
 					padding: 0 0.5rem;
 					right: 0;
@@ -35,7 +32,7 @@
 		}
 
 		td {
-			.media-link-icon {
+			.mediaLinkIcon {
 				padding-left: 0.25rem;
 			}
 		}

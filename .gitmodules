@@ -1,3 +1,0 @@
-[submodule "themes/elementary"]
-	path = themes/elementary
-	url = git@github.com:aaronellington/hugo-elementary.git

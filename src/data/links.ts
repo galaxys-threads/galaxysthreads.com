@@ -6,7 +6,7 @@ const Links = {
 	Reddit: 'https://reddit.com/r/GalaxysThreads',
 	AurebeshMode:
 		'https://chrome.google.com/webstore/detail/aurebesh-mode/hdhhdjnopmenaffkokpopaglihanddhh',
-	Mail: 'mailto:contact@galaxysthreads.com',
+	Mail: 'mailto:hello@galaxysthreads.com',
 	CanonGuide: '/canon-guide/',
 	Landing: '/landing/',
 }

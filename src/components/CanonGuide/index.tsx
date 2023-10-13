@@ -1,15 +1,25 @@
+'use client'
+
 import React from 'react'
 
-import { useEffect, useState } from 'react'
 import Canon, {
 	CanonEntry,
 	CanonEra,
 	CanonType,
 	formatTimeline,
 	getMediaLinkResult,
-} from '../Data/canon'
-import { Table, TableColumn, TableSort, TableSortDirection } from './Table'
-import { useSearchParams } from 'react-router-dom'
+} from '@/data/canon'
+
+import {
+	Table,
+	TableColumn,
+	TableSort,
+	TableSortDirection,
+} from '@/components/Table'
+
+import { useQueryState } from '@/modules/hooks/useQueryState'
+
+import classes from './CanonGuide.module.scss'
 
 const defaultEras = [
 	CanonEra.highRepublic as string,
@@ -103,28 +113,31 @@ const columns: TableColumn<CanonEntry>[] = [
 	},
 ]
 
+type Config = {
+	allowedTypes: string[]
+	allowedEras: string[]
+	sort: TableSort
+}
+
+const defaultConfig = {
+	allowedEras: defaultEras,
+	allowedTypes: defaultTypes,
+	sort: defaultSort,
+}
+
 export default function CanonGuide() {
-	const [searchParams, setSearchParams] = useSearchParams()
-	const config = JSON.parse(searchParams.get('config')) || {}
-
-	const [allowedTypes, setAllowedTypes] = useState(
-		config.allowedTypes || defaultTypes,
-	)
-
-	const [sort, setSort] = useState(config.sort || defaultSort)
-
-	const [allowedEras, setAllowedEras] = useState(
-		config.allowedEras || defaultEras,
-	)
+	const [config, setConfig] = useQueryState<Config>('config', defaultConfig)
 
 	const toggleCanonEra = (era: string) => {
-		setAllowedEras((previousValue) => {
-			let newValue = [...previousValue]
+		setConfig((previousValue) => {
+			let newValue = JSON.parse(JSON.stringify(previousValue)) as Config
 
-			if (previousValue.includes(era)) {
-				newValue = previousValue.filter((e) => e !== era)
+			if (previousValue?.allowedEras.includes(era)) {
+				newValue.allowedEras = previousValue.allowedEras.filter(
+					(e) => e !== era,
+				)
 			} else {
-				newValue.push(era)
+				newValue.allowedEras.push(era)
 			}
 
 			return newValue
@@ -132,32 +145,36 @@ export default function CanonGuide() {
 	}
 
 	const toggleCanonType = (type: string) => {
-		let newValue = [...allowedTypes]
-		if (allowedTypes.includes(type)) {
-			newValue = allowedTypes.filter((e) => e !== type)
-		} else {
-			newValue.push(type)
-		}
+		setConfig((previousValue) => {
+			let newValue = JSON.parse(JSON.stringify(previousValue)) as Config
 
-		setAllowedTypes(newValue)
+			if (previousValue?.allowedTypes.includes(type)) {
+				newValue.allowedTypes = previousValue.allowedTypes.filter(
+					(e) => e !== type,
+				)
+			} else {
+				newValue.allowedTypes.push(type)
+			}
+
+			return newValue
+		})
 	}
 
-	useEffect(() => {
-		setSearchParams({
-			config: JSON.stringify({
-				allowedEras,
-				allowedTypes,
-				sort,
-			}),
+	const setSort = (sort: TableSort) => {
+		setConfig((previousValue) => {
+			let newValue = JSON.parse(JSON.stringify(previousValue)) as Config
+			newValue.sort = sort
+
+			return newValue
 		})
-	}, [allowedEras, allowedTypes, sort])
+	}
 
 	const tableData = [...Canon].filter((item) => {
-		if (!allowedTypes.includes(item.type)) {
+		if (!config.allowedTypes.includes(item.type)) {
 			return false
 		}
 
-		if (!allowedEras.includes(item.era)) {
+		if (!config.allowedEras.includes(item.era)) {
 			return false
 		}
 
@@ -165,14 +182,14 @@ export default function CanonGuide() {
 	})
 
 	return (
-		<div>
-			<div className="filters">
-				<div className="filter">
+		<section>
+			<div className={classes.filters}>
+				<div className={classes.filter}>
 					<h2>Sorting</h2>
 
 					<label>
 						<input
-							checked={sort.columnIndex === 1}
+							checked={config.sort.columnIndex === 1}
 							readOnly
 							onClick={() => {
 								setSort({
@@ -186,7 +203,7 @@ export default function CanonGuide() {
 					</label>
 					<label>
 						<input
-							checked={sort.columnIndex === 2}
+							checked={config.sort.columnIndex === 2}
 							readOnly
 							onClick={() => {
 								setSort({
@@ -199,14 +216,14 @@ export default function CanonGuide() {
 						Released
 					</label>
 				</div>
-				<div className="filter">
+				<div className={classes.filter}>
 					<h2>Eras</h2>
 					{Object.values(CanonEra).map((era: string, eraIndex: Number) => {
 						return (
 							<label key={`${eraIndex}`}>
 								<input
 									type="checkbox"
-									checked={allowedEras.includes(era)}
+									checked={config.allowedEras.includes(era)}
 									onChange={() => toggleCanonEra(era)}
 								/>
 								{era}
@@ -214,7 +231,7 @@ export default function CanonGuide() {
 						)
 					})}
 				</div>
-				<div className="filter">
+				<div className={classes.filter}>
 					<h2>Types</h2>
 					{Object.values(CanonType).map(
 						(canonType: string, canonTypeIndex: Number) => {
@@ -222,7 +239,7 @@ export default function CanonGuide() {
 								<label key={`${canonTypeIndex}`}>
 									<input
 										type="checkbox"
-										checked={allowedTypes.includes(canonType)}
+										checked={config.allowedTypes.includes(canonType)}
 										onChange={() => toggleCanonType(canonType)}
 									/>
 									{canonType}
@@ -232,25 +249,21 @@ export default function CanonGuide() {
 					)}
 				</div>
 			</div>
-			<div className="filter">
+			<div className={classes.filter}>
 				<input
 					type="button"
 					value="Reset Filters"
 					onClick={() => {
-						setAllowedEras(defaultEras)
-						setAllowedTypes(defaultTypes)
-						setSort(defaultSort)
+						setConfig(defaultConfig)
 					}}
 				/>
 			</div>
 			<Table
 				data={tableData}
 				columns={columns}
-				sort={sort}
-				onSort={(newSort: TableSort) => {
-					setSort(newSort)
-				}}
+				sort={config.sort}
+				setSort={setSort}
 			/>
-		</div>
+		</section>
 	)
 }

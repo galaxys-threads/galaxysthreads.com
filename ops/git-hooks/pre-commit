@@ -1,6 +1,0 @@
-#!/bin/sh
-
-npm install
-rm assets/elementary.*
-npm run build
-git add assets/elementary.*

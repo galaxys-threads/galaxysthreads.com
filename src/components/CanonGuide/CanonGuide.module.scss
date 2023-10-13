@@ -1,0 +1,19 @@
+.filters {
+	display: flex;
+	row-gap: 1rem;
+	column-gap: 1rem;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+
+	.filter {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+
+		gap: var(--standard-ui-space);
+		label {
+			white-space: nowrap;
+		}
+	}
+}

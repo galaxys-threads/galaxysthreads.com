@@ -1,4 +1,0 @@
----
-title: Landing
----
-Welcome!
