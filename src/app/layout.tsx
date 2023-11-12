@@ -1,5 +1,11 @@
 import type { Metadata } from 'next'
-import { LayoutStandard } from '@aaronellington/standard-ui'
+import {
+	LayoutCarbon,
+	Menu,
+	Header,
+	Footer,
+	Page,
+} from '@aaronellington/standard-ui'
 import {
 	FaBook,
 	FaChrome,
@@ -35,7 +41,7 @@ interface Props {
 	children: JSX.Element
 }
 
-const mainMenu: StandardUIMenu.TopLevelEntry[] = [
+const mainMenu = new Menu.Menu([
 	{
 		Children: null,
 		Icon: <FaHome />,
@@ -60,9 +66,9 @@ const mainMenu: StandardUIMenu.TopLevelEntry[] = [
 		Label: 'Shop',
 		To: Links.Etsy,
 	},
-]
+])
 
-const footerMenu: StandardUIMenu.TopLevelEntry[] = [
+const footerMenu = new Menu.Menu([
 	{
 		Icon: <FaEnvelope />,
 		Label: 'Email',
@@ -93,34 +99,42 @@ const footerMenu: StandardUIMenu.TopLevelEntry[] = [
 		To: Links.Github,
 		Children: null,
 	},
-]
+])
+
+mainMenu.RenderFunc = nextLinkRenderFunc
+footerMenu.RenderFunc = nextLinkRenderFunc
 
 export default function Layout(props: Props) {
 	return (
 		<html lang="en">
 			<body>
-				<LayoutStandard
-					renderMenuFunc={nextLinkRenderFunc}
-					mainMenu={mainMenu}
-					footerMenu={footerMenu}
-					brand={
-						<Link href="/" style={{ display: 'block' }}>
-							<Logo />
-						</Link>
+				<LayoutCarbon
+					header={
+						<Header
+							brand={{
+								Icon: <Logo />,
+								Label: "Galaxy's Threads",
+								To: '/',
+							}}
+							menu={mainMenu}
+						/>
 					}
 					footer={
-						<>
-							<p>
-								Please Note: Galaxy&apos;s Threads fan-run organization and is
-								NOT affiliated with Lucasfilm Ltd. or The Walt Disney Company.
-							</p>
-							<br />
-							<p>Galaxy&apos;s Threads © {new Date().getFullYear()}</p>
-						</>
+						<Footer menu={footerMenu}>
+							<>
+								<small>
+									Please Note: Galaxy&apos;s Threads fan-run organization and is
+									NOT affiliated with Lucasfilm Ltd. or The Walt Disney Company.
+								</small>
+								<small>
+									Galaxy&apos;s Threads © {new Date().getFullYear()}
+								</small>
+							</>
+						</Footer>
 					}
 				>
-					{props.children}
-				</LayoutStandard>
+					<Page>{props.children}</Page>
+				</LayoutCarbon>
 			</body>
 		</html>
 	)

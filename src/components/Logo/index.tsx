@@ -2,7 +2,7 @@ export function Logo() {
 	return (
 		<svg
 			style={{
-				maxHeight: '3rem',
+				height: '1rem',
 				display: 'block',
 				width: 'auto',
 				color: 'var(--standard-ui-foreground-primary)',
