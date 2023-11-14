@@ -5,6 +5,7 @@ import {
 	Header,
 	Footer,
 	Page,
+	OneLiner,
 } from '@aaronellington/standard-ui'
 import {
 	FaBook,
@@ -16,7 +17,6 @@ import {
 	FaGithub,
 } from 'react-icons/fa'
 import Link from 'next/link'
-import { StandardUIMenu } from '@aaronellington/standard-ui/src/types'
 import { Logo } from '@/components/Logo'
 import Links from '@/data/links'
 
@@ -43,61 +43,88 @@ interface Props {
 
 const mainMenu = new Menu.Menu([
 	{
-		Children: null,
-		Icon: <FaHome />,
-		Label: `Home`,
-		To: '/',
+		to: '/',
+		content: (
+			<OneLiner>
+				<FaHome />
+				Home
+			</OneLiner>
+		),
 	},
 	{
-		Children: null,
-		Icon: <FaBook />,
-		Label: `Canon Guide`,
-		To: Links.CanonGuide,
+		to: Links.CanonGuide,
+		content: (
+			<OneLiner>
+				<FaBook />
+				Canon Guide
+			</OneLiner>
+		),
 	},
 	{
-		Children: null,
-		Icon: <FaChrome />,
-		Label: 'Aurebesh Mode',
-		To: Links.AurebeshMode,
+		content: (
+			<OneLiner>
+				<FaChrome />
+				Aurebesh Mode
+			</OneLiner>
+		),
+		to: Links.AurebeshMode,
 	},
 	{
-		Children: null,
-		Icon: <FaShoppingBag />,
-		Label: 'Shop',
-		To: Links.Etsy,
+		content: (
+			<OneLiner>
+				<FaShoppingBag />
+				Shop
+			</OneLiner>
+		),
+		to: Links.Etsy,
 	},
 ])
 
 const footerMenu = new Menu.Menu([
 	{
-		Icon: <FaEnvelope />,
-		Label: 'Email',
-		To: Links.Mail,
-		Children: null,
+		content: (
+			<OneLiner>
+				<FaEnvelope />
+				Email
+			</OneLiner>
+		),
+		to: Links.Mail,
 	},
 	{
-		Icon: <FaDiscord />,
-		Label: 'Discord Server',
-		To: Links.Discord,
-		Children: null,
+		content: (
+			<OneLiner>
+				<FaDiscord />
+				Discord Server
+			</OneLiner>
+		),
+		to: Links.Discord,
 	},
 	{
-		Children: null,
-		Icon: <FaShoppingBag />,
-		Label: 'Shop',
-		To: Links.Etsy,
+		content: (
+			<OneLiner>
+				<FaShoppingBag />
+				Shop
+			</OneLiner>
+		),
+		to: Links.Etsy,
 	},
 	{
-		Children: null,
-		Icon: <FaChrome />,
-		Label: 'Aurebesh Mode',
-		To: Links.AurebeshMode,
+		content: (
+			<OneLiner>
+				<FaChrome />
+				Aurebesh Mode
+			</OneLiner>
+		),
+		to: Links.AurebeshMode,
 	},
 	{
-		Icon: <FaGithub />,
-		Label: 'Github',
-		To: Links.Github,
-		Children: null,
+		content: (
+			<OneLiner>
+				<FaGithub />
+				Github
+			</OneLiner>
+		),
+		to: Links.Github,
 	},
 ])
 
@@ -112,9 +139,15 @@ export default function Layout(props: Props) {
 					header={
 						<Header
 							brand={{
-								Icon: <Logo />,
-								Label: "Galaxy's Threads",
-								To: '/',
+								content: (
+									<OneLiner>
+										<h1>
+											<Logo />
+											<div>Galaxy&apos;s Threads</div>
+										</h1>
+									</OneLiner>
+								),
+								to: '/',
 							}}
 							menu={mainMenu}
 						/>
