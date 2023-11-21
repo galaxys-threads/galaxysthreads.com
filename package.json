@@ -9,8 +9,7 @@
 		"test": "echo TODO"
 	},
 	"dependencies": {
-		"@aaronellington/reset-css": "^0.0.6",
-		"@aaronellington/standard-ui": "^0.0.32",
+		"@aaronellington/standard-ui": "^0.0.35",
 		"next": "13.5.4",
 		"react": "^18",
 		"react-dom": "^18",
