@@ -1,5 +1,5 @@
-import dynamic from 'next/dynamic'
-const CanonGuide = dynamic(() => import('@/components/CanonGuide'), {
+import dynamic from "next/dynamic"
+const CanonGuide = dynamic(() => import("@/components/CanonGuide"), {
 	ssr: false,
 })
 
@@ -15,7 +15,7 @@ export default function Page() {
 				out there.
 			</p>
 			<hr />
-			<CanonGuide></CanonGuide>
+			<CanonGuide />
 			<hr />
 			<h2>Other Resources</h2>
 			<p>

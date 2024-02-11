@@ -1,46 +1,25 @@
-.PHONY: full build build-npm test test-npm lint lint-npm fix fix-npm watch watch-npm clean
+.PHONY: *
 
-SHELL=/bin/bash -o pipefail
-$(shell git config core.hooksPath ops/git-hooks)
-
-full: clean lint test build
-
-## Build the project
-build: build-npm
-
-build-npm:
-	[ -d node_modules ] || npm install
+build: clean install lint
 	npm run build
 
-## Test the project
-test: test-npm
+build-storybook: install
+	npm run build-storybook
 
-test-npm:
-	[ -d node_modules ] || npm install
-	npm run test
+install:
+	npm install
 
-## Lint the project
-lint: lint-npm
-
-lint-npm:
-	[ -d node_modules ] || npm install
+lint: install
 	npm run lint
 
-## Fix the project
-fix: fix-npm
-
-fix-npm:
-	[ -d node_modules ] || npm install
+fix: install
 	npm run fix
 
-## Watch the project
-watch: build-npm
-	make -j1 watch-npm
-
-watch-npm:
-	[ -d node_modules ] || npm install
+watch: install
 	npm run watch
 
-## Clean the project
+watch-storybook: install
+	npm run watch-storybook
+
 clean:
 	git clean -Xdff --exclude="!.env*local"

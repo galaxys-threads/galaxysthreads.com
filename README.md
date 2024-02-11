@@ -1,3 +1,1 @@
-# galaxys-threads
-
-The Galaxy's Threads website.
+# template-static-site-react

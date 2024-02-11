@@ -1,28 +1,37 @@
 {
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"watch": "next dev",
 		"build": "next build",
-		"start": "next start",
-		"lint": "prettier --check . && next lint",
-		"fix": "prettier --write . && eslint frontend --fix",
-		"test": "echo TODO"
+		"lint": "prettier . --check && biome check src",
+		"fix": "prettier . --write && biome check --apply src",
+		"watch-storybook": "storybook dev",
+		"build-storybook": "storybook build"
 	},
 	"dependencies": {
 		"@aaronellington/standard-ui": "^0.0.35",
-		"next": "13.5.4",
+		"next": "14.1.0",
 		"react": "^18",
 		"react-dom": "^18",
-		"react-icons": "^4.11.0",
-		"sass": "^1.69.2"
+		"react-icons": "^5.0.1",
+		"sass": "^1.70.0"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "1.5.3",
+		"@storybook/addon-essentials": "^7.6.14",
+		"@storybook/addon-interactions": "^7.6.14",
+		"@storybook/addon-links": "^7.6.14",
+		"@storybook/addon-onboarding": "^1.0.11",
+		"@storybook/blocks": "^7.6.14",
+		"@storybook/nextjs": "^7.6.14",
+		"@storybook/react": "^7.6.14",
+		"@storybook/test": "^7.6.14",
 		"@types/node": "^20",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",
-		"eslint": "^8",
-		"eslint-config-next": "13.5.4",
-		"prettier": "3.0.3",
+		"prettier": "3.2.5",
+		"storybook": "^7.6.14",
 		"typescript": "^5"
 	}
 }

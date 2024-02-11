@@ -1,28 +1,28 @@
-import type { Metadata } from 'next'
+import { Logo } from "@/components/Logo"
+import Links from "@/data/links"
 import {
+	Footer,
+	Header,
 	LayoutCarbon,
 	Menu,
-	Header,
-	Footer,
-	Page,
 	OneLiner,
-} from '@aaronellington/standard-ui'
+	Page,
+} from "@aaronellington/standard-ui"
+import type { Metadata } from "next"
+import Link from "next/link"
 import {
 	FaBook,
 	FaChrome,
-	FaShoppingBag,
 	FaDiscord,
 	FaEnvelope,
-	FaHome,
 	FaGithub,
-} from 'react-icons/fa'
-import Link from 'next/link'
-import { Logo } from '@/components/Logo'
-import Links from '@/data/links'
+	FaHome,
+	FaShoppingBag,
+} from "react-icons/fa"
 
 export const metadata: Metadata = {
 	title: `Galaxy's Threads`,
-	description: 'The website for Aaron Ellington.',
+	description: "The website for Aaron Ellington.",
 }
 
 const nextLinkRenderFunc = (
@@ -43,7 +43,7 @@ interface Props {
 
 const mainMenu = new Menu.Menu([
 	{
-		to: '/',
+		to: "/",
 		content: (
 			<OneLiner>
 				<FaHome />
@@ -147,7 +147,7 @@ export default function Layout(props: Props) {
 										</h1>
 									</OneLiner>
 								),
-								to: '/',
+								to: "/",
 							}}
 							menu={mainMenu}
 						/>

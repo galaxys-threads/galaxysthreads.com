@@ -1,7 +1,7 @@
-import Canon from './canon'
+import Canon from "./canon"
 
-test('Confirm no duplicate timelines', () => {
-	let foundThings = [] as number[]
+test("Confirm no duplicate timelines", () => {
+	const foundThings = [] as number[]
 	for (const entry of Canon) {
 		if (foundThings.includes(entry.timeline)) {
 			throw `Duplicate Timeline on: ${entry.name}`
@@ -11,8 +11,8 @@ test('Confirm no duplicate timelines', () => {
 	}
 })
 
-test('Confirm no duplicate release dates', () => {
-	let foundThings = [] as number[]
+test("Confirm no duplicate release dates", () => {
+	const foundThings = [] as number[]
 	for (const entry of Canon) {
 		if (!entry.released) {
 			continue
@@ -26,8 +26,8 @@ test('Confirm no duplicate release dates', () => {
 	}
 })
 
-test('Confirm no duplicate names', () => {
-	let foundThings = [] as string[]
+test("Confirm no duplicate names", () => {
+	const foundThings = [] as string[]
 	for (const entry of Canon) {
 		const key = `${entry.name} ${entry.type}`
 

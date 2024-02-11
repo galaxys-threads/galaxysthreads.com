@@ -1,5 +1,5 @@
-import Links from '@/data/links'
-import Link from 'next/link'
+import Links from "@/data/links"
+import Link from "next/link"
 
 export default function Page() {
 	return (
@@ -7,7 +7,7 @@ export default function Page() {
 			<h1>Hello there!</h1>
 			<p>
 				Welcome! This website is still a work in progress and we will be adding
-				more soon. But for now, checkout our Star Wars{' '}
+				more soon. But for now, checkout our Star Wars{" "}
 				<Link href={Links.CanonGuide}>Canon Guide</Link> and other fun things
 				listed below:
 			</p>
@@ -19,7 +19,7 @@ export default function Page() {
 			<h2>Talk To Us</h2>
 			<ul>
 				<li>
-					<a href={Links.Discord} target="_blank">
+					<a href={Links.Discord} target="_blank" rel="noreferrer">
 						Discord Server
 					</a>
 				</li>

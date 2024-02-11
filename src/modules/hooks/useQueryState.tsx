@@ -1,5 +1,5 @@
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { useCallback, useEffect, useRef, useState } from "react"
 
 function GetDefault<T>(stateKey: string, defaultValue: T): T {
 	const searchParams = new URLSearchParams(window.location.search)
@@ -46,7 +46,7 @@ export function useQueryState<T>(
 		}
 
 		router.push(
-			pathname + '?' + createQueryString(stateKey, JSON.stringify(state)),
+			`${pathname}?${createQueryString(stateKey, JSON.stringify(state))}`,
 			{
 				scroll: false,
 			},

@@ -1,2 +1,7 @@
-*.yml
-*.yaml
+*.js
+*.jsx
+*.ts
+*.tsx
+*.json
+/.next/
+/out/

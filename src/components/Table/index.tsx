@@ -1,5 +1,5 @@
-import React from 'react'
-import classes from './Table.module.scss'
+import React from "react"
+import classes from "./Table.module.scss"
 
 export declare type TableProps<T> = {
 	data: T[]
@@ -20,8 +20,8 @@ export type TableSort = {
 }
 
 export enum TableSortDirection {
-	ASC = 'asc',
-	DESC = 'desc',
+	ASC = "asc",
+	DESC = "desc",
 }
 
 export declare type SetTableSort = (newSort: TableSort) => void
@@ -34,7 +34,7 @@ export function Table<T>(props: TableProps<T>) {
 			return
 		}
 
-		let newValue = {
+		const newValue = {
 			columnIndex: columnIndex,
 			direction: TableSortDirection.DESC,
 		} as TableSort
@@ -87,32 +87,39 @@ export function Table<T>(props: TableProps<T>) {
 			<table>
 				<thead>
 					<tr>
-						{props.columns.map((column, columnIndex) => (
-							<th
-								key={columnIndex}
-								onClick={() => handleSortingChange(columnIndex)}
-								className={column.sortFunction ? classes.sortable : ''}
-							>
-								{columnIndex === props.sort.columnIndex && (
-									<span className={classes.sortIndicator}>
-										{props.sort.direction === TableSortDirection.ASC
-											? '⭡'
-											: '⭣'}
-									</span>
-								)}
-								{column.name}
-							</th>
-						))}
+						{props.columns.map((column, columnIndex) => {
+							const key = columnIndex
+							return (
+								<th
+									key={key}
+									onClick={() => handleSortingChange(columnIndex)}
+									className={column.sortFunction ? classes.sortable : ""}
+								>
+									{columnIndex === props.sort.columnIndex && (
+										<span className={classes.sortIndicator}>
+											{props.sort.direction === TableSortDirection.ASC
+												? "⭡"
+												: "⭣"}
+										</span>
+									)}
+									{column.name}
+								</th>
+							)
+						})}
 					</tr>
 				</thead>
 				<tbody>
-					{tableData.map((row, rowIndex) => (
-						<tr key={rowIndex}>
-							{props.columns.map((column, columnIndex) => (
-								<td key={columnIndex}>{column.display(row)}</td>
-							))}
-						</tr>
-					))}
+					{tableData.map((row, rowIndex) => {
+						const key = rowIndex
+						return (
+							<tr key={key}>
+								{props.columns.map((column, columnIndex) => {
+									const key = columnIndex
+									return <td key={key}>{column.display(row)}</td>
+								})}
+							</tr>
+						)
+					})}
 					{message}
 				</tbody>
 			</table>

@@ -1,24 +1,9 @@
-FROM node:18-alpine AS base
-
-FROM base AS builder
-RUN apk add --no-cache libc6-compat
-WORKDIR /app
+FROM node:21 as builder
+WORKDIR /workspace/
 COPY . .
-RUN npm ci
+RUN npm i
 RUN npm run build
 
-FROM base AS runner
-WORKDIR /app
-ENV NODE_ENV production
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-COPY --from=builder /app/public ./public
-RUN mkdir .next
-RUN chown nextjs:nodejs .next
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-USER nextjs
-EXPOSE 3000
-ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
-CMD ["node", "server.js"]
+FROM ghcr.io/aaronellington/static-web-server:latest
+COPY --from=builder /workspace/out ./public
+EXPOSE 2828

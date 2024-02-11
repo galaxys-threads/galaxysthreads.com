@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import React from 'react'
+import React from "react"
 
 import Canon, {
 	CanonEntry,
@@ -8,18 +8,18 @@ import Canon, {
 	CanonType,
 	formatTimeline,
 	getMediaLinkResult,
-} from '@/data/canon'
+} from "@/data/canon"
 
 import {
 	Table,
 	TableColumn,
 	TableSort,
 	TableSortDirection,
-} from '@/components/Table'
+} from "@/components/Table"
 
-import { useQueryState } from '@/modules/hooks/useQueryState'
+import { useQueryState } from "@/modules/hooks/useQueryState"
 
-import classes from './CanonGuide.module.scss'
+import classes from "./CanonGuide.module.scss"
 
 const defaultEras = [
 	CanonEra.highRepublic as string,
@@ -43,7 +43,7 @@ const defaultSort = {
 
 const columns: TableColumn<CanonEntry>[] = [
 	{
-		name: 'Name',
+		name: "Name",
 		display: (row) => {
 			let mediaLink = <></>
 			if (row.mediaLink) {
@@ -54,8 +54,9 @@ const columns: TableColumn<CanonEntry>[] = [
 						target="_blank"
 						title={mediaLinkResult.tooltipText}
 						className="media-link-icon"
+						rel="noreferrer"
 					>
-						<i className={mediaLinkResult.iconClass}></i>
+						<i className={mediaLinkResult.iconClass} />
 					</a>
 				)
 			}
@@ -66,6 +67,7 @@ const columns: TableColumn<CanonEntry>[] = [
 						href={row.wookieepedia}
 						target="_blank"
 						title="View on Wookieepedia"
+						rel="noreferrer"
 					>
 						{row.name}
 					</a>
@@ -75,7 +77,7 @@ const columns: TableColumn<CanonEntry>[] = [
 		},
 	},
 	{
-		name: 'Timeline',
+		name: "Timeline",
 		display: (row) => {
 			return formatTimeline(row.timeline)
 		},
@@ -84,10 +86,10 @@ const columns: TableColumn<CanonEntry>[] = [
 		},
 	},
 	{
-		name: 'Released',
+		name: "Released",
 		display: (row) => {
 			if (!row.released) {
-				return 'TBD'
+				return "TBD"
 			}
 			let label = row.released.getFullYear().toString()
 			if (row.released >= new Date()) {
@@ -97,18 +99,18 @@ const columns: TableColumn<CanonEntry>[] = [
 			return <span title={row.released.toLocaleDateString()}>{label}</span>
 		},
 		sortFunction: (a, b) => {
-			let valueA = a.released || new Date('4000-01-01')
-			let valueB = b.released || new Date('4000-01-01')
+			const valueA = a.released || new Date("4000-01-01")
+			const valueB = b.released || new Date("4000-01-01")
 
 			return valueA > valueB ? 1 : -1
 		},
 	},
 	{
-		name: 'Type',
+		name: "Type",
 		display: (row) => row.type,
 	},
 	{
-		name: 'Era',
+		name: "Era",
 		display: (row) => row.era,
 	},
 ]
@@ -126,11 +128,11 @@ const defaultConfig = {
 }
 
 export default function CanonGuide() {
-	const [config, setConfig] = useQueryState<Config>('config', defaultConfig)
+	const [config, setConfig] = useQueryState<Config>("config", defaultConfig)
 
 	const toggleCanonEra = (era: string) => {
 		setConfig((previousValue) => {
-			let newValue = JSON.parse(JSON.stringify(previousValue)) as Config
+			const newValue = JSON.parse(JSON.stringify(previousValue)) as Config
 
 			if (previousValue?.allowedEras.includes(era)) {
 				newValue.allowedEras = previousValue.allowedEras.filter(
@@ -146,7 +148,7 @@ export default function CanonGuide() {
 
 	const toggleCanonType = (type: string) => {
 		setConfig((previousValue) => {
-			let newValue = JSON.parse(JSON.stringify(previousValue)) as Config
+			const newValue = JSON.parse(JSON.stringify(previousValue)) as Config
 
 			if (previousValue?.allowedTypes.includes(type)) {
 				newValue.allowedTypes = previousValue.allowedTypes.filter(
@@ -162,7 +164,7 @@ export default function CanonGuide() {
 
 	const setSort = (sort: TableSort) => {
 		setConfig((previousValue) => {
-			let newValue = JSON.parse(JSON.stringify(previousValue)) as Config
+			const newValue = JSON.parse(JSON.stringify(previousValue)) as Config
 			newValue.sort = sort
 
 			return newValue
@@ -218,9 +220,9 @@ export default function CanonGuide() {
 				</div>
 				<div className={classes.filter}>
 					<h2>Eras</h2>
-					{Object.values(CanonEra).map((era: string, eraIndex: Number) => {
+					{Object.values(CanonEra).map((era: string, eraIndex: number) => {
 						return (
-							<label key={`${eraIndex}`}>
+							<label key={era}>
 								<input
 									type="checkbox"
 									checked={config.allowedEras.includes(era)}
@@ -233,20 +235,18 @@ export default function CanonGuide() {
 				</div>
 				<div className={classes.filter}>
 					<h2>Types</h2>
-					{Object.values(CanonType).map(
-						(canonType: string, canonTypeIndex: Number) => {
-							return (
-								<label key={`${canonTypeIndex}`}>
-									<input
-										type="checkbox"
-										checked={config.allowedTypes.includes(canonType)}
-										onChange={() => toggleCanonType(canonType)}
-									/>
-									{canonType}
-								</label>
-							)
-						},
-					)}
+					{Object.values(CanonType).map((canonType: string) => {
+						return (
+							<label key={canonType}>
+								<input
+									type="checkbox"
+									checked={config.allowedTypes.includes(canonType)}
+									onChange={() => toggleCanonType(canonType)}
+								/>
+								{canonType}
+							</label>
+						)
+					})}
 				</div>
 			</div>
 			<div className={classes.filter}>
