@@ -1,4 +1,3 @@
-import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import { useCallback, useEffect, useRef, useState } from "react"
 
 function GetDefault<T>(stateKey: string, defaultValue: T): T {
@@ -17,24 +16,25 @@ export function useQueryState<T>(
 	stateKey: string,
 	defaultValue: T,
 ): [T, React.Dispatch<React.SetStateAction<T>>] {
-	const router = useRouter()
-	const searchParams = useSearchParams()
-	const pathname = usePathname()
 
 	const [state, setState] = useState<T>(GetDefault(stateKey, defaultValue))
 	const isNewSession = useRef(true)
+
 	const createQueryString = useCallback(
 		(name: string, value: string) => {
-			const params = new URLSearchParams(searchParams)
+			const params = new URLSearchParams(window.location.search)
 			params.set(name, value)
 
 			return params.toString()
 		},
-		[searchParams],
+		[],
 	)
 
 	useEffect(() => {
+		const searchParams = new URLSearchParams(window.location.search)
+
 		if (isNewSession.current) {
+
 			const currentState = JSON.parse(
 				searchParams.get(stateKey) as string,
 			) as null | T
@@ -45,13 +45,10 @@ export function useQueryState<T>(
 			return
 		}
 
-		router.push(
-			`${pathname}?${createQueryString(stateKey, JSON.stringify(state))}`,
-			{
-				scroll: false,
-			},
-		)
-	}, [state, stateKey, createQueryString, pathname, router, searchParams])
+		const newRelativePathQuery = `${window.location.pathname}?${createQueryString(stateKey, JSON.stringify(state))}`
+		history.pushState(null, '', newRelativePathQuery);
+
+	}, [state, createQueryString])
 
 	return [state, setState]
 }
