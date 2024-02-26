@@ -10,7 +10,7 @@
 		"build-storybook": "storybook build"
 	},
 	"dependencies": {
-		"@aaronellington/standard-ui": "^0.0.35",
+		"@aaronellington/standard-ui": "^0.0.39",
 		"next": "14.1.0",
 		"react": "^18",
 		"react-dom": "^18",

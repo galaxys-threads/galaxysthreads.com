@@ -25,6 +25,8 @@ export const metadata: Metadata = {
 	description: "The website for Aaron Ellington.",
 }
 
+import "@aaronellington/reset-css"
+
 const nextLinkRenderFunc = (
 	children: JSX.Element,
 	target: string,
